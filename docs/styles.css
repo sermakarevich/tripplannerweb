@@ -381,6 +381,7 @@ input, select, textarea {
   border: 1px solid var(--line);
   border-radius: 6px;
   padding: 11px 12px;
+  text-align: left;  /* iOS right-aligns date input values by default */
 }
 
 input:focus, select:focus, textarea:focus {
