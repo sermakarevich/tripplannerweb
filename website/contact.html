@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — AI Travel Planner</title>
+<meta name="description" content="Questions, ideas, feedback — drop us a line and we'll get back to you.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%230E4A5E'/%3E%3Cpath d='M50 18 L60 55 L50 48 L40 55 Z' fill='%23FBF7EF'/%3E%3Cpath d='M50 82 L40 45 L50 52 L60 45 Z' fill='%23B4552D'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="compass">✦</span> AI Travel Planner</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="design_my_trip.html">Design my trip</a>
+      <a href="eurotrip.html">Eurotrip 2026</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" style="padding: 64px 0 48px;">
+  <div class="wrap">
+    <p class="eyebrow">Contact</p>
+    <h1>Say hello.</h1>
+    <p class="lede">Questions, ideas, feedback on a plan — write us a line and we'll get back to you.</p>
+  </div>
+</section>
+
+<section style="padding-bottom: 90px;">
+  <div class="wrap">
+
+    <form id="contact-form" novalidate>
+      <div class="card">
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+          <p class="field-hint">So we can reply. Nothing else, ever.</p>
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" placeholder="What's on your mind?" required></textarea>
+        </div>
+        <button class="btn" type="submit" style="width: 100%;">Send →</button>
+        <p class="error" id="form-error" hidden></p>
+      </div>
+    </form>
+
+    <div class="card success-card" id="success" hidden>
+      <p class="eyebrow" style="color: var(--pine);">Message sent</p>
+      <h2>Thanks for reaching out</h2>
+      <p class="muted">We read every message and will get back to you at the email you gave us.</p>
+      <p style="margin-top: 22px;"><a href="index.html">← Back to home</a></p>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>AI Travel Planner · built by people who drive</span>
+    <span><a href="index.html">Home</a> · <a href="eurotrip.html">Eurotrip 2026</a></span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var ENDPOINT = "https://formsubmit.co/ajax/sermakarevich@gmail.com";
+  // DB service contact endpoint. Local dev auto-targets the db API on :8001;
+  // in prod set PROD_CONTACT_API to https://<db-api-domain>/contact.
+  // (Empty prod value = skip DB, email still sent.)
+  var PROD_CONTACT_API = "";
+  var isLocal = location.hostname === "localhost" || location.hostname === "127.0.0.1";
+  var CONTACT_API = isLocal ? "http://localhost:8001/contact" : PROD_CONTACT_API;
+  var SOURCE = "contact";
+  var form = document.getElementById("contact-form");
+  var errEl = document.getElementById("form-error");
+  var successEl = document.getElementById("success");
+  var submitting = false;
+
+  function showError(msg) {
+    errEl.textContent = msg;
+    errEl.hidden = false;
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (submitting) return; // guard against rapid multi-click
+    errEl.hidden = true;
+
+    var email = form.email.value.trim();
+    var message = form.message.value.trim();
+
+    if (!email || !message) {
+      showError("Please fill in your email and a message.");
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      showError("That email doesn't look right.");
+      return;
+    }
+
+    var btn = form.querySelector("button[type=submit]");
+    submitting = true;
+    btn.disabled = true;
+    btn.textContent = "Sending…";
+
+    // DB is best-effort — email is the source of truth if it fails.
+    var dbDone = Promise.resolve();
+    if (CONTACT_API) {
+      dbDone = fetch(CONTACT_API, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ version: "v0", source: SOURCE, email: email, message: message })
+      }).catch(function () { /* non-blocking */ });
+    }
+
+    dbDone
+      .then(function () {
+        var emailBody = {
+          _subject: "Contact message — " + email,
+          _template: "table",
+          "Email": email,
+          "Message": message
+        };
+        return fetch(ENDPOINT, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Accept": "application/json" },
+          body: JSON.stringify(emailBody)
+        }).then(function (res) {
+          if (!res.ok) throw new Error("HTTP " + res.status);
+          return res.json();
+        });
+      })
+      .then(function () {
+        form.hidden = true;
+        successEl.hidden = false;
+        successEl.scrollIntoView({ behavior: "smooth", block: "center" });
+      })
+      .catch(function () {
+        submitting = false;
+        btn.disabled = false;
+        btn.textContent = "Send →";
+        showError("Couldn't send your message. Please try again, or email us directly at sermakarevich@gmail.com.");
+      });
+  });
+})();
+</script>
+
+</body>
+</html>
