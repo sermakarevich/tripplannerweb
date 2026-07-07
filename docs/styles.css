@@ -384,6 +384,9 @@ input, select, textarea {
   text-align: left;  /* iOS right-aligns date input values by default */
 }
 
+/* iOS gives date inputs an intrinsic min-width that overflows narrow cards */
+input[type="date"] { -webkit-appearance: none; appearance: none; min-width: 0; }
+
 input:focus, select:focus, textarea:focus {
   outline: 2px solid var(--sea);
   outline-offset: 0;
