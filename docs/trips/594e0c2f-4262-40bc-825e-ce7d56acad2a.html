@@ -1,0 +1,1442 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Krakow road trip — 2067.8 km</title>
+<meta name="description" content="AI-planned 21-night road trip from Krakow, Poland covering 10 stops: Tatranská Lomnica, Bled, Heiligenblut, Zell am See, St. Gilgen, Hallstatt, Bad Ischl, Český Krumlov, Mikulov, Terchová.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%230E4A5E'/%3E%3Cpath d='M50 18 L60 55 L50 48 L40 55 Z' fill='%23FBF7EF'/%3E%3Cpath d='M50 82 L40 45 L50 52 L60 45 Z' fill='%23B4552D'/%3E%3C/svg%3E">
+<style>
+
+  :root{
+    --sea:#0E4A5E; --sea-soft:#DCEAEE; --pine:#2F5D3A; --pine-soft:#E3EDE2;
+    --rust:#B4552D; --rust-soft:#F5E4D9; --sand:#EAD9B8; --paper:#FBF7EF;
+    --ink:#22303A; --ink-60:#5A6B75; --line:#E2D9C8;
+    --serif:"Iowan Old Style",Georgia,"Times New Roman",serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.55;margin:0}
+  .wrap{max-width:860px;margin:0 auto;padding:24px 20px 80px}
+  header{border-bottom:3px double var(--sea);padding:28px 0 22px;margin-bottom:8px}
+  .eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--sea);font-weight:600}
+  h1{font-family:var(--serif);font-size:clamp(30px,6vw,44px);line-height:1.1;margin:8px 0 10px;text-wrap:balance}
+  .sub{color:var(--ink-60);max-width:60ch;margin:0}
+  .facts{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:16px;font-size:14px}
+  .facts b{font-variant-numeric:tabular-nums}
+  h2{font-family:var(--serif);font-size:24px;margin:44px 0 6px;text-wrap:balance}
+  .lede{color:var(--ink-60);margin:0 0 18px;max-width:65ch}
+
+  .map-box{background:#fff;border:1px solid var(--line);border-radius:6px;padding:14px 8px 6px;margin-top:18px}
+  .map-box svg{width:100%;height:auto;display:block}
+  .legend{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:13px;padding:8px 10px 10px}
+  .legend span{display:inline-flex;align-items:center;gap:7px}
+  .swatch{width:22px;height:0;border-top:3px solid;display:inline-block}
+  .sw1{border-color:var(--sea)} .sw2{border-color:var(--rust);border-top-style:dashed} .sw3{border-color:var(--pine);border-top-style:dotted;border-top-width:4px}
+  .leg-btn{display:inline-flex;align-items:center;gap:7px;font:inherit;color:inherit;background:none;
+    border:1px solid transparent;border-radius:4px;padding:4px 8px;cursor:pointer}
+  .leg-btn:hover{background:var(--sea-soft)}
+  .leg-btn.active{border-color:var(--ink-60);background:var(--sea-soft);font-weight:600}
+  .leg-btn:focus-visible{outline:2px solid var(--sea);outline-offset:1px}
+  .leg-hint{flex-basis:100%;font-size:12px;color:var(--ink-60)}
+
+  .card{background:#fff;border:1px solid var(--line);border-radius:6px;margin:22px 0;overflow:hidden}
+  .card-head{padding:18px 20px 14px;border-bottom:1px solid var(--line);display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
+  .card-head .tag{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;padding:4px 9px;border-radius:3px;color:#fff}
+  .t1{background:var(--sea)} .t2{background:var(--rust)} .t3{background:var(--pine)}
+  .card-head h3{font-family:var(--serif);font-size:22px;margin:0;flex:1 1 auto;min-width:200px}
+  .card-body{padding:16px 20px 20px}
+  .why{margin:0 0 14px;max-width:65ch}
+  .stops{list-style:none;margin:0 0 16px;padding:0}
+  .stops li{display:grid;grid-template-columns:64px 1fr;gap:12px;padding:9px 0;border-bottom:1px dotted var(--line)}
+  .stops li:last-child{border-bottom:0}
+  .nights{font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;color:var(--sea);white-space:nowrap;padding-top:1px}
+  .stops .place{font-weight:600}
+  .stops .what{color:var(--ink-60);font-size:14px}
+  .stat-row{display:flex;flex-wrap:wrap;gap:8px}
+  .stat{background:var(--sea-soft);border-radius:4px;padding:7px 12px;font-size:13px}
+  .stat b{font-variant-numeric:tabular-nums}
+  .caveat{margin:14px 0 0;font-size:14px;color:var(--ink-60)}
+  .caveat b{color:var(--ink)}
+
+  .places-grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:18px}
+  .p-card{background:#fff;border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
+  .p-card img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;background:var(--sea-soft)}
+  .p-noimg{width:100%;aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;background:var(--sea-soft);color:var(--ink-60);font-family:var(--serif);font-size:19px;text-align:center;padding:12px}
+  .p-body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+  .p-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .p-ord{display:none;width:22px;height:22px;border-radius:50%;background:var(--sea);color:var(--paper);font-size:13px;font-weight:700;align-items:center;justify-content:center;flex:none;align-self:center}
+  .p-card.on-route .p-ord{display:inline-flex}
+  .p-card.on-route{box-shadow:0 0 0 2px var(--sea)}
+  .p-head h3{font-family:var(--serif);font-size:19px;margin:0;flex:1 1 auto}
+  .p-tag{font-size:10px;letter-spacing:.11em;text-transform:uppercase;font-weight:700;padding:3px 8px;border-radius:3px;white-space:nowrap}
+  .p-sea{background:var(--sea);color:#fff}
+  .p-stop{background:var(--pine-soft);color:var(--pine)}
+  .p-wild{background:#8a6d1f;color:#fff}
+  .p-body p{margin:0;font-size:14px}
+  .p-try{color:var(--ink-60);margin-top:auto}
+  .p-try b{color:var(--ink)}
+  .p-stay{color:var(--ink-60)}
+  .p-stay b{color:var(--pine)}
+
+  /* route builder */
+  .rb-box{background:#fff;border:1px solid var(--line);border-radius:6px;padding:16px;overflow-x:auto}
+  .rb-presets{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+  .rb-presets button,.rb-check{font:inherit;font-size:13px;padding:6px 12px;border:1px solid var(--sea);
+    background:#fff;color:var(--sea);border-radius:4px;cursor:pointer}
+  .rb-presets button:hover,.rb-check:hover{background:var(--sea);color:#fff}
+  .rb-check{background:var(--sea);color:#fff;font-weight:600;padding:8px 18px}
+  .rb-check:hover{background:#0a3846}
+  table.rb{border-collapse:collapse;width:100%;font-size:13px;margin-bottom:12px}
+  table.rb th,table.rb td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
+  table.rb th{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-60)}
+  table.rb input[type=date]{font:inherit;font-size:12px;padding:3px 4px;border:1px solid var(--line);border-radius:3px}
+  table.rb input[type=number]{font:inherit;font-size:12px;padding:3px 4px;border:1px solid var(--line);border-radius:3px;width:52px}
+  table.rb input[type=number]:disabled{border-color:transparent;background:transparent}
+  table.rb tr.rb-off td{opacity:.45}
+  table.rb tr.rb-off input[type=date]{pointer-events:none}
+  .rb-links a{color:var(--sea);font-weight:600;text-decoration:none;border-bottom:1px dotted var(--sea);margin-right:10px}
+  #rb-result{margin-top:12px;font-size:14px}
+  #rb-result .ok{color:var(--pine);font-weight:600}
+  #rb-result .err{color:var(--rust);font-weight:600}
+  #rb-result ul{margin:8px 0 0;padding-left:20px}
+  #rb-result li{margin:2px 0}
+  .rb-mapwrap{margin-top:14px;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#FDFBF6}
+  #rb-map{display:block;width:100%;height:auto}
+  .rb-note{font-size:12px;color:var(--ink-60);margin-top:8px}
+  .p-tix{list-style:none;padding:10px 0 0;margin:10px 0 0;border-top:1px dashed var(--line);display:flex;flex-direction:column;gap:5px;font-size:13px}
+  .p-tix li{line-height:1.45;color:var(--ink-60)}
+  .p-tix a{color:var(--sea);font-weight:600;text-decoration:none;border-bottom:1px dotted var(--sea)}
+  .p-tix a:hover,.p-tix a:focus{border-bottom-style:solid}
+  .must{color:var(--rust);font-weight:700}
+  .p-notes{list-style:none;padding:10px 12px;margin:10px 0 0;border-left:3px solid var(--rust);background:rgba(180,83,50,.06);border-radius:0 6px 6px 0;display:flex;flex-direction:column;gap:5px;font-size:13px}
+  .p-notes li{line-height:1.45;color:var(--ink-60)}
+  .p-notes li::before{content:"⚠ ";color:var(--rust)}
+  .p-notes .pn-h{font-weight:700;color:var(--rust);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+  .p-notes .pn-h::before{content:""}
+  .p-facts{list-style:none;padding:10px 12px;margin:10px 0 0;border-left:3px solid var(--sea);background:rgba(14,74,94,.05);border-radius:0 6px 6px 0;display:flex;flex-direction:column;gap:5px;font-size:13px}
+  .p-facts li{line-height:1.45;color:var(--ink-60)}
+  .p-facts li::before{content:"✦ ";color:var(--sea)}
+  .p-facts .pf-h{font-weight:700;color:var(--sea);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+  .p-facts .pf-h::before{content:""}
+  .p-around{list-style:none;padding:10px 12px;margin:10px 0 0;border-left:3px solid var(--pine);background:rgba(47,93,58,.06);border-radius:0 6px 6px 0;display:flex;flex-direction:column;gap:5px;font-size:13px}
+  .p-around li{line-height:1.45;color:var(--ink-60)}
+  .p-around li::before{content:"➜ ";color:var(--pine)}
+  .p-around .pa-h{font-weight:700;color:var(--pine);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+  .p-around .pa-h::before{content:""}
+  #tabbar{position:sticky;top:0;z-index:60;display:flex;gap:8px;padding:12px 0 0;background:var(--paper);border-bottom:2px solid var(--line);margin:18px 0 22px}
+  .tb{font:inherit;font-weight:700;font-size:15px;letter-spacing:.02em;padding:10px 26px;border:1.5px solid var(--line);border-bottom:none;border-radius:10px 10px 0 0;background:transparent;color:var(--ink-60);cursor:pointer}
+  .tb.on{background:var(--sea);color:#fff;border-color:var(--sea)}
+  .tb:hover:not(.on){color:var(--sea);border-color:var(--sea)}
+  .p-eat{list-style:none;padding:10px 12px;margin:10px 0 0;border-left:3px solid #9C6F1E;background:rgba(156,111,30,.06);border-radius:0 6px 6px 0;display:flex;flex-direction:column;gap:5px;font-size:13px}
+  .p-eat li{line-height:1.45;color:var(--ink-60)}
+  .p-eat li::before{content:"\1F374  "}
+  .p-eat .pe-h{font-weight:700;color:#9C6F1E;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+  .p-eat .pe-h::before{content:""}
+  .p-eat a{color:#9C6F1E;font-size:12px;text-decoration:none;border-bottom:1px dotted #9C6F1E;white-space:nowrap}
+  .p-more{margin-top:6px}
+  .p-more a{color:var(--sea);font-size:13px;text-decoration:none;border-bottom:1px dotted var(--sea)}
+  .p-more a:hover,.p-more a:focus{border-bottom-style:solid}
+
+  .tbl-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:6px}
+  table{border-collapse:collapse;width:100%;font-size:14px;min-width:560px}
+  th,td{text-align:left;padding:9px 14px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+  th{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-60);background:var(--paper)}
+  tr:last-child td{border-bottom:0}
+  .yes{color:var(--pine);font-weight:700} .no{color:var(--rust);font-weight:700} .part{color:#8a6d1f;font-weight:700}
+
+  footer{margin-top:44px;font-size:13px;color:var(--ink-60);border-top:1px solid var(--line);padding-top:14px}
+
+  /* site chrome */
+  .site-header{border-bottom:3px double var(--sea);background:var(--paper)}
+  .site-header .shwrap{max-width:860px;margin:0 auto;padding:22px 20px 16px;display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .brand{font-family:var(--serif);font-size:22px;color:var(--ink);text-decoration:none;letter-spacing:.01em}
+  .brand .compass{color:var(--rust)}
+  .site-nav{display:flex;gap:26px}
+  .site-nav a{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.12em;text-decoration:none;color:var(--ink-60);padding-bottom:4px;border-bottom:2px solid transparent}
+  .site-nav a:hover{color:var(--sea)}
+  .site-nav a.active{color:var(--sea);border-bottom-color:var(--rust)}
+  /* ---- Design my trip tab: brief form (scoped) ---- */
+  #tab-design .lede{color:var(--ink-60);margin:0 0 26px;max-width:60ch}
+  #tab-design .btn{display:inline-block;background:var(--sea);color:#fff;font-family:var(--sans);font-size:15px;font-weight:600;letter-spacing:.02em;padding:13px 30px;border:none;border-radius:6px;cursor:pointer;transition:background .15s ease}
+  #tab-design .btn:hover{background:#0B3B4B}
+  #tab-design .btn[disabled]{background:var(--ink-60);cursor:default}
+  #tab-design .form-route{list-style:none;max-width:680px;margin:0;padding:0}
+  #tab-design .form-route>li{position:relative;padding:0 0 44px 62px}
+  #tab-design .form-route>li::before{content:"";position:absolute;left:17px;top:40px;bottom:6px;border-left:2px dashed var(--sea);opacity:.4}
+  #tab-design .form-route>li:last-child::before{display:none}
+  #tab-design .form-route .pin{position:absolute;left:0;top:0;width:36px;height:36px;border-radius:50%;background:var(--sea);border:2px solid #fff;box-shadow:0 0 0 1px var(--line);color:#fff;font-weight:700;font-size:16px;line-height:32px;text-align:center}
+  #tab-design .form-route .pin-final{background:var(--rust)}
+  #tab-design .fr-h{font-family:var(--serif);font-weight:600;font-size:22px;line-height:1.2;margin:0 0 4px}
+  #tab-design .section-note{font-size:15px;color:var(--ink-60);margin:0 0 18px;max-width:54ch}
+  #tab-design .form-route .card{margin:0;padding:22px 22px 24px;overflow:visible}
+  #tab-design label{display:block;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-60);margin-bottom:6px}
+  #tab-design input,#tab-design select,#tab-design textarea{width:100%;font-family:var(--sans);font-size:16px;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:6px;padding:11px 12px}
+  #tab-design input:focus,#tab-design select:focus,#tab-design textarea:focus{outline:2px solid var(--sea);outline-offset:0;border-color:var(--sea)}
+  #tab-design .field-hint{font-size:13px;color:var(--ink-60);margin-top:5px}
+  #tab-design .form-row{margin-bottom:22px}
+  #tab-design .form-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  #tab-design .form-grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+  @media (max-width:520px){#tab-design .form-grid-2,#tab-design .form-grid-3{grid-template-columns:1fr}}
+  #tab-design .choice-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media (max-width:520px){#tab-design .choice-row{grid-template-columns:1fr}}
+  #tab-design .choice{position:relative;display:block;border:1px solid var(--line);border-radius:6px;background:#fff;padding:14px 16px;cursor:pointer;margin-bottom:0}
+  #tab-design .choice input{position:absolute;opacity:0;pointer-events:none;width:auto}
+  #tab-design .choice .choice-title{display:block;font-family:var(--serif);font-size:17px;font-weight:600;color:var(--ink);margin-bottom:3px}
+  #tab-design .choice .choice-sub{display:block;font-size:13px;color:var(--ink-60);font-weight:400}
+  #tab-design .choice:has(input:checked){border-color:var(--sea);background:var(--sea-soft);outline:1px solid var(--sea)}
+  #tab-design .error{color:var(--rust);font-size:14px;margin-top:10px}
+  #tab-design .muted{color:var(--ink-60)}
+  #tab-design .success-card{max-width:560px;margin:0;padding:40px 32px;text-align:center;background:var(--pine-soft);border:1px solid var(--pine)}
+
+  /* trip map + per-place mini-maps */
+  .map-toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 0}
+  .mbtn{font:inherit;font-size:13.5px;font-weight:600;padding:9px 16px;border:1.5px solid var(--sea);border-radius:9px;background:transparent;color:var(--sea);cursor:pointer}
+  .mbtn:hover{background:var(--sea);color:#fff}
+  #rb-lmap-box{position:relative;border:1.5px solid var(--line);border-radius:12px;overflow:hidden;margin-top:14px}
+  #rb-lmap{height:62vh;min-height:440px;background:#DCE9EE}
+  .mpin{display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#0E4A5E;color:#FBF7EF;font-weight:700;font-size:13px;border:2px solid #FBF7EF;box-shadow:0 1px 4px rgba(0,0,0,.4);font-family:-apple-system,'Segoe UI',Roboto,sans-serif}
+  .mpin.home{background:#B4552D;font-size:15px}
+  .leaflet-tooltip.mlbl{background:transparent;border:0;box-shadow:none;padding:0 2px;font-family:-apple-system,'Segoe UI',Roboto,sans-serif;font-size:12px;font-weight:600;color:#3E4E58;text-shadow:-1px -1px 0 #FDFBF6,1px -1px 0 #FDFBF6,-1px 1px 0 #FDFBF6,1px 1px 0 #FDFBF6,0 0 5px #FDFBF6}
+  .leaflet-tooltip.mlbl::before{display:none}
+  .leaflet-tooltip.mlbl-on{font-size:13px;color:#0E4A5E}
+  #rb-lmap-fallback[hidden]{display:none}
+  #rb-lmap-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:30px;background:rgba(251,247,239,.96);z-index:500;color:var(--ink);font-size:15px;line-height:1.6}
+  .leaflet-popup-content{font-family:inherit;font-size:13.5px;line-height:1.5}
+  .pm-box{margin-top:12px}
+  .pm-map{height:320px;border:1.5px solid var(--line);border-radius:10px;position:relative;background:#DCE9EE}
+  .pm-leg{font-size:12px;color:var(--ink-60);margin:7px 0 0}
+  .pm-dot,.pm-dot-i{width:12px;height:12px;border-radius:50%;background:#C84B3C;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4)}
+  .pm-dot-i{display:inline-block;vertical-align:-2px;border-color:var(--ink-60)}
+  .pm-em{font-size:17px;line-height:1;text-shadow:0 0 3px #fff,0 1px 2px rgba(0,0,0,.3)}
+  .pm-fail{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;background:rgba(251,247,239,.96);z-index:500;font-size:13.5px;line-height:1.5}
+  .pm-chip{display:inline-block;font-size:11px;font-weight:600;padding:1px 7px;border-radius:9px;background:#E8EFF2;color:#0E4A5E;vertical-align:1px;margin-left:4px}
+  .pm-pop a{color:#0E4A5E;font-weight:600}
+
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="shwrap">
+    <a class="brand" href="index.html"><span class="compass">✦</span> AI Travel Planner</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="design_my_trip.html">Design my trip</a>
+      <a href="#" class="active">Krakow trip</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Planned by the AI Travel Planner agent</div>
+  <h1>Krakow road trip — the route to Terchová</h1>
+  <p class="sub">Browse the places, then compose your own route in the builder — dates, km and booking links come out automatically.</p>
+  <div class="facts">
+    <span>🗓 <b>12 Jul 2026 → 02 Aug 2026</b> · 21 nights</span>
+    <span>🧭 2 adults, 1 kid (18)</span>
+    <span>🚗 <b>2068 km</b> total</span>
+    
+    <span>💶 budget ~<b>€2310</b></span>
+  </div>
+</header>
+
+<div id="tab-design">
+  <h2 style="margin-top:34px">Tell us how you travel.</h2>
+  <p class="lede">Seven quick stops — like the trip itself. Below is the brief behind this plan. Edit everything, make it yours, and we'll research a route around it.</p>
+
+  <form id="brief-form" novalidate>
+    <ol class="form-route">
+
+      <li>
+        <span class="pin">1</span>
+        <h3 class="fr-h">How do you travel?</h3>
+        <p class="section-note">This changes everything about how we plan.</p>
+        <div class="choice-row">
+          <label class="choice">
+            <input type="radio" name="mode" value="vibe" checked>
+            <span class="choice-title">Vibe</span>
+            <span class="choice-sub">I know the feeling I want — help me discover the places.</span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="mode" value="strict">
+            <span class="choice-title">Strict</span>
+            <span class="choice-sub">I know where I want to go — build the best route there.</span>
+          </label>
+        </div>
+      </li>
+
+      <li>
+        <span class="pin">2</span>
+        <h3 class="fr-h">Where?</h3>
+        <p class="section-note">A place, a region — or just a direction like "the sea".</p>
+        <div class="card">
+          <div class="choice-row" style="margin-bottom: 18px;">
+            <label class="choice">
+              <input type="radio" name="trip_type" value="round" checked>
+              <span class="choice-title">Round trip</span>
+              <span class="choice-sub">Back home at the end.</span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="trip_type" value="oneway">
+              <span class="choice-title">One way</span>
+              <span class="choice-sub">Finish somewhere else.</span>
+            </label>
+          </div>
+          <div class="form-grid-2">
+            <div>
+              <label for="from">From</label>
+              <input id="from" name="from" type="text" value="Krakow, Poland" required>
+            </div>
+            <div>
+              <label for="to">To</label>
+              <input id="to" name="to" type="text" value="Wherever feels right">
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <span class="pin">3</span>
+        <h3 class="fr-h">When?</h3>
+        <div class="card">
+          <div class="form-grid-2">
+            <div>
+              <label for="start">Start</label>
+              <input id="start" name="start" type="date" value="2026-07-12" required>
+            </div>
+            <div>
+              <label for="end">End</label>
+              <input id="end" name="end" type="date" value="2026-08-02" required>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <span class="pin">4</span>
+        <h3 class="fr-h">Who's coming?</h3>
+        <div class="card">
+          <div class="form-grid-3">
+            <div>
+              <label for="adults">Adults</label>
+              <input id="adults" name="adults" type="number" min="1" max="12" value="2" required>
+            </div>
+            <div>
+              <label for="kids">Kids (ages)</label>
+              <input id="kids" name="kids" type="text" value="">
+            </div>
+            <div>
+              <label for="pets">Pets</label>
+              <input id="pets" name="pets" type="text" value="none">
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <span class="pin">5</span>
+        <h3 class="fr-h">How much driving feels right?</h3>
+        <p class="section-note">We pace the whole route around this — no vacation spent staring at a windshield.</p>
+        <div class="card">
+          <div class="form-grid-2">
+            <div>
+              <label for="drive-optimal">Feels right</label>
+              <input id="drive-optimal" name="drive_optimal" type="text" placeholder="3–4 hours a day">
+            </div>
+            <div>
+              <label for="drive-max">Absolute max</label>
+              <input id="drive-max" name="drive_max" type="text" placeholder="6 hours">
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <span class="pin">6</span>
+        <h3 class="fr-h">What makes it your trip?</h3>
+        <p class="section-note">Past places that felt right, tastes, pace — we read your travel style from this.</p>
+        <div class="card">
+          <div class="form-row">
+            <label for="loved">Places you've loved</label>
+            <textarea id="loved" name="loved" rows="3"></textarea>
+          </div>
+          <div class="form-row">
+            <label for="prefs">Preferences &amp; interests</label>
+            <textarea id="prefs" name="prefs" rows="4">beach, hiking, mountains, museums, art galleries, seafood, nature</textarea>
+          </div>
+          <div class="form-grid-3">
+            <div>
+              <label for="stops">Stops</label>
+              <input id="stops" name="stops" type="text" value="3–4 places">
+            </div>
+            <div>
+              <label for="main-stop">Main stay</label>
+              <input id="main-stop" name="main_stop" type="text" value="">
+            </div>
+            <div>
+              <label for="max-km">Max total km</label>
+              <input id="max-km" name="max_km" type="text" value="4000 km">
+            </div>
+          </div>
+          <div class="form-row" style="margin-top: 18px;">
+            <label for="food">Food you're after</label>
+            <input id="food" name="food" type="text" value="">
+          </div>
+          <div class="form-row" style="margin-bottom: 0;">
+            <label for="avoid">And what you don't want</label>
+            <textarea id="avoid" name="avoid" rows="2">Big cities</textarea>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <span class="pin pin-final">✦</span>
+        <h3 class="fr-h">Where do we send it?</h3>
+        <p class="section-note">We're onboarding travelers gradually — your brief holds your place in line.</p>
+        <div class="card">
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+            <p class="field-hint">Your itinerary lands here. Nothing else, ever.</p>
+          </div>
+          <button class="btn" type="submit" style="width: 100%;">Join wishlist →</button>
+          <p class="error" id="form-error" hidden></p>
+        </div>
+      </li>
+
+    </ol>
+  </form>
+
+  <div class="card success-card" id="success" hidden>
+    <p class="eyebrow" style="color: var(--pine);">You're on the list</p>
+    <h3 style="color:var(--pine);font-family:var(--serif);font-size:24px;margin-bottom:10px">Brief received</h3>
+    <p class="muted">We'll research the route around everything you told us and email your day-by-day itinerary.</p>
+  </div>
+</div>
+
+<script type="application/json" id="tripplan">{"schema":"tripplan.v1","request":{"origin":{"name":"Krakow","country":"Poland","lat":50.0647,"lon":19.945},"start_date":"2026-07-12","end_date":"2026-08-02","party":"2 adults, 1 kid (18)","interests":["beach","hiking","mountains","museums","art galleries","seafood","nature"],"pace":"balanced","budget_total_eur":null,"km_cap":4000,"must":["Hallstatt","Sandy beach","Easy hiking with cable car"],"avoid":["Big cities"],"notes":"Heading to: The sea — Italy or Croatia or somewhere there. Trip type: Round trip. Vibe: discover places. Stops: 3–4 places. Main stay: 7–14 days near the sea. Loved: Jesolo, Lake Como, Titlis & Pilatus hikes, Morskie Oko, Hallstatt (dream)."},"stops":[{"key":"tatranska-lomnica","name":"Tatranská Lomnica","country":"SK","lat":49.1648,"lon":20.2698,"nights":3,"leg_km":790.1,"leg_h":11.29,"pois":[{"n":"Lomnický štít","t":"must","lat":49.1945,"lon":20.213,"note":"Slovakia's second-highest peak accessible by a spectacular cable car ride."},{"n":"Skalnaté pleso","t":"must","lat":49.1864,"lon":20.2324,"note":"Beautiful alpine lake and hub for hiking trails with stunning valley views."},{"n":"Museum of the Tatra National Park","t":"sight","lat":49.1652,"lon":20.2858,"note":"Fascinating exhibition of Tatra nature, history, and local folklore."},{"n":"Expozícia tatranskej prírody","t":"sight","lat":49.1664,"lon":20.2895,"note":"Lovely botanical garden showcasing rare mountain flora and herbs."},{"n":"Belianska Cave","t":"sight","lat":49.2286,"lon":20.3175,"note":"The only dripstone cave open to the public in the High Tatras."},{"n":"Humno Tatry","t":"eat","lat":49.1661,"lon":20.2788,"note":"grilled trout, venison goulash · ~€25/pp · lively rustic atmosphere with a suspended Cadillac"},{"n":"Stará Mama","t":"eat","lat":49.1643,"lon":20.2811,"note":"bryndzové halušky, garlic soup · ~€18/pp · cozy traditional Slovak wooden chalet"}],"desc":"A premier gateway to the High Tatras, offering dramatic cable car rides to Lomnický štít, lush alpine hiking trails, and a serene mountain resort atmosphere.","stay":"€90-160/n resort center — cheaper guesthouses (pension) €50-90/n","try":"Bryndzové halušky (potato dumplings with sheep cheese), Kapustnica (cabbage soup), Tatratea (herbal liqueur)","tickets":[{"name":"Lomnický štít Cable Car","url":"https://www.google.com/search?q=Lomnicky+stit+cable+car+tickets","price":"~€49-69","note":"Book weeks in advance via Gopass as tickets to the very peak sell out rapidly; trips are highly weather-dependent."},{"name":"TANAP Museum","url":"https://www.google.com/search?q=TANAP+Museum+Tatranska+Lomnica+tickets","price":"~€3","note":"Tickets purchased at the door; excellent exhibition on Tatra nature and history for rainy days."}],"eat":[{"name":"Stará Mama","desc":"Traditional Slovak cuisine in a rustic, cozy setting. Try the authentic bryndzové halušky or venison goulash. ~€15-25/pp."},{"name":"Humno Tatry","desc":"A unique restaurant and music club featuring a real Cadillac suspended from the ceiling. Famous for grilled ribs and local trout. ~€20-35/pp."},{"name":"Olivia Restaurant","desc":"Located in Hotel Kukučka, offering refined modern European dishes and traditional Slovak ingredients with a contemporary twist. ~€30-45/pp."}],"around":["Štrbské Pleso — 30 min drive, iconic glacial lake with scenic walking paths and dramatic mountain backdrops.","Belianska Cave — 15 min drive, the only open dripstone cave in the High Tatras featuring stunning stalactites.","Starý Smokovec & Hrebienok — 10 min drive, take the funicular railway up for easy hikes to the Cold Water Waterfalls."],"tips":["An electronic highway vignette is mandatory if you use the D1 motorway to reach the Tatras; purchase it online at eznamka.sk.","Parking in Tatranská Lomnica is strictly regulated; use designated paid central parking lots or ensure your hotel provides a parking permit.","Mountain weather changes rapidly; always pack waterproof layers, thermal wear, and sturdy hiking boots even for short summer walks."],"facts":["The cable car to Lomnický štít (2,634m) was one of the most modern in Europe when completed in 1940, suspended without supporting pylons between the stations.","Tatranská Lomnica is home to the headquarters of TANAP, the oldest national park in Slovakia, established in 1949."],"photo":""},{"key":"bled","name":"Bled","country":"SI","lat":46.3683,"lon":14.1142,"nights":2,"leg_km":171.3,"leg_h":2.45,"pois":[{"n":"Bled Island","t":"must","lat":46.3622,"lon":14.0903,"note":"Take a traditional wooden pletna boat to the iconic island church and ring the wishing bell."},{"n":"Bled Castle","t":"must","lat":46.3698,"lon":14.1007,"note":"Perched on a steep cliff with panoramic lake views, hosting a historical museum and printing press."},{"n":"Grajska Beach","t":"beach","lat":46.369,"lon":14.1035,"note":"The only designated outdoor bathing area on Lake Bled, located right below the castle cliff."},{"n":"Mala Osojnica","t":"sight","lat":46.3594,"lon":14.0811,"note":"A steep forest hike leading to the absolute best postcard-perfect viewpoint of Lake Bled."},{"n":"Vintgar Gorge","t":"sight","lat":46.3911,"lon":14.0838,"note":"Stunning wooden walkways carved into a narrow canyon with rushing turquoise waters and waterfalls."},{"n":"Sova Bled","t":"eat","lat":46.3582,"lon":14.0945,"note":"Seafood risotto & local trout · ~€35/pp · Romantic lakeside dining with excellent seafood options"},{"n":"Ostarija Peglez'n","t":"eat","lat":46.3661,"lon":14.1072,"note":"Grilled sea bass & seafood pasta · ~€28/pp · Cozy rustic tavern known for great fish dishes"},{"n":"Kavarna Park","t":"eat","lat":46.3672,"lon":14.1085,"note":"Original Bled cream cake (Kremšnita) · ~€10/pp · The birthplace of the famous local dessert"}],"desc":"Nestled in the Julian Alps, Lake Bled captivates with its emerald-green waters, a cliffside medieval castle, and a picture-perfect island church. It is a premier gateway for alpine hiking, lakeside swimming, and exploring dramatic gorges.","stay":"€130-220/n lakeside or town center — cheaper in nearby villages like Lesce €80-120","try":"Bled cream cake (Kremšnita), Blejska grmada, local river trout, Carniolan sausage","tickets":[{"name":"Bled Castle","url":"https://www.google.com/search?q=Bled+Castle+tickets","price":"~€17","note":"Includes access to the museum and panoramic terraces; booking ahead avoids peak-hour ticket lines."},{"name":"Pletna Boat to Bled Island","url":"https://www.google.com/search?q=Bled+island+pletna+boat","price":"~€18 boat + €12 church","note":"Pletna boats are cash-only; alternatively, you can rent a rowboat to row yourself."}],"eat":[{"name":"Restavracija Sova Bled","desc":"Fresh lake trout, octopus, and premium Slovenian wines right by the water (~€30-45/pp)."},{"name":"Ostarija Peglez'n","desc":"Rustic, cozy tavern serving excellent seafood platters and grilled squid (~€25-35/pp)."},{"name":"Restavracija Julijana","desc":"Michelin-recommended fine dining overlooking the lake, featuring refined local ingredients (~€70-90/pp)."}],"around":["Vintgar Gorge — 10 min drive, dramatic wooden walkways over the rushing Radovna River.","Lake Bohinj — 30 min drive, a wilder, less commercialized alpine lake perfect for hiking and swimming.","Pokljuka Plateau — 25 min drive, dense spruce forests and a starting point for high-altitude mountain hikes."],"tips":["A Slovenian e-vignette is mandatory for driving on all motorways; purchase it online before crossing the border.","Lakeside parking is extremely limited and expensive; use designated P+R lots further out and walk or take the local shuttle.","To beat the heavy summer crowds and midday heat on the popular Mala Osojnica viewpoint hike, start before 7:00 AM."],"facts":["The iconic Bled cream cake (Kremšnita) has a protected geographical status and is traditionally crafted to be exactly 7x7 centimeters.","Bled Island is Slovenia's only natural island, featuring 99 stone steps leading up to the church where grooms traditionally carry their brides for good luck."],"photo":""},{"key":"heiligenblut","name":"Heiligenblut","country":"AT","lat":47.0414,"lon":12.8364,"nights":2,"leg_km":55.1,"leg_h":0.79,"pois":[{"n":"Großglockner Hochalpenstraße","t":"must","lat":47.075,"lon":12.842,"note":"Stunning high-alpine panoramic toll road leading to the Grossglockner"},{"n":"Kaiser-Franz-Josefs-Höhe","t":"must","lat":47.075,"lon":12.751,"note":"Spectacular viewpoint overlooking Austria's highest peak and the Pasterze glacier"},{"n":"Wallfahrtskirche St. Vinzenz","t":"must","lat":47.041,"lon":12.843,"note":"Iconic Gothic church with a famous winged altar and dramatic mountain backdrop"},{"n":"Gletscherweg Pasterze","t":"sight","lat":47.072,"lon":12.74,"note":"Incredible hike down to the melting tongue of Austria's largest glacier"},{"n":"Gößnitzfall","t":"sight","lat":47.027,"lon":12.818,"note":"Impressive 70-meter waterfall accessible via a scenic nature trail"},{"n":"Heiligenbluter Bergbahnen","t":"sight","lat":47.04,"lon":12.839,"note":"Cable car ride to 2,600m for panoramic views and high-altitude hiking trails"},{"n":"Restaurant Kirchenwirt","t":"eat","lat":47.041,"lon":12.842,"note":"Wiener Schnitzel, Kaspressknödel · ~€25/pp · Cozy traditional stube with local mountain specialties"},{"n":"Glocknerhaus","t":"eat","lat":47.075,"lon":12.784,"note":"Kaiserschmarrn, Gulaschsuppe · ~€20/pp · Historic alpine lodge offering hearty Austrian comfort food"},{"n":"Landhotel Post Restaurant","t":"eat","lat":47.04,"lon":12.841,"note":"Venison ragout, Tafelspitz · ~€35/pp · Elegant dining room serving refined Carinthian classics"}],"desc":"Nestled at the foot of the Grossglockner, Austria's highest peak, Heiligenblut is a postcard-perfect alpine village offering dramatic mountain vistas, high-altitude hiking, and access to the famous High Alpine Road.","stay":"€110-190/n village center — cheaper guesthouses in surrounding valley €70-110","try":"Kärntner Kasnudeln (Carinthian cheese noodles), Glocknerlamm (local lamb), Glocknerforelle (alpine trout)","tickets":[{"name":"Grossglockner High Alpine Road Toll","url":"https://www.google.com/search?q=Grossglockner+High+Alpine+Road+tickets","price":"~€43","note":"Day ticket covers toll; buy online for quick lane entry. Road is closed in winter."},{"name":"Schareck Cable Car","url":"https://www.google.com/search?q=Grossglockner+Bergbahnen+tickets","price":"~€32","note":"Check operating hours seasonally; free access is often included with the Nationalpark Kärnten Card."}],"eat":[{"name":"Restaurant Kirchenwirt","desc":"Traditional Carinthian specialties like Kasnudeln and venison stew in a rustic alpine setting, ~€25-40/pp."},{"name":"Alpengasthof Glocknerhaus","desc":"Hearty mountain hut food with panoramic views of the Pasterze glacier, try the Kaiserschmarrn, ~€20-35/pp."}],"around":["Pasterze Glacier — 25 min drive, hike down to Austria's longest glacier before it retreats further.","Lienz — 45 min drive, a charming medieval sun-drenched town in East Tyrol with museums and cafes.","Zell am See — 1 hour 15 min drive (via High Alpine Road), beautiful alpine lake with beach areas and boat trips."],"tips":["The Grossglockner High Alpine Road is closed in winter (typically late October to early May) due to heavy snow.","An Austrian highway vignette is required for motorways, but the Grossglockner High Alpine Road requires an additional separate toll.","Weather changes rapidly at 2,000+ meters; pack layers, windproof gear, and sturdy hiking boots even in mid-summer."],"facts":["The village is named 'Holy Blood' after a relic containing the blood of Christ, allegedly brought here by a Danish knight in 914 AD.","The iconic St. Vincent Pilgrimage Church, with the Grossglockner peak perfectly framed behind it, is one of the most photographed sights in Austria."],"photo":""},{"key":"zell-am-see","name":"Zell am See","country":"AT","lat":47.3236,"lon":12.7961,"nights":2,"leg_km":119.2,"leg_h":1.7,"pois":[{"n":"Schmittenhöhe","t":"must","lat":47.3294,"lon":12.7383,"note":"Panoramic mountain peak with hiking trails and stunning lake views"},{"n":"Zeller See","t":"must","lat":47.3245,"lon":12.8092,"note":"Crystal-clear alpine lake perfect for boating and scenic walks"},{"n":"Strandbad Zell am See","t":"beach","lat":47.3272,"lon":12.8025,"note":"Lakeside lido with heated pool, sunbathing lawns, and water sports"},{"n":"Sigmund-Thun-Klamm","t":"sight","lat":47.2592,"lon":12.7411,"note":"Spectacular wooden walkway through a deep, rushing river gorge"},{"n":"Stadtmuseum Vogtturm","t":"sight","lat":47.3239,"lon":12.7971,"note":"Historic tower housing local history, art, and cultural exhibitions"},{"n":"Salzburgerhof Gourmet Restaurant","t":"eat","lat":47.3261,"lon":12.7981,"note":"Local lake fish, venison · ~€75/pp · Award-winning fine dining in a romantic garden setting"},{"n":"Steinerwirt","t":"eat","lat":47.3242,"lon":12.7968,"note":"Tafelspitz, Kaiserschmarrn · ~€35/pp · Historic tavern serving authentic Salzburger land classics"},{"n":"Kupferkessel","t":"eat","lat":47.3218,"lon":12.7952,"note":"Grilled meats, wood-fired pizza · ~€25/pp · Lively atmosphere with rustic decor and hearty portions"}],"desc":"A stunning alpine town where the crystal-clear Lake Zell meets the dramatic peaks of the Schmittenhöhe, offering a perfect mix of lakeside beaches and high-altitude hiking.","stay":"€150-250/n lakeside or center — cheaper in Schüttdorf €100-150/n","try":"Zeller Reinanke (local lake whitefish), Kasnocken (alpine cheese noodles), Kaiserschmarrn","tickets":[{"name":"Schmittenhöhe Cable Car","url":"https://www.google.com/search?q=Schmittenhohe+cable+car+tickets","price":"~€35","note":"Often included for free if your accommodation provides the Zell am See-Kaprun Summer Card."},{"name":"Kaprun High Alpine Reservoirs","url":"https://www.google.com/search?q=Kaprun+High+Alpine+Reservoirs+tickets","price":"~€28","note":"Ticket includes the transfer buses and the open-air Lärchwand inclined elevator."}],"eat":[{"name":"Restaurant Salzburgerhof","desc":"Award-winning fine dining featuring freshly caught local lake trout and refined Austrian classics, ~€60-90/pp."},{"name":"Steinerwirt","desc":"A historic tavern serving excellent Wiener Schnitzel, local venison, and traditional Salzburger Nockerl, ~€25-40/pp."},{"name":"Kupferkessel","desc":"A lively, casual spot popular for its hearty steaks, pizzas, and local draft beers, ~€20-35/pp."}],"around":["Grossglockner High Alpine Road — 30 min drive to the toll gate, offering breathtaking views of Austria's highest peak.","Krimml Waterfalls — 50 min drive to Europe's highest waterfalls with a scenic mist-sprayed hiking trail.","Sigmund Thun Gorge — 15 min drive to a dramatic wooden walkway suspended over a rushing glacial river."],"tips":["An Austrian highway vignette is mandatory for the drive; buy a digital or physical sticker before entering the motorway.","Parking in the historic center is heavily restricted; use the designated Contipark underground garages to avoid steep fines.","Book accommodation that explicitly includes the 'Zell am See-Kaprun Summer Card' to save significantly on cable cars and lidos."],"facts":["Lake Zell contains exceptionally pure water that is officially certified to drinking water standards.","The town's iconic Grand Hotel, built in 1894 on its own private peninsula, has hosted Empress Elisabeth (Sisi) of Austria."],"photo":""},{"key":"st-gilgen","name":"St. Gilgen","country":"AT","lat":47.7667,"lon":13.3667,"nights":2,"leg_km":44.3,"leg_h":0.63,"pois":[{"n":"Zwölferhorn Cable Car","t":"must","lat":47.7661,"lon":13.3658,"note":"Scenic cable car ride to the summit for panoramic alpine views and hiking trails."},{"n":"Mozarthaus St. Gilgen","t":"must","lat":47.7675,"lon":13.3661,"note":"Charming museum dedicated to Mozart's mother and sister with beautiful lake views."},{"n":"Strandbad St. Gilgen","t":"beach","lat":47.7692,"lon":13.3725,"note":"Lakeside lido with crystal-clear waters, sunbathing lawns, and mountain backdrops."},{"n":"Falkenstein Cliff Trail","t":"sight","lat":47.7685,"lon":13.4012,"note":"Scenic hiking trail along the lake cliffside leading to a historic pilgrimage chapel."},{"n":"Musikinstrumente-Museum der Völker","t":"sight","lat":47.7681,"lon":13.3648,"note":"Fascinating museum showcasing over 2,000 musical instruments from around the world."},{"n":"Fischer Wirt","t":"eat","lat":47.7672,"lon":13.3665,"note":"Wolfgangsee char, trout · ~€35/pp · Cozy traditional tavern famous for fresh local lake fish"},{"n":"Gasthof Zur Post","t":"eat","lat":47.7674,"lon":13.3659,"note":"Wiener Schnitzel, Tafelspitz · ~€30/pp · Historic inn serving refined Austrian classics in a charming courtyard"}],"desc":"A picturesque lakeside village on Wolfgangsee, St. Gilgen combines alpine hiking trails, pristine swimming beaches, and deep cultural ties to Mozart's family.","stay":"€130-220/n lakeside or center — cheaper in surrounding hills €90-130","try":"Wolfgangsee Saibling (lake trout), Kaiserschmarrn, Salzburger Nockerl","tickets":[{"name":"Zwölferhorn Cable Car","url":"https://www.google.com/search?q=Zwoelferhorn+Seilbahn+tickets","price":"~€33","note":"Buy online to skip the ticket window queue on sunny weekends."},{"name":"Wolfgangsee Schifffahrt (Ferry)","url":"https://www.google.com/search?q=Wolfgangsee+Schifffahrt+tickets","price":"~€24","note":"Combined tickets with the SchafbergBahn cog railway are available."},{"name":"Mozarthaus St. Gilgen","url":"https://www.google.com/search?q=Mozarthaus+St+Gilgen+tickets","price":"~€7","note":"Small museum dedicated to Mozart's mother and sister; check seasonal opening hours."}],"eat":[{"name":"Gasthof zur Post","desc":"Traditional Austrian tavern serving fresh Wolfgangsee fish and local venison (~€25-40/pp)."},{"name":"Fischerstube","desc":"Freshly caught lake trout (Saibling) and seafood platters right by the water (~€30-50/pp)."},{"name":"Café Dallmann","desc":"Mozart-inspired pastries, handmade Mozartkugeln, and traditional coffee (~€10-15/pp)."}],"around":["St. Wolfgang & SchafbergBahn — 20 min drive (or ferry), historic cog railway up the mountain.","Hallstatt — 40 min drive, iconic lakeside UNESCO village and ancient salt mine.","Bad Ischl — 20 min drive, imperial spa town with Kaiservilla and famous Café Zauner."],"tips":["An Austrian highway vignette is mandatory if you use the A1 autobahn to get here.","Parking near the lakefront (Strandbad) fills up very early on hot summer days; use the designated P1 or P2 park-and-ride lots.","Many smaller shops and traditional mountain huts (Almen) only accept cash, so keep Euros on hand."],"facts":["Although Wolfgang Amadeus Mozart never visited St. Gilgen, his mother Anna Maria was born here, and his sister Nannerl lived here for many years.","The village was used as a filming location for the opening scenes of the classic movie 'The Sound of Music'."],"photo":""},{"key":"hallstatt","name":"Hallstatt","country":"AT","lat":47.5622,"lon":13.6493,"nights":2,"leg_km":20.9,"leg_h":0.3,"pois":[{"n":"Hallstatt Skywalk","t":"must","lat":47.5622,"lon":13.6478,"note":"Breathtaking viewing platform hovering 360 meters above the rooftops of Hallstatt."},{"n":"Salzwelten Hallstatt","t":"must","lat":47.5615,"lon":13.6381,"note":"Explore the world's oldest salt mine with a subterranean lake and slide."},{"n":"Classic Viewpoint Hallstatt","t":"must","lat":47.5646,"lon":13.6493,"note":"The iconic postcard photo spot of the village and the church spire."},{"n":"Badeinsel Hallstatt","t":"beach","lat":47.5535,"lon":13.6515,"note":"A man-made bathing island with a nice beach area, perfect for a swim in Lake Hallstatt."},{"n":"Hallstatt Museum","t":"sight","lat":47.5611,"lon":13.6491,"note":"Fascinating museum showcasing 7,000 years of local history and Celtic culture."},{"n":"Waldbachstrub Waterfall","t":"sight","lat":47.5488,"lon":13.6294,"note":"A scenic 90-meter waterfall reached via a beautiful hiking trail through the Echerntal."},{"n":"Seehotel Grüner Baum","t":"eat","lat":47.5618,"lon":13.6495,"note":"local lake trout & char · ~€45/pp · lakeside terrace with stunning views"},{"n":"Gasthof Zauner","t":"eat","lat":47.5614,"lon":13.6489,"note":"grilled wild catch Reinanke · ~€35/pp · historic tavern famous for local fish"}],"desc":"A fairytale alpine village wedged between dramatic Dachstein mountains and a pristine lake, offering world-class salt mine history and stunning mountain hikes.","stay":"€150-250/n lakeside old town — cheaper in Obertraun €90-140/n","try":"Reinanke (lake trout), Salzburger Nockerl, Hallstätter Krapfen","tickets":[{"name":"Hallstatt Salt Mine (Salzwelten) & Skywalk","url":"https://www.salzwelten.at/en/hallstatt","price":"~€40","note":"Book online in advance to skip long funicular lines, especially in summer."},{"name":"Dachstein Krippenstein Cable Car & Ice Cave","url":"https://dachstein-salzkammergut.com/en/","price":"~€50-60","note":"Check weather webcams before booking; mountain weather changes rapidly."}],"eat":[{"name":"Restaurant im Seehotel Grüner Baum","desc":"Freshly caught Lake Hallstatt whitefish (Reinanke) served on a lakeside terrace. ~€35-50/pp."},{"name":"Gasthof Zauner","desc":"Historic inn famous for wild game dishes and grilled local trout. ~€30-45/pp."},{"name":"Rudolfsturm","desc":"Traditional Austrian dumplings and strudel served with panoramic views next to the salt mine. ~€20-30/pp."}],"around":["Obertraun Beach & Koppenbrüller Cave — 10 min drive, great swimming spot and a roaring active water cave.","Gosau Lakes (Vorderer Gosausee) — 20 min drive, mirror-like alpine lake with Dachstein glacier views and hiking paths.","Bad Ischl — 25 min drive, historic spa town featuring the Kaiservilla, Emperor Franz Joseph's summer residence."],"tips":["Day-tripper crowds peak between 10:00 and 16:00; explore early in the morning or late in the evening for a peaceful experience.","Cars are strictly banned in the historic center; you must park in designated external lots (P1 or P2) and use the shuttle if staying overnight.","Austria requires a digital or physical highway vignette for your road trip; purchase it before crossing the border or at gas stations."],"facts":["Hallstatt is home to the world's oldest salt mine, dating back over 7,000 years to the Bronze Age.","The village is so beloved in Asia that a full-scale replica of Hallstatt was built in Guangdong, China.","Due to limited space in the local graveyard, bones in the Beinhaus (Charnel House) were historically exhumed, bleached, and hand-painted with floral motifs."],"photo":""},{"key":"bad-ischl","name":"Bad Ischl","country":"AT","lat":47.7111,"lon":13.6189,"nights":2,"leg_km":178.0,"leg_h":2.54,"pois":[{"n":"Kaiservilla","t":"must","lat":47.7151,"lon":13.6214,"note":"Stroll through the imperial park and tour the historic summer residence of Emperor Franz Joseph."},{"n":"Katrin Cable Car","t":"must","lat":47.7018,"lon":13.5938,"note":"Ride up to the Katrin mountain pasture for panoramic views and scenic alpine hiking trails."},{"n":"Naturstrandbad Nussensee","t":"beach","lat":47.6914,"lon":13.5592,"note":"A pristine, hidden forest lake perfect for a refreshing swim in nature."},{"n":"Rettenbachklamm","t":"sight","lat":47.7198,"lon":13.6552,"note":"Hike through a wild, romantic gorge with rushing waters and wooden footbridges."},{"n":"Stadtmuseum Bad Ischl","t":"sight","lat":47.7118,"lon":13.6231,"note":"Explore local history, salt mining heritage, and imperial culture in this charming museum."},{"n":"Café Zauner","t":"eat","lat":47.7115,"lon":13.6201,"note":"Zaunerstollen & pastries · ~€15/pp · Historic imperial pastry shop on the Esplanade"},{"n":"Restaurant Weinhaus Attwenger","t":"eat","lat":47.7128,"lon":13.6225,"note":"Local lake trout & schnitzel · ~€30/pp · Cozy riverside dining with excellent local fish dishes"},{"n":"k.u.k. Hofbeisl","t":"eat","lat":47.7112,"lon":13.6219,"note":"Tafelspitz & local beer · ~€25/pp · Traditional tavern atmosphere in the heart of the town"}],"desc":"The elegant heart of the Salzkammergut lake district, Bad Ischl combines imperial Habsburg grandeur with pristine alpine nature, thermal waters, and dramatic mountain peaks.","stay":"€120-200/n town center — cheaper guesthouses in the surrounding valleys €80-120","try":"Zaunerstollen, Kaiserschmarrn, Salzkammergut Reinanke (freshly caught lake trout)","tickets":[{"name":"Kaiservilla (Imperial Villa)","url":"https://www.google.com/search?q=Kaiservilla+Bad+Ischl+tickets","price":"~€22","note":"Guided tours of the imperial apartments are highly recommended and can sell out during peak summer hours."},{"name":"Katrin Cable Car (Katrin Seilbahn)","url":"https://www.google.com/search?q=Katrin+Seilbahn+tickets","price":"~€26","note":"Provides access to the 7-Lakes-View hiking trail; check operating hours as it closes in bad weather."}],"eat":[{"name":"Café Konditorei Zauner","desc":"The legendary former supplier to the imperial court; try the iconic Zaunerstollen nougat cake, ~€10-15/pp."},{"name":"Restaurant Weinhaus Attwenger","desc":"Historic riverside restaurant serving excellent local lake fish and traditional Austrian dishes, ~€25-45/pp."},{"name":"k.u.k. Hofwirt","desc":"Classic tavern atmosphere offering hearty Austrian staples like Tafelspitz and Wiener Schnitzel, ~€20-35/pp."}],"around":["Hallstatt — 25 min drive, the world-famous lakeside village with its ancient salt mine and dramatic mountain backdrop.","Wolfgangsee (St. Gilgen) — 20 min drive, offering beautiful lakeside beaches, swimming spots, and boat cruises.","Gosauseen Lakes — 35 min drive, stunning alpine lakes reflecting the jagged peaks of the Dachstein Glacier."],"tips":["An Austrian digital or sticker vignette is mandatory if you use the autobahn (A1) to reach the Salzkammergut region.","Parking in the historic center is strictly regulated; use the designated long-term parking lots (P1 or P2) to avoid heavy fines.","Many traditional mountain huts and local cafes in the area do not accept credit cards, so always carry cash."],"facts":["Emperor Franz Joseph I and Empress Sisi spent 60 summers here, and the town is where they officially got engaged in 1853.","Bad Ischl was designated as a European Capital of Culture in 2024, celebrating its rich alpine heritage and contemporary art.","It is Austria's oldest saltwater spa town, utilizing the region's natural saline springs for therapeutic treatments since 1823."],"photo":""},{"key":"cesky-krumlov","name":"Český Krumlov","country":"CZ","lat":48.8127,"lon":14.3145,"nights":2,"leg_km":283.8,"leg_h":4.05,"pois":[{"n":"State Castle and Chateau Český Krumlov","t":"must","lat":48.8128,"lon":14.3142,"note":"Stunning Renaissance castle with a unique Baroque theater and bear moat."},{"n":"Historic Center of Český Krumlov","t":"must","lat":48.8109,"lon":14.3152,"note":"UNESCO-listed medieval streets winding along the scenic Vltava River loop."},{"n":"Egon Schiele Art Centrum","t":"sight","lat":48.8105,"lon":14.3134,"note":"Excellent modern art gallery dedicated to the famous Austrian expressionist painter."},{"n":"Kleť Mountain","t":"sight","lat":48.8637,"lon":14.2831,"note":"Highest peak of Blanský Forest with an observation tower, perfect for hiking."},{"n":"Windy Point Beach (Lipno)","t":"beach","lat":48.7364,"lon":14.1118,"note":"Sandy lakeside beach on Lipno Reservoir with a vibrant beach bar atmosphere."},{"n":"Krčma v Šatlavské ulici","t":"eat","lat":48.8113,"lon":14.3157,"note":"Grilled meats & local trout · ~€25/pp · medieval tavern experience with open fire"},{"n":"Krčma U Dwou Maryí","t":"eat","lat":48.8122,"lon":14.3172,"note":"Old Bohemian feast & river fish · ~€20/pp · authentic medieval recipes by the river"},{"n":"Papa's Living Restaurant","t":"eat","lat":48.8118,"lon":14.3161,"note":"Fresh pasta & river trout · ~€30/pp · riverside terrace with castle views"}],"desc":"A fairytale medieval town looped by the Vltava River, featuring a massive castle complex, winding cobblestone lanes, and easy access to the dense forests and lakes of South Bohemia.","stay":"€80-150/n historic center — cheaper guesthouses (penzion) €50-80 outside the river bend","try":"South Bohemian trout (pstruh), garlic soup (česnečka), local Eggenberg beer, gingerbread","tickets":[{"name":"Český Krumlov Castle Tours","url":"https://www.google.com/search?q=Cesky+Krumlov+Castle+tickets","price":"~€12","note":"Book the Castle Theater and Tower tours well in advance as spots are strictly limited."},{"name":"Egon Schiele Art Centrum","url":"https://www.google.com/search?q=Egon+Schiele+Art+Centrum+tickets","price":"~€8","note":"Dedicated to the Austrian modernist painter; tickets can usually be bought at the door."}],"eat":[{"name":"Krčma v Šatlavské ulici","desc":"Medieval-style tavern serving open-fire grilled meats and traditional Bohemian platters, ~€20-30/pp."},{"name":"Papa's Living Restaurant","desc":"Riverside dining featuring fresh local river trout, pasta, and great local wines, ~€25-35/pp."},{"name":"Laibon","desc":"Creative vegetarian and local dishes served on a peaceful terrace right on the Vltava River, ~€15-25/pp."}],"around":["Lipno Reservoir — 30 min drive, sandy lakeside beaches, sailing, and a treetop walkway.","Kleť Mountain — 20 min drive, hike or take the chairlift up for panoramic views and an observatory.","Hluboká Castle — 40 min drive, a stunning Windsor-style white neo-Gothic chateau."],"tips":["The historic center is a pedestrian-only zone; you must park in designated outer lots (P1-P4) and walk in.","Day-trippers flood the narrow streets from 10 AM to 4 PM; explore early in the morning or late in the evening for a peaceful experience.","Many smaller shops and traditional taverns still prefer cash (Czech Koruna - CZK), though cards are widely accepted in larger venues."],"facts":["The castle moat has been home to brown bears since the 16th century, a tradition maintained to this day.","The town's Baroque Castle Theater is one of the world's best-preserved, complete with its original 18th-century stage machinery and scenery."],"photo":""},{"key":"mikulov","name":"Mikulov","country":"CZ","lat":48.8072,"lon":16.6378,"nights":2,"leg_km":233.0,"leg_h":3.33,"pois":[{"n":"Zámek Mikulov","t":"must","lat":48.8068,"lon":16.6366,"note":"Baroque castle housing regional museum exhibits and a giant wine cask."},{"n":"Svatý Kopeček","t":"must","lat":48.8071,"lon":16.6481,"note":"Scenic hike up a nature reserve with a pilgrimage chapel and panoramic views."},{"n":"Kozí Hrádek","t":"sight","lat":48.8101,"lon":16.6391,"note":"Ruins of a 15th-century artillery tower offering excellent town views."},{"n":"Lom Janičův vrch","t":"beach","lat":48.8094,"lon":16.6588,"note":"Flooded former limestone quarry popular for swimming and nature walks."},{"n":"Jeskyně Na Turoldu","t":"sight","lat":48.8163,"lon":16.6398,"note":"Unique karst cave system with bat populations and geological formations."},{"n":"Bistro Drogerka","t":"eat","lat":48.8055,"lon":16.6378,"note":"seasonal dishes & local wine · ~€22/pp · vibrant central bistro"},{"n":"Sojka & Spol.","t":"eat","lat":48.8062,"lon":16.6371,"note":"mediterranean-inspired plates · ~€28/pp · cozy courtyard seating"}],"desc":"Dominated by a majestic clifftop castle, Mikulov is a picturesque South Moravian wine town nestled against the white limestone cliffs of the Pálava hills.","stay":"€70-120/n historic center — cheaper guesthouses in suburbs €50-80","try":"Pálava white wine, Moravian smoked meats, pickled Hermelín cheese","tickets":[{"name":"Mikulov Castle","url":"https://www.google.com/search?q=Mikulov+Castle+tickets","price":"~€10","note":"Guided tours of the historic wine cellars and the giant barrel are highly recommended on weekends."},{"name":"Dietrichstein Tomb","url":"https://www.google.com/search?q=Dietrichstein+Tomb+Mikulov+tickets","price":"~€6","note":"Located right on the main square; check seasonal opening hours as it closes in winter."}],"eat":[{"name":"Sojka & spol.","desc":"Modern bistro serving seasonal Moravian dishes and an exceptional selection of local wines — ~€20-30/pp."},{"name":"Bistro Drogerka","desc":"Popular spot on the main square known for great breakfasts, light lunches, and specialty coffee — ~€10-15/pp."},{"name":"Kukanz","desc":"Cozy restaurant offering traditional Czech classics and local wines in a stylishly rustic interior — ~€15-25/pp."}],"around":["Pálava Hills (Děvín) — 10 min drive, scenic hiking trails through limestone cliffs leading to the Děvičky castle ruins.","Lednice-Valtice Complex — 15 min drive, a breathtaking UNESCO site featuring romantic châteaux, English gardens, and boating canals.","Nové Mlýny Reservoirs — 15 min drive, vast lakes offering windsurfing, beaches, and lakeside cycling paths."],"tips":["Parking in the historic center is strictly regulated and requires paying via automated meters or a mobile app.","A Czech highway vignette is mandatory if you use the nearby D2 highway to access the region.","Many smaller local wine cellars (sklepy) and family vineyards operate on a cash-only basis, so carry Czech Koruna (CZK)."],"facts":["Mikulov Castle houses one of the largest historic wine barrels in Europe, built in 1643 with a capacity of over 101,000 liters.","The town was historically a major center of Jewish culture in Moravia, serving as the seat of the regional land rabbi for over three centuries."],"photo":""},{"key":"terchova","name":"Terchová","country":"SK","lat":49.2574,"lon":19.0314,"nights":2,"leg_km":172.1,"leg_h":2.46,"pois":[{"n":"Jánošíkove Diery","t":"must","lat":49.2597,"lon":19.0628,"note":"Stunning gorge system with ladders, waterfalls, and bridges."},{"n":"Chleb Cableway (Vrátna)","t":"must","lat":49.2272,"lon":19.0378,"note":"Cable car to Chleb ridge for breathtaking Malá Fatra views."},{"n":"Statue of Juraj Jánošík","t":"must","lat":49.2581,"lon":19.0311,"note":"Colossal steel monument overlooking the village of the legendary highwayman."},{"n":"Terchovské Srdce Lookout Tower","t":"sight","lat":49.2619,"lon":19.0233,"note":"Easy hike to a 30m wooden tower offering panoramic valley views."},{"n":"Expozícia Jánošík a Terchová","t":"sight","lat":49.2575,"lon":19.0175,"note":"Local museum dedicated to folk hero Juraj Jánošík and village history."},{"n":"Veľký Rozsutec Peak","t":"sight","lat":49.2311,"lon":19.0983,"note":"Iconic, rugged peak offering the most challenging and rewarding hike."},{"n":"Haluškáreň Terchová","t":"eat","lat":49.2572,"lon":19.0169,"note":"Bryndzové halušky, garlic soup · ~€12/pp · Cozy traditional wooden interior"},{"n":"Terchovská Koliba Diery","t":"eat","lat":49.2591,"lon":19.0631,"note":"Baked trout, potato dumplings with cabbage · ~€15/pp · Right at the trailhead of Jánošíkove Diery"}],"desc":"Gateway to the dramatic Malá Fatra National Park, Terchová is a picturesque mountain village famed for its rugged gorges, traditional folklore, and as the birthplace of Slovakia's legendary outlaw Juraj Jánošík.","stay":"€60-100/n in local guesthouses (pension) — premium wellness hotels €120-180/n","try":"Bryndzové halušky (potato dumplings with sheep cheese), Terchovský korbáčik (braided string cheese), Kapustnica (sauerkraut soup)","tickets":[{"name":"Vrátna Chleb Cable Car","url":"https://www.google.com/search?q=Vratna+Chleb+cable+car+tickets","price":"~€18","note":"Check weather conditions and seasonal operating hours online before heading up to the ridge."},{"name":"Terchová Museum (Expozícia Jánošík a Terchová)","url":"https://www.google.com/search?q=Terchova+Museum+tickets","price":"~€4","note":"A small museum dedicated to local history and the legendary outlaw Juraj Jánošík; tickets are purchased on-site."}],"eat":[{"name":"Terchovská Koliba Diery","desc":"Traditional wooden cabin serving authentic bryndzové halušky and garlic soup in a bread bowl; ~€15-20/pp."},{"name":"Haluškáreň Terchová","desc":"Cozy local eatery specializing in various types of traditional Slovak dumplings; ~€10-15/pp."}],"around":["Orava Castle — 45 min drive, a stunning medieval castle perched high on a rock above the Orava River.","Šútovo Waterfall — 30 min drive, a scenic hike through the forest to the highest waterfall in the Malá Fatra range.","Strečno Castle — 25 min drive, ruined medieval fortress offering panoramic views over the Váh river gorge."],"tips":["Parking at the main trailheads like Biely Potok fills up very early on summer weekends; bring cash for parking fees (~€5-10).","The ladders and metal chains in the Jánošíkove Diery gorges can be extremely slippery after rain; sturdy hiking boots are essential.","Slovakia requires an electronic highway vignette (e-známka) for driving on motorways; purchase it online before entering the country."],"facts":["Terchová is the birthplace of Juraj Jánošík, the 'Slovak Robin Hood', who is celebrated with a massive 7.5-meter steel statue overlooking the village.","The traditional music of Terchová, characterized by multi-part singing and string instrument play, was inscribed on the UNESCO Intangible Cultural Heritage list in 2013."],"photo":""}],"total_km":2067.8,"total_nights":21,"budget_estimate_eur":2310,"notes":""}</script>
+<script id="plan-adapter-js">
+
+(function(){
+  function haversineKm(lat1,lon1,lat2,lon2){
+    var R=6371,toRad=Math.PI/180;
+    var dLat=(lat2-lat1)*toRad, dLon=(lon2-lon1)*toRad;
+    var a=Math.sin(dLat/2)*Math.sin(dLat/2)+Math.cos(lat1*toRad)*Math.cos(lat2*toRad)*Math.sin(dLon/2)*Math.sin(dLon/2);
+    return R*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a));
+  }
+  function escHtml(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  window.escHtml=escHtml;
+  var plan=JSON.parse(document.getElementById('tripplan').textContent);
+  var origin=plan.request.origin;
+  var GEO={origin:[origin.lat,origin.lon]};
+  var NAMES={origin:origin.name};
+  var SHORT={origin:(origin.name||'').split(' ')[0]||origin.name};
+  plan.stops.forEach(function(s){
+    GEO[s.key]=[s.lat,s.lon];
+    NAMES[s.key]=s.name;
+    SHORT[s.key]=(s.name||'').split(' ')[0]||s.name;
+  });
+  var PLACES=plan.stops.map(function(s){
+    return {k:s.key,name:s.name+' · '+s.country,bq:s.name+', '+s.country,
+      ab:s.name.toLowerCase().replace(/\s+/g,'-'),nights:s.nights||1};
+  });
+  var EDGES=[];
+  var prevKey='origin';
+  plan.stops.forEach(function(s){
+    EDGES.push([prevKey,s.key,s.leg_km||0,0]);
+    prevKey=s.key;
+  });
+  if(plan.stops.length && origin.lat!=null && origin.lon!=null){
+    var last=plan.stops[plan.stops.length-1];
+    var est=Math.round(haversineKm(last.lat,last.lon,origin.lat,origin.lon)*1.25);
+    EDGES.push([prevKey,'origin',est,1]);
+  }
+  var TRIP_DAYS=Math.max(1,Math.round((new Date(plan.request.end_date)-new Date(plan.request.start_date))/86400000));
+  var PDATA={};
+  plan.stops.forEach(function(s){
+    PDATA[s.key]=(s.pois||[]).map(function(p){return {n:p.n,t:p.t,ll:[p.lat,p.lon],note:p.note};});
+  });
+  window.TRIP_PLAN=plan;
+  window.TRIP_ORIGIN=origin;
+  window.TRIP_START_DATE=plan.request.start_date;
+  window.TRIP_GEO=GEO;
+  window.TRIP_NAMES=NAMES;
+  window.TRIP_SHORT=SHORT;
+  window.TRIP_PLACES=PLACES;
+  window.TRIP_EDGES=EDGES;
+  window.TRIP_DAYS=TRIP_DAYS;
+  window.TRIP_KM_CAP=plan.request.km_cap;
+  window.PDATA=PDATA;
+})();
+
+</script>
+
+<h2>Trip map — the places &amp; your route</h2>
+<p class="lede">Every stop on a real road map — <b>numbered pins</b> are your overnight stops in visit order, and the <b>solid line</b> is the real driving route. It redraws live as you edit the route in the builder below.</p>
+<div id="rb-lmap-box">
+  <div id="rb-lmap"></div>
+  <div id="rb-lmap-fallback" hidden><span>&#128506; The interactive map couldn't load its tiles — it needs an internet connection.<br><b>Check your connection and reload</b> to see the full map.</span></div>
+</div>
+<div class="map-toolbar">
+  <button type="button" class="mbtn" id="mb-kml">&#11015; KML &mdash; import into Google My&nbsp;Maps</button>
+  <button type="button" class="mbtn" id="mb-ics">&#11015; Calendar .ics &mdash; import into Google Calendar</button>
+</div>
+<p class="rb-note">Click a numbered pin for dates. The solid route line is the <b>real driving route</b> (courtesy OSRM; dashed straight lines show while it loads or if routing is unreachable). Map tiles &copy; OpenStreetMap. <b>My Maps:</b> import the KML at mymaps.google.com &rarr; Create map &rarr; Import — pins + route then show in the Google Maps app under Saved &rarr; Maps. <b>Calendar:</b> import the .ics at calendar.google.com &rarr; Settings &rarr; Import &amp; export.</p>
+
+<h2 id="builder">Route builder — order, dates, book</h2>
+<p class="lede">Pick your <b>start date</b>, tick places and set <b>nights</b> for each — check-in and check-out dates are computed by chaining from the start date. Edit the <b>#</b> number to reorder: type 2 to slot a place into position 2, everything after shifts down and keeps its nights. The trip always ends back at <b>Krakow</b>. The trip map above redraws your route as you go.</p>
+<div class="rb-box">
+  <div class="rb-presets">
+    <label style="font-size:13px;color:var(--ink-60);align-self:center">Start:
+      <input type="date" id="rb-start" value="2026-07-12" style="font:inherit;font-size:12px;padding:3px 4px;border:1px solid var(--line);border-radius:3px"></label>
+    <button type="button" onclick="rbPreset(1)">Reset to plan</button>
+    <button type="button" onclick="rbPreset(0)">Clear</button>
+  </div>
+  <table class="rb" id="rb-table">
+    <thead><tr><th>#</th><th>Place</th><th>Nights</th><th>Check-in</th><th>Check-out</th><th>Km</th><th>H</th><th>Book</th></tr></thead>
+    <tbody></tbody>
+  </table>
+  <div id="rb-result"></div>
+  <p class="rb-note">Km are driving distances between consecutive stops; "~" legs are estimates. Hours assume ~95 km/h trip average incl. short breaks. Booking/Airbnb links open pre-filled searches — availability and prices are theirs.</p>
+</div>
+<script id="rb-builder-js">
+
+(function(){
+var esc=window.escHtml;
+var PLACES=window.TRIP_PLACES;
+var EDGES=window.TRIP_EDGES;
+var SHORT=window.TRIP_SHORT;
+var TRIP_DAYS=window.TRIP_DAYS;
+var ORIGIN=window.TRIP_ORIGIN;
+var KM_CAP=window.TRIP_KM_CAP;
+var ADJ={};
+EDGES.forEach(function(e){
+  (ADJ[e[0]]=ADJ[e[0]]||[]).push({to:e[1],km:e[2],est:e[3]});
+  (ADJ[e[1]]=ADJ[e[1]]||[]).push({to:e[0],km:e[2],est:e[3]});
+});
+function shortest(a,b){
+  // cost adds +30 km per edge so a multi-hop "shortcut" must beat the
+  // direct road by a real margin, not mesh rounding noise; km stays true
+  if(a===b)return{km:0,est:0,path:[a]};
+  var cost={},km={},est={},done={},prev={};cost[a]=0;km[a]=0;est[a]=0;
+  while(true){
+    var u=null;for(var k in cost){if(!done[k]&&(u===null||cost[k]<cost[u]))u=k;}
+    if(u===null)return null;
+    if(u===b){
+      var path=[b],c=b;
+      while(prev[c]!==undefined){c=prev[c];path.unshift(c);}
+      return{km:km[b],est:est[b],path:path};
+    }
+    done[u]=1;
+    (ADJ[u]||[]).forEach(function(e){
+      var d=cost[u]+e.km+30;
+      if(cost[e.to]===undefined||d<cost[e.to]){cost[e.to]=d;km[e.to]=km[u]+e.km;est[e.to]=(est[u]||e.est)?1:0;prev[e.to]=u;}
+    });
+  }
+}
+var byKey={};PLACES.forEach(function(p){byKey[p.k]=p;});
+var order=[];      // keys of selected places, visit order
+var stayN={};      // key -> nights (int)
+var tb=document.querySelector('#rb-table tbody');
+var startInput=document.getElementById('rb-start');
+function startDate(){return startInput.value||window.TRIP_START_DATE;}
+function addDays(iso,n){var d=new Date(iso+'T12:00:00');d.setDate(d.getDate()+n);return d.toISOString().slice(0,10);}
+function nightsBetween(a,b){return Math.round((new Date(b)-new Date(a))/86400000);}
+function fmt(d){return d?new Date(d+'T12:00:00').toLocaleDateString('en-GB',{day:'numeric',month:'short'}):'—';}
+function kmStr(r){return r?(r.est?'~':'')+Math.round(r.km):'?';}
+function hStr(r){return r?'~'+(Math.round(r.km/95*2)/2):'?';}
+PLACES.forEach(function(p){
+  var tr=document.createElement('tr');tr.className='rb-off';tr.id='rbr-'+p.k;
+  tr.innerHTML='<td><input type="number" id="rbnum-'+p.k+'" min="1" step="1" disabled aria-label="visit position of '+esc(p.name)+'"></td>'+
+    '<td><label style="cursor:pointer"><input type="checkbox" id="rbc-'+p.k+'"> '+esc(p.name)+'</label></td>'+
+    '<td><input type="number" id="rbn-'+p.k+'" min="1" step="1" disabled aria-label="nights at '+esc(p.name)+'"></td>'+
+    '<td id="rbi-'+p.k+'">—</td>'+
+    '<td id="rbo-'+p.k+'">—</td>'+
+    '<td id="rbkm-'+p.k+'">–</td>'+
+    '<td id="rbh-'+p.k+'">–</td>'+
+    '<td class="rb-links" id="rbl-'+p.k+'"></td>';
+  tb.appendChild(tr);
+  tr.querySelector('input[type=checkbox]').addEventListener('change',function(){
+    var i=order.indexOf(p.k);
+    if(this.checked&&i<0){order.push(p.k);if(!stayN[p.k])stayN[p.k]=p.nights||1;}
+    if(!this.checked&&i>=0){order.splice(i,1);delete stayN[p.k];}
+    rebuild();
+  });
+  document.getElementById('rbn-'+p.k).addEventListener('change',function(){
+    var v=parseInt(this.value,10);
+    stayN[p.k]=(isNaN(v)||v<1)?1:v;
+    rebuild();
+  });
+  document.getElementById('rbnum-'+p.k).addEventListener('change',function(){
+    var i=order.indexOf(p.k);
+    if(i<0)return;
+    var v=parseInt(this.value,10);
+    if(isNaN(v))v=i+1;
+    v=Math.max(1,Math.min(order.length,v));
+    order.splice(i,1);
+    order.splice(v-1,0,p.k);
+    rebuild();
+  });
+});
+// pinned finish row: always ends back at the trip origin
+var trK=document.createElement('tr');trK.id='rbr-origin';
+trK.innerHTML='<td id="rbnum-origin" style="font-weight:700;color:var(--rust);text-align:center">🏁</td>'+
+  '<td><b>'+esc(ORIGIN.name)+' — home</b></td>'+
+  '<td>—</td><td id="rbi-origin">—</td><td>—</td>'+
+  '<td id="rbkm-origin">–</td><td id="rbh-origin">–</td><td></td>';
+tb.appendChild(trK);
+startInput.addEventListener('change',rebuild);
+function rebuild(){
+  order.forEach(function(k){tb.appendChild(document.getElementById('rbr-'+k));});
+  tb.appendChild(trK);
+  PLACES.forEach(function(p){if(order.indexOf(p.k)<0)tb.appendChild(document.getElementById('rbr-'+p.k));});
+  var T0=startDate(),TEND=addDays(T0,TRIP_DAYS);
+  var cur=T0,prevKey='origin',totalKm=0,totalN=0,anyEst=false,legs=[];
+  PLACES.forEach(function(p){
+    var sel=order.indexOf(p.k)>=0;
+    document.getElementById('rbr-'+p.k).className=sel?'':'rb-off';
+    var num=document.getElementById('rbnum-'+p.k),nn=document.getElementById('rbn-'+p.k);
+    num.disabled=!sel;nn.disabled=!sel;
+    if(!sel){num.value='';nn.value='';
+      document.getElementById('rbi-'+p.k).textContent='—';
+      document.getElementById('rbo-'+p.k).textContent='—';
+      document.getElementById('rbkm-'+p.k).textContent='–';
+      document.getElementById('rbh-'+p.k).textContent='–';
+      document.getElementById('rbl-'+p.k).innerHTML='';}
+  });
+  order.forEach(function(k,idx){
+    var n=stayN[k]||1,ci=cur,co=addDays(ci,n);
+    document.getElementById('rbnum-'+k).value=idx+1;
+    document.getElementById('rbn-'+k).value=n;
+    document.getElementById('rbi-'+k).textContent=fmt(ci);
+    document.getElementById('rbo-'+k).textContent=fmt(co);
+    var r=shortest(prevKey,k);if(r){totalKm+=r.km;if(r.est)anyEst=true;legs.push({r:r});}
+    document.getElementById('rbkm-'+k).textContent=kmStr(r);
+    document.getElementById('rbh-'+k).textContent=hStr(r);
+    document.getElementById('rbl-'+k).innerHTML=
+      '<a target="_blank" rel="noopener" href="https://www.booking.com/searchresults.html?ss='+encodeURIComponent(byKey[k].bq)+'&checkin='+ci+'&checkout='+co+'&group_adults=2&no_rooms=1&group_children=0">Booking</a>'+
+      '<a target="_blank" rel="noopener" href="https://www.airbnb.com/s/'+encodeURIComponent(byKey[k].ab)+'/homes?checkin='+ci+'&checkout='+co+'&adults=2">Airbnb</a>';
+    totalN+=n;cur=co;prevKey=k;
+  });
+  // finish row
+  var home=shortest(prevKey,'origin');
+  document.getElementById('rbkm-origin').textContent=order.length?kmStr(home):'–';
+  document.getElementById('rbh-origin').textContent=order.length?hStr(home):'–';
+  document.getElementById('rbi-origin').textContent=order.length?fmt(cur):'—';
+  if(home&&order.length){totalKm+=home.km;if(home.est)anyEst=true;legs.push({r:home});}
+  if(window.rbMapSync)window.rbMapSync();
+  // sort "The places" gallery: on-route cards first, in visit order, numbered
+  document.querySelectorAll('.p-card[data-place]').forEach(function(c){
+    var i=order.indexOf(c.getAttribute('data-place'));
+    c.style.order=i>=0?i:50;
+    c.classList.toggle('on-route',i>=0);
+    var o=c.querySelector('.p-ord');if(o)o.textContent=i>=0?(i+1):'';
+  });
+  var res=document.getElementById('rb-result'),h='';
+  if(order.length){
+    h+='<p><b>Total: '+(anyEst?'~':'')+Math.round(totalKm)+' km · ~'+(Math.round(totalKm/95*2)/2)+' h driving · '+totalN+' nights</b>';
+    if(KM_CAP){if(totalKm>KM_CAP)h+=' <span class="err">— over the '+KM_CAP+' km limit!</span>';else h+=' — within the '+KM_CAP+' km limit.';}
+    h+='</p>';
+    h+='<p>Depart '+esc(ORIGIN.name)+' <b>'+fmt(T0)+'</b> → home <b>'+fmt(cur)+'</b> ('+nightsBetween(T0,cur)+' days).';
+    if(cur>TEND)h+=' <span class="err">Longer than planned ('+fmt(TEND)+').</span>';
+    else if(cur<TEND)h+=' '+nightsBetween(cur,TEND)+' spare day(s) vs the planned length.';
+    h+='</p>';
+  }else h='<p class="rb-note">Nothing selected yet — tick places above in visiting order.</p>';
+  res.innerHTML=h;
+}
+// snapshot of the current route for the Map tab + KML/ICS exports
+window.rbState=function(){
+  var T0=startDate(),cur=T0,stops=[],legs=[],prev='origin',totalKm=0;
+  order.forEach(function(k){
+    var n=stayN[k]||1,ci=cur,co=addDays(ci,n);
+    stops.push({k:k,name:SHORT[k],full:byKey[k].name,loc:byKey[k].bq,nights:n,ci:ci,co:co});
+    var r=shortest(prev,k);if(r){legs.push(r.path);totalKm+=r.km;}
+    cur=co;prev=k;
+  });
+  if(order.length){var h=shortest(prev,'origin');if(h){legs.push(h.path);totalKm+=h.km;}}
+  return{start:T0,end:cur,stops:stops,legs:legs,km:totalKm};
+};
+window.rbPreset=function(n){
+  var P=n===1?PLACES.map(function(p){return [p.k,p.nights||1];}):[];
+  order=[];stayN={};
+  PLACES.forEach(function(p){document.getElementById('rbc-'+p.k).checked=false;});
+  P.forEach(function(x){
+    order.push(x[0]);stayN[x[0]]=x[1];
+    document.getElementById('rbc-'+x[0]).checked=true;
+  });
+  rebuild();
+};
+if(document.readyState==='complete'){rbPreset(1);}
+else{window.addEventListener('load',function(){rbPreset(1);});}
+})();
+
+</script>
+<h2 id="places">The places — profiles</h2>
+<p class="lede">Every stop in one gallery. Places on your route in the builder above float to the top, numbered in visit order. Ticket links go to official operators.</p>
+<div class="places-grid">
+
+  <div class="p-card" data-place="tatranska-lomnica">
+    <div class="p-noimg">Tatranská Lomnica</div>
+    <div class="p-body">
+      <div class="p-head"><span class="p-ord"></span><h3>Tatranská Lomnica</h3><span class="p-tag p-stop">stop · SK</span></div>
+      <p>A premier gateway to the High Tatras, offering dramatic cable car rides to Lomnický štít, lush alpine hiking trails, and a serene mountain resort atmosphere.</p>
+      <p class="p-stay"><b>Stay:</b> €90-160/n resort center — cheaper guesthouses (pension) €50-90/n</p>
+      <p class="p-try"><b>Try:</b> Bryndzové halušky (potato dumplings with sheep cheese), Kapustnica (cabbage soup), Tatratea (herbal liqueur)</p>
+      
+      <ul class="p-tix">
+        
+        <li><a href="https://www.google.com/search?q=Lomnicky+stit+cable+car+tickets" target="_blank" rel="noopener">Lomnický štít Cable Car</a> ~€49-69 · Book weeks in advance via Gopass as tickets to the very peak sell out rapidly; trips are highly weather-dependent.</li>
+        
+        <li><a href="https://www.google.com/search?q=TANAP+Museum+Tatranska+Lomnica+tickets" target="_blank" rel="noopener">TANAP Museum</a> ~€3 · Tickets purchased at the door; excellent exhibition on Tatra nature and history for rainy days.</li>
+        
+      </ul>
+      
+      
+      <ul class="p-eat"><li class="pe-h">Where to eat</li>
+        <li><b>Stará Mama</b> — Traditional Slovak cuisine in a rustic, cozy setting. Try the authentic bryndzové halušky or venison goulash. ~€15-25/pp.</li><li><b>Humno Tatry</b> — A unique restaurant and music club featuring a real Cadillac suspended from the ceiling. Famous for grilled ribs and local trout. ~€20-35/pp.</li><li><b>Olivia Restaurant</b> — Located in Hotel Kukučka, offering refined modern European dishes and traditional Slovak ingredients with a contemporary twist. ~€30-45/pp.</li>
+      </ul>
+      
+      
+      <ul class="p-around"><li class="pa-h">In &amp; around</li>
+        <li>Štrbské Pleso — 30 min drive, iconic glacial lake with scenic walking paths and dramatic mountain backdrops.</li><li>Belianska Cave — 15 min drive, the only open dripstone cave in the High Tatras featuring stunning stalactites.</li><li>Starý Smokovec & Hrebienok — 10 min drive, take the funicular railway up for easy hikes to the Cold Water Waterfalls.</li>
+      </ul>
+      
+      
+      <ul class="p-notes"><li class="pn-h">Notes — read before you go</li>
+        <li>An electronic highway vignette is mandatory if you use the D1 motorway to reach the Tatras; purchase it online at eznamka.sk.</li><li>Parking in Tatranská Lomnica is strictly regulated; use designated paid central parking lots or ensure your hotel provides a parking permit.</li><li>Mountain weather changes rapidly; always pack waterproof layers, thermal wear, and sturdy hiking boots even for short summer walks.</li>
+      </ul>
+      
+      
+      <ul class="p-facts"><li class="pf-h">Interesting facts</li>
+        <li>The cable car to Lomnický štít (2,634m) was one of the most modern in Europe when completed in 1940, suspended without supporting pylons between the stations.</li><li>Tatranská Lomnica is home to the headquarters of TANAP, the oldest national park in Slovakia, established in 1949.</li>
+      </ul>
+      
+      <div class="pm-box"><div class="pm-map" id="pm-tatranska-lomnica" data-pmkey="tatranska-lomnica"></div><p class="pm-leg">⭐ must-see · 🏖 beach · 🍴 where to eat · <span class="pm-dot-i"></span> sight — click a pin for details</p></div>
+      <p class="p-more"><a href="https://www.google.com/search?tbm=isch&amp;q=Tatransk%C3%A1%20Lomnica%20SK" target="_blank" rel="noopener">More photos on Google Images →</a></p>
+    </div>
+  </div>
+
+  <div class="p-card" data-place="bled">
+    <div class="p-noimg">Bled</div>
+    <div class="p-body">
+      <div class="p-head"><span class="p-ord"></span><h3>Bled</h3><span class="p-tag p-stop">stop · SI</span></div>
+      <p>Nestled in the Julian Alps, Lake Bled captivates with its emerald-green waters, a cliffside medieval castle, and a picture-perfect island church. It is a premier gateway for alpine hiking, lakeside swimming, and exploring dramatic gorges.</p>
+      <p class="p-stay"><b>Stay:</b> €130-220/n lakeside or town center — cheaper in nearby villages like Lesce €80-120</p>
+      <p class="p-try"><b>Try:</b> Bled cream cake (Kremšnita), Blejska grmada, local river trout, Carniolan sausage</p>
+      
+      <ul class="p-tix">
+        
+        <li><a href="https://www.google.com/search?q=Bled+Castle+tickets" target="_blank" rel="noopener">Bled Castle</a> ~€17 · Includes access to the museum and panoramic terraces; booking ahead avoids peak-hour ticket lines.</li>
+        
+        <li><a href="https://www.google.com/search?q=Bled+island+pletna+boat" target="_blank" rel="noopener">Pletna Boat to Bled Island</a> ~€18 boat + €12 church · Pletna boats are cash-only; alternatively, you can rent a rowboat to row yourself.</li>
+        
+      </ul>
+      
+      
+      <ul class="p-eat"><li class="pe-h">Where to eat</li>
+        <li><b>Restavracija Sova Bled</b> — Fresh lake trout, octopus, and premium Slovenian wines right by the water (~€30-45/pp).</li><li><b>Ostarija Peglez'n</b> — Rustic, cozy tavern serving excellent seafood platters and grilled squid (~€25-35/pp).</li><li><b>Restavracija Julijana</b> — Michelin-recommended fine dining overlooking the lake, featuring refined local ingredients (~€70-90/pp).</li>
+      </ul>
+      
+      
+      <ul class="p-around"><li class="pa-h">In &amp; around</li>
+        <li>Vintgar Gorge — 10 min drive, dramatic wooden walkways over the rushing Radovna River.</li><li>Lake Bohinj — 30 min drive, a wilder, less commercialized alpine lake perfect for hiking and swimming.</li><li>Pokljuka Plateau — 25 min drive, dense spruce forests and a starting point for high-altitude mountain hikes.</li>
+      </ul>
+      
+      
+      <ul class="p-notes"><li class="pn-h">Notes — read before you go</li>
+        <li>A Slovenian e-vignette is mandatory for driving on all motorways; purchase it online before crossing the border.</li><li>Lakeside parking is extremely limited and expensive; use designated P+R lots further out and walk or take the local shuttle.</li><li>To beat the heavy summer crowds and midday heat on the popular Mala Osojnica viewpoint hike, start before 7:00 AM.</li>
+      </ul>
+      
+      
+      <ul class="p-facts"><li class="pf-h">Interesting facts</li>
+        <li>The iconic Bled cream cake (Kremšnita) has a protected geographical status and is traditionally crafted to be exactly 7x7 centimeters.</li><li>Bled Island is Slovenia's only natural island, featuring 99 stone steps leading up to the church where grooms traditionally carry their brides for good luck.</li>
+      </ul>
+      
+      <div class="pm-box"><div class="pm-map" id="pm-bled" data-pmkey="bled"></div><p class="pm-leg">⭐ must-see · 🏖 beach · 🍴 where to eat · <span class="pm-dot-i"></span> sight — click a pin for details</p></div>
+      <p class="p-more"><a href="https://www.google.com/search?tbm=isch&amp;q=Bled%20SI" target="_blank" rel="noopener">More photos on Google Images →</a></p>
+    </div>
+  </div>
+
+  <div class="p-card" data-place="heiligenblut">
+    <div class="p-noimg">Heiligenblut</div>
+    <div class="p-body">
+      <div class="p-head"><span class="p-ord"></span><h3>Heiligenblut</h3><span class="p-tag p-stop">stop · AT</span></div>
+      <p>Nestled at the foot of the Grossglockner, Austria's highest peak, Heiligenblut is a postcard-perfect alpine village offering dramatic mountain vistas, high-altitude hiking, and access to the famous High Alpine Road.</p>
+      <p class="p-stay"><b>Stay:</b> €110-190/n village center — cheaper guesthouses in surrounding valley €70-110</p>
+      <p class="p-try"><b>Try:</b> Kärntner Kasnudeln (Carinthian cheese noodles), Glocknerlamm (local lamb), Glocknerforelle (alpine trout)</p>
+      
+      <ul class="p-tix">
+        
+        <li><a href="https://www.google.com/search?q=Grossglockner+High+Alpine+Road+tickets" target="_blank" rel="noopener">Grossglockner High Alpine Road Toll</a> ~€43 · Day ticket covers toll; buy online for quick lane entry. Road is closed in winter.</li>
+        
+        <li><a href="https://www.google.com/search?q=Grossglockner+Bergbahnen+tickets" target="_blank" rel="noopener">Schareck Cable Car</a> ~€32 · Check operating hours seasonally; free access is often included with the Nationalpark Kärnten Card.</li>
+        
+      </ul>
+      
+      
+      <ul class="p-eat"><li class="pe-h">Where to eat</li>
+        <li><b>Restaurant Kirchenwirt</b> — Traditional Carinthian specialties like Kasnudeln and venison stew in a rustic alpine setting, ~€25-40/pp.</li><li><b>Alpengasthof Glocknerhaus</b> — Hearty mountain hut food with panoramic views of the Pasterze glacier, try the Kaiserschmarrn, ~€20-35/pp.</li>
+      </ul>
+      
+      
+      <ul class="p-around"><li class="pa-h">In &amp; around</li>
+        <li>Pasterze Glacier — 25 min drive, hike down to Austria's longest glacier before it retreats further.</li><li>Lienz — 45 min drive, a charming medieval sun-drenched town in East Tyrol with museums and cafes.</li><li>Zell am See — 1 hour 15 min drive (via High Alpine Road), beautiful alpine lake with beach areas and boat trips.</li>
+      </ul>
+      
+      
+      <ul class="p-notes"><li class="pn-h">Notes — read before you go</li>
+        <li>The Grossglockner High Alpine Road is closed in winter (typically late October to early May) due to heavy snow.</li><li>An Austrian highway vignette is required for motorways, but the Grossglockner High Alpine Road requires an additional separate toll.</li><li>Weather changes rapidly at 2,000+ meters; pack layers, windproof gear, and sturdy hiking boots even in mid-summer.</li>
+      </ul>
+      
+      
+      <ul class="p-facts"><li class="pf-h">Interesting facts</li>
+        <li>The village is named 'Holy Blood' after a relic containing the blood of Christ, allegedly brought here by a Danish knight in 914 AD.</li><li>The iconic St. Vincent Pilgrimage Church, with the Grossglockner peak perfectly framed behind it, is one of the most photographed sights in Austria.</li>
+      </ul>
+      
+      <div class="pm-box"><div class="pm-map" id="pm-heiligenblut" data-pmkey="heiligenblut"></div><p class="pm-leg">⭐ must-see · 🏖 beach · 🍴 where to eat · <span class="pm-dot-i"></span> sight — click a pin for details</p></div>
+      <p class="p-more"><a href="https://www.google.com/search?tbm=isch&amp;q=Heiligenblut%20AT" target="_blank" rel="noopener">More photos on Google Images →</a></p>
+    </div>
+  </div>
+
+  <div class="p-card" data-place="zell-am-see">
+    <div class="p-noimg">Zell am See</div>
+    <div class="p-body">
+      <div class="p-head"><span class="p-ord"></span><h3>Zell am See</h3><span class="p-tag p-stop">stop · AT</span></div>
+      <p>A stunning alpine town where the crystal-clear Lake Zell meets the dramatic peaks of the Schmittenhöhe, offering a perfect mix of lakeside beaches and high-altitude hiking.</p>
+      <p class="p-stay"><b>Stay:</b> €150-250/n lakeside or center — cheaper in Schüttdorf €100-150/n</p>
+      <p class="p-try"><b>Try:</b> Zeller Reinanke (local lake whitefish), Kasnocken (alpine cheese noodles), Kaiserschmarrn</p>
+      
+      <ul class="p-tix">
+        
+        <li><a href="https://www.google.com/search?q=Schmittenhohe+cable+car+tickets" target="_blank" rel="noopener">Schmittenhöhe Cable Car</a> ~€35 · Often included for free if your accommodation provides the Zell am See-Kaprun Summer Card.</li>
+        
+        <li><a href="https://www.google.com/search?q=Kaprun+High+Alpine+Reservoirs+tickets" target="_blank" rel="noopener">Kaprun High Alpine Reservoirs</a> ~€28 · Ticket includes the transfer buses and the open-air Lärchwand inclined elevator.</li>
+        
+      </ul>
+      
+      
+      <ul class="p-eat"><li class="pe-h">Where to eat</li>
+        <li><b>Restaurant Salzburgerhof</b> — Award-winning fine dining featuring freshly caught local lake trout and refined Austrian classics, ~€60-90/pp.</li><li><b>Steinerwirt</b> — A historic tavern serving excellent Wiener Schnitzel, local venison, and traditional Salzburger Nockerl, ~€25-40/pp.</li><li><b>Kupferkessel</b> — A lively, casual spot popular for its hearty steaks, pizzas, and local draft beers, ~€20-35/pp.</li>
+      </ul>
+      
+      
+      <ul class="p-around"><li class="pa-h">In &amp; around</li>
+        <li>Grossglockner High Alpine Road — 30 min drive to the toll gate, offering breathtaking views of Austria's highest peak.</li><li>Krimml Waterfalls — 50 min drive to Europe's highest waterfalls with a scenic mist-sprayed hiking trail.</li><li>Sigmund Thun Gorge — 15 min drive to a dramatic wooden walkway suspended over a rushing glacial river.</li>
+      </ul>
+      
+      
+      <ul class="p-notes"><li class="pn-h">Notes — read before you go</li>
+        <li>An Austrian highway vignette is mandatory for the drive; buy a digital or physical sticker before entering the motorway.</li><li>Parking in the historic center is heavily restricted; use the designated Contipark underground garages to avoid steep fines.</li><li>Book accommodation that explicitly includes the 'Zell am See-Kaprun Summer Card' to save significantly on cable cars and lidos.</li>
+      </ul>
+      
+      
+      <ul class="p-facts"><li class="pf-h">Interesting facts</li>
+        <li>Lake Zell contains exceptionally pure water that is officially certified to drinking water standards.</li><li>The town's iconic Grand Hotel, built in 1894 on its own private peninsula, has hosted Empress Elisabeth (Sisi) of Austria.</li>
+      </ul>
+      
+      <div class="pm-box"><div class="pm-map" id="pm-zell-am-see" data-pmkey="zell-am-see"></div><p class="pm-leg">⭐ must-see · 🏖 beach · 🍴 where to eat · <span class="pm-dot-i"></span> sight — click a pin for details</p></div>
+      <p class="p-more"><a href="https://www.google.com/search?tbm=isch&amp;q=Zell%20am%20See%20AT" target="_blank" rel="noopener">More photos on Google Images →</a></p>
+    </div>
+  </div>
+
+  <div class="p-card" data-place="st-gilgen">
+    <div class="p-noimg">St. Gilgen</div>
+    <div class="p-body">
+      <div class="p-head"><span class="p-ord"></span><h3>St. Gilgen</h3><span class="p-tag p-stop">stop · AT</span></div>
+      <p>A picturesque lakeside village on Wolfgangsee, St. Gilgen combines alpine hiking trails, pristine swimming beaches, and deep cultural ties to Mozart's family.</p>
+      <p class="p-stay"><b>Stay:</b> €130-220/n lakeside or center — cheaper in surrounding hills €90-130</p>
+      <p class="p-try"><b>Try:</b> Wolfgangsee Saibling (lake trout), Kaiserschmarrn, Salzburger Nockerl</p>
+      
+      <ul class="p-tix">
+        
+        <li><a href="https://www.google.com/search?q=Zwoelferhorn+Seilbahn+tickets" target="_blank" rel="noopener">Zwölferhorn Cable Car</a> ~€33 · Buy online to skip the ticket window queue on sunny weekends.</li>
+        
+        <li><a href="https://www.google.com/search?q=Wolfgangsee+Schifffahrt+tickets" target="_blank" rel="noopener">Wolfgangsee Schifffahrt (Ferry)</a> ~€24 · Combined tickets with the SchafbergBahn cog railway are available.</li>
+        
+        <li><a href="https://www.google.com/search?q=Mozarthaus+St+Gilgen+tickets" target="_blank" rel="noopener">Mozarthaus St. Gilgen</a> ~€7 · Small museum dedicated to Mozart's mother and sister; check seasonal opening hours.</li>
+        
+      </ul>
+      
+      
+      <ul class="p-eat"><li class="pe-h">Where to eat</li>
+        <li><b>Gasthof zur Post</b> — Traditional Austrian tavern serving fresh Wolfgangsee fish and local venison (~€25-40/pp).</li><li><b>Fischerstube</b> — Freshly caught lake trout (Saibling) and seafood platters right by the water (~€30-50/pp).</li><li><b>Café Dallmann</b> — Mozart-inspired pastries, handmade Mozartkugeln, and traditional coffee (~€10-15/pp).</li>
+      </ul>
+      
+      
+      <ul class="p-around"><li class="pa-h">In &amp; around</li>
+        <li>St. Wolfgang & SchafbergBahn — 20 min drive (or ferry), historic cog railway up the mountain.</li><li>Hallstatt — 40 min drive, iconic lakeside UNESCO village and ancient salt mine.</li><li>Bad Ischl — 20 min drive, imperial spa town with Kaiservilla and famous Café Zauner.</li>
+      </ul>
+      
+      
+      <ul class="p-notes"><li class="pn-h">Notes — read before you go</li>
+        <li>An Austrian highway vignette is mandatory if you use the A1 autobahn to get here.</li><li>Parking near the lakefront (Strandbad) fills up very early on hot summer days; use the designated P1 or P2 park-and-ride lots.</li><li>Many smaller shops and traditional mountain huts (Almen) only accept cash, so keep Euros on hand.</li>
+      </ul>
+      
+      
+      <ul class="p-facts"><li class="pf-h">Interesting facts</li>
+        <li>Although Wolfgang Amadeus Mozart never visited St. Gilgen, his mother Anna Maria was born here, and his sister Nannerl lived here for many years.</li><li>The village was used as a filming location for the opening scenes of the classic movie 'The Sound of Music'.</li>
+      </ul>
+      
+      <div class="pm-box"><div class="pm-map" id="pm-st-gilgen" data-pmkey="st-gilgen"></div><p class="pm-leg">⭐ must-see · 🏖 beach · 🍴 where to eat · <span class="pm-dot-i"></span> sight — click a pin for details</p></div>
+      <p class="p-more"><a href="https://www.google.com/search?tbm=isch&amp;q=St.%20Gilgen%20AT" target="_blank" rel="noopener">More photos on Google Images →</a></p>
+    </div>
+  </div>
+
+  <div class="p-card" data-place="hallstatt">
+    <div class="p-noimg">Hallstatt</div>
+    <div class="p-body">
+      <div class="p-head"><span class="p-ord"></span><h3>Hallstatt</h3><span class="p-tag p-stop">stop · AT</span></div>
+      <p>A fairytale alpine village wedged between dramatic Dachstein mountains and a pristine lake, offering world-class salt mine history and stunning mountain hikes.</p>
+      <p class="p-stay"><b>Stay:</b> €150-250/n lakeside old town — cheaper in Obertraun €90-140/n</p>
+      <p class="p-try"><b>Try:</b> Reinanke (lake trout), Salzburger Nockerl, Hallstätter Krapfen</p>
+      
+      <ul class="p-tix">
+        
+        <li><a href="https://www.salzwelten.at/en/hallstatt" target="_blank" rel="noopener">Hallstatt Salt Mine (Salzwelten) & Skywalk</a> ~€40 · Book online in advance to skip long funicular lines, especially in summer.</li>
+        
+        <li><a href="https://dachstein-salzkammergut.com/en/" target="_blank" rel="noopener">Dachstein Krippenstein Cable Car & Ice Cave</a> ~€50-60 · Check weather webcams before booking; mountain weather changes rapidly.</li>
+        
+      </ul>
+      
+      
+      <ul class="p-eat"><li class="pe-h">Where to eat</li>
+        <li><b>Restaurant im Seehotel Grüner Baum</b> — Freshly caught Lake Hallstatt whitefish (Reinanke) served on a lakeside terrace. ~€35-50/pp.</li><li><b>Gasthof Zauner</b> — Historic inn famous for wild game dishes and grilled local trout. ~€30-45/pp.</li><li><b>Rudolfsturm</b> — Traditional Austrian dumplings and strudel served with panoramic views next to the salt mine. ~€20-30/pp.</li>
+      </ul>
+      
+      
+      <ul class="p-around"><li class="pa-h">In &amp; around</li>
+        <li>Obertraun Beach & Koppenbrüller Cave — 10 min drive, great swimming spot and a roaring active water cave.</li><li>Gosau Lakes (Vorderer Gosausee) — 20 min drive, mirror-like alpine lake with Dachstein glacier views and hiking paths.</li><li>Bad Ischl — 25 min drive, historic spa town featuring the Kaiservilla, Emperor Franz Joseph's summer residence.</li>
+      </ul>
+      
+      
+      <ul class="p-notes"><li class="pn-h">Notes — read before you go</li>
+        <li>Day-tripper crowds peak between 10:00 and 16:00; explore early in the morning or late in the evening for a peaceful experience.</li><li>Cars are strictly banned in the historic center; you must park in designated external lots (P1 or P2) and use the shuttle if staying overnight.</li><li>Austria requires a digital or physical highway vignette for your road trip; purchase it before crossing the border or at gas stations.</li>
+      </ul>
+      
+      
+      <ul class="p-facts"><li class="pf-h">Interesting facts</li>
+        <li>Hallstatt is home to the world's oldest salt mine, dating back over 7,000 years to the Bronze Age.</li><li>The village is so beloved in Asia that a full-scale replica of Hallstatt was built in Guangdong, China.</li><li>Due to limited space in the local graveyard, bones in the Beinhaus (Charnel House) were historically exhumed, bleached, and hand-painted with floral motifs.</li>
+      </ul>
+      
+      <div class="pm-box"><div class="pm-map" id="pm-hallstatt" data-pmkey="hallstatt"></div><p class="pm-leg">⭐ must-see · 🏖 beach · 🍴 where to eat · <span class="pm-dot-i"></span> sight — click a pin for details</p></div>
+      <p class="p-more"><a href="https://www.google.com/search?tbm=isch&amp;q=Hallstatt%20AT" target="_blank" rel="noopener">More photos on Google Images →</a></p>
+    </div>
+  </div>
+
+  <div class="p-card" data-place="bad-ischl">
+    <div class="p-noimg">Bad Ischl</div>
+    <div class="p-body">
+      <div class="p-head"><span class="p-ord"></span><h3>Bad Ischl</h3><span class="p-tag p-stop">stop · AT</span></div>
+      <p>The elegant heart of the Salzkammergut lake district, Bad Ischl combines imperial Habsburg grandeur with pristine alpine nature, thermal waters, and dramatic mountain peaks.</p>
+      <p class="p-stay"><b>Stay:</b> €120-200/n town center — cheaper guesthouses in the surrounding valleys €80-120</p>
+      <p class="p-try"><b>Try:</b> Zaunerstollen, Kaiserschmarrn, Salzkammergut Reinanke (freshly caught lake trout)</p>
+      
+      <ul class="p-tix">
+        
+        <li><a href="https://www.google.com/search?q=Kaiservilla+Bad+Ischl+tickets" target="_blank" rel="noopener">Kaiservilla (Imperial Villa)</a> ~€22 · Guided tours of the imperial apartments are highly recommended and can sell out during peak summer hours.</li>
+        
+        <li><a href="https://www.google.com/search?q=Katrin+Seilbahn+tickets" target="_blank" rel="noopener">Katrin Cable Car (Katrin Seilbahn)</a> ~€26 · Provides access to the 7-Lakes-View hiking trail; check operating hours as it closes in bad weather.</li>
+        
+      </ul>
+      
+      
+      <ul class="p-eat"><li class="pe-h">Where to eat</li>
+        <li><b>Café Konditorei Zauner</b> — The legendary former supplier to the imperial court; try the iconic Zaunerstollen nougat cake, ~€10-15/pp.</li><li><b>Restaurant Weinhaus Attwenger</b> — Historic riverside restaurant serving excellent local lake fish and traditional Austrian dishes, ~€25-45/pp.</li><li><b>k.u.k. Hofwirt</b> — Classic tavern atmosphere offering hearty Austrian staples like Tafelspitz and Wiener Schnitzel, ~€20-35/pp.</li>
+      </ul>
+      
+      
+      <ul class="p-around"><li class="pa-h">In &amp; around</li>
+        <li>Hallstatt — 25 min drive, the world-famous lakeside village with its ancient salt mine and dramatic mountain backdrop.</li><li>Wolfgangsee (St. Gilgen) — 20 min drive, offering beautiful lakeside beaches, swimming spots, and boat cruises.</li><li>Gosauseen Lakes — 35 min drive, stunning alpine lakes reflecting the jagged peaks of the Dachstein Glacier.</li>
+      </ul>
+      
+      
+      <ul class="p-notes"><li class="pn-h">Notes — read before you go</li>
+        <li>An Austrian digital or sticker vignette is mandatory if you use the autobahn (A1) to reach the Salzkammergut region.</li><li>Parking in the historic center is strictly regulated; use the designated long-term parking lots (P1 or P2) to avoid heavy fines.</li><li>Many traditional mountain huts and local cafes in the area do not accept credit cards, so always carry cash.</li>
+      </ul>
+      
+      
+      <ul class="p-facts"><li class="pf-h">Interesting facts</li>
+        <li>Emperor Franz Joseph I and Empress Sisi spent 60 summers here, and the town is where they officially got engaged in 1853.</li><li>Bad Ischl was designated as a European Capital of Culture in 2024, celebrating its rich alpine heritage and contemporary art.</li><li>It is Austria's oldest saltwater spa town, utilizing the region's natural saline springs for therapeutic treatments since 1823.</li>
+      </ul>
+      
+      <div class="pm-box"><div class="pm-map" id="pm-bad-ischl" data-pmkey="bad-ischl"></div><p class="pm-leg">⭐ must-see · 🏖 beach · 🍴 where to eat · <span class="pm-dot-i"></span> sight — click a pin for details</p></div>
+      <p class="p-more"><a href="https://www.google.com/search?tbm=isch&amp;q=Bad%20Ischl%20AT" target="_blank" rel="noopener">More photos on Google Images →</a></p>
+    </div>
+  </div>
+
+  <div class="p-card" data-place="cesky-krumlov">
+    <div class="p-noimg">Český Krumlov</div>
+    <div class="p-body">
+      <div class="p-head"><span class="p-ord"></span><h3>Český Krumlov</h3><span class="p-tag p-stop">stop · CZ</span></div>
+      <p>A fairytale medieval town looped by the Vltava River, featuring a massive castle complex, winding cobblestone lanes, and easy access to the dense forests and lakes of South Bohemia.</p>
+      <p class="p-stay"><b>Stay:</b> €80-150/n historic center — cheaper guesthouses (penzion) €50-80 outside the river bend</p>
+      <p class="p-try"><b>Try:</b> South Bohemian trout (pstruh), garlic soup (česnečka), local Eggenberg beer, gingerbread</p>
+      
+      <ul class="p-tix">
+        
+        <li><a href="https://www.google.com/search?q=Cesky+Krumlov+Castle+tickets" target="_blank" rel="noopener">Český Krumlov Castle Tours</a> ~€12 · Book the Castle Theater and Tower tours well in advance as spots are strictly limited.</li>
+        
+        <li><a href="https://www.google.com/search?q=Egon+Schiele+Art+Centrum+tickets" target="_blank" rel="noopener">Egon Schiele Art Centrum</a> ~€8 · Dedicated to the Austrian modernist painter; tickets can usually be bought at the door.</li>
+        
+      </ul>
+      
+      
+      <ul class="p-eat"><li class="pe-h">Where to eat</li>
+        <li><b>Krčma v Šatlavské ulici</b> — Medieval-style tavern serving open-fire grilled meats and traditional Bohemian platters, ~€20-30/pp.</li><li><b>Papa's Living Restaurant</b> — Riverside dining featuring fresh local river trout, pasta, and great local wines, ~€25-35/pp.</li><li><b>Laibon</b> — Creative vegetarian and local dishes served on a peaceful terrace right on the Vltava River, ~€15-25/pp.</li>
+      </ul>
+      
+      
+      <ul class="p-around"><li class="pa-h">In &amp; around</li>
+        <li>Lipno Reservoir — 30 min drive, sandy lakeside beaches, sailing, and a treetop walkway.</li><li>Kleť Mountain — 20 min drive, hike or take the chairlift up for panoramic views and an observatory.</li><li>Hluboká Castle — 40 min drive, a stunning Windsor-style white neo-Gothic chateau.</li>
+      </ul>
+      
+      
+      <ul class="p-notes"><li class="pn-h">Notes — read before you go</li>
+        <li>The historic center is a pedestrian-only zone; you must park in designated outer lots (P1-P4) and walk in.</li><li>Day-trippers flood the narrow streets from 10 AM to 4 PM; explore early in the morning or late in the evening for a peaceful experience.</li><li>Many smaller shops and traditional taverns still prefer cash (Czech Koruna - CZK), though cards are widely accepted in larger venues.</li>
+      </ul>
+      
+      
+      <ul class="p-facts"><li class="pf-h">Interesting facts</li>
+        <li>The castle moat has been home to brown bears since the 16th century, a tradition maintained to this day.</li><li>The town's Baroque Castle Theater is one of the world's best-preserved, complete with its original 18th-century stage machinery and scenery.</li>
+      </ul>
+      
+      <div class="pm-box"><div class="pm-map" id="pm-cesky-krumlov" data-pmkey="cesky-krumlov"></div><p class="pm-leg">⭐ must-see · 🏖 beach · 🍴 where to eat · <span class="pm-dot-i"></span> sight — click a pin for details</p></div>
+      <p class="p-more"><a href="https://www.google.com/search?tbm=isch&amp;q=%C4%8Cesk%C3%BD%20Krumlov%20CZ" target="_blank" rel="noopener">More photos on Google Images →</a></p>
+    </div>
+  </div>
+
+  <div class="p-card" data-place="mikulov">
+    <div class="p-noimg">Mikulov</div>
+    <div class="p-body">
+      <div class="p-head"><span class="p-ord"></span><h3>Mikulov</h3><span class="p-tag p-stop">stop · CZ</span></div>
+      <p>Dominated by a majestic clifftop castle, Mikulov is a picturesque South Moravian wine town nestled against the white limestone cliffs of the Pálava hills.</p>
+      <p class="p-stay"><b>Stay:</b> €70-120/n historic center — cheaper guesthouses in suburbs €50-80</p>
+      <p class="p-try"><b>Try:</b> Pálava white wine, Moravian smoked meats, pickled Hermelín cheese</p>
+      
+      <ul class="p-tix">
+        
+        <li><a href="https://www.google.com/search?q=Mikulov+Castle+tickets" target="_blank" rel="noopener">Mikulov Castle</a> ~€10 · Guided tours of the historic wine cellars and the giant barrel are highly recommended on weekends.</li>
+        
+        <li><a href="https://www.google.com/search?q=Dietrichstein+Tomb+Mikulov+tickets" target="_blank" rel="noopener">Dietrichstein Tomb</a> ~€6 · Located right on the main square; check seasonal opening hours as it closes in winter.</li>
+        
+      </ul>
+      
+      
+      <ul class="p-eat"><li class="pe-h">Where to eat</li>
+        <li><b>Sojka & spol.</b> — Modern bistro serving seasonal Moravian dishes and an exceptional selection of local wines — ~€20-30/pp.</li><li><b>Bistro Drogerka</b> — Popular spot on the main square known for great breakfasts, light lunches, and specialty coffee — ~€10-15/pp.</li><li><b>Kukanz</b> — Cozy restaurant offering traditional Czech classics and local wines in a stylishly rustic interior — ~€15-25/pp.</li>
+      </ul>
+      
+      
+      <ul class="p-around"><li class="pa-h">In &amp; around</li>
+        <li>Pálava Hills (Děvín) — 10 min drive, scenic hiking trails through limestone cliffs leading to the Děvičky castle ruins.</li><li>Lednice-Valtice Complex — 15 min drive, a breathtaking UNESCO site featuring romantic châteaux, English gardens, and boating canals.</li><li>Nové Mlýny Reservoirs — 15 min drive, vast lakes offering windsurfing, beaches, and lakeside cycling paths.</li>
+      </ul>
+      
+      
+      <ul class="p-notes"><li class="pn-h">Notes — read before you go</li>
+        <li>Parking in the historic center is strictly regulated and requires paying via automated meters or a mobile app.</li><li>A Czech highway vignette is mandatory if you use the nearby D2 highway to access the region.</li><li>Many smaller local wine cellars (sklepy) and family vineyards operate on a cash-only basis, so carry Czech Koruna (CZK).</li>
+      </ul>
+      
+      
+      <ul class="p-facts"><li class="pf-h">Interesting facts</li>
+        <li>Mikulov Castle houses one of the largest historic wine barrels in Europe, built in 1643 with a capacity of over 101,000 liters.</li><li>The town was historically a major center of Jewish culture in Moravia, serving as the seat of the regional land rabbi for over three centuries.</li>
+      </ul>
+      
+      <div class="pm-box"><div class="pm-map" id="pm-mikulov" data-pmkey="mikulov"></div><p class="pm-leg">⭐ must-see · 🏖 beach · 🍴 where to eat · <span class="pm-dot-i"></span> sight — click a pin for details</p></div>
+      <p class="p-more"><a href="https://www.google.com/search?tbm=isch&amp;q=Mikulov%20CZ" target="_blank" rel="noopener">More photos on Google Images →</a></p>
+    </div>
+  </div>
+
+  <div class="p-card" data-place="terchova">
+    <div class="p-noimg">Terchová</div>
+    <div class="p-body">
+      <div class="p-head"><span class="p-ord"></span><h3>Terchová</h3><span class="p-tag p-stop">stop · SK</span></div>
+      <p>Gateway to the dramatic Malá Fatra National Park, Terchová is a picturesque mountain village famed for its rugged gorges, traditional folklore, and as the birthplace of Slovakia's legendary outlaw Juraj Jánošík.</p>
+      <p class="p-stay"><b>Stay:</b> €60-100/n in local guesthouses (pension) — premium wellness hotels €120-180/n</p>
+      <p class="p-try"><b>Try:</b> Bryndzové halušky (potato dumplings with sheep cheese), Terchovský korbáčik (braided string cheese), Kapustnica (sauerkraut soup)</p>
+      
+      <ul class="p-tix">
+        
+        <li><a href="https://www.google.com/search?q=Vratna+Chleb+cable+car+tickets" target="_blank" rel="noopener">Vrátna Chleb Cable Car</a> ~€18 · Check weather conditions and seasonal operating hours online before heading up to the ridge.</li>
+        
+        <li><a href="https://www.google.com/search?q=Terchova+Museum+tickets" target="_blank" rel="noopener">Terchová Museum (Expozícia Jánošík a Terchová)</a> ~€4 · A small museum dedicated to local history and the legendary outlaw Juraj Jánošík; tickets are purchased on-site.</li>
+        
+      </ul>
+      
+      
+      <ul class="p-eat"><li class="pe-h">Where to eat</li>
+        <li><b>Terchovská Koliba Diery</b> — Traditional wooden cabin serving authentic bryndzové halušky and garlic soup in a bread bowl; ~€15-20/pp.</li><li><b>Haluškáreň Terchová</b> — Cozy local eatery specializing in various types of traditional Slovak dumplings; ~€10-15/pp.</li>
+      </ul>
+      
+      
+      <ul class="p-around"><li class="pa-h">In &amp; around</li>
+        <li>Orava Castle — 45 min drive, a stunning medieval castle perched high on a rock above the Orava River.</li><li>Šútovo Waterfall — 30 min drive, a scenic hike through the forest to the highest waterfall in the Malá Fatra range.</li><li>Strečno Castle — 25 min drive, ruined medieval fortress offering panoramic views over the Váh river gorge.</li>
+      </ul>
+      
+      
+      <ul class="p-notes"><li class="pn-h">Notes — read before you go</li>
+        <li>Parking at the main trailheads like Biely Potok fills up very early on summer weekends; bring cash for parking fees (~€5-10).</li><li>The ladders and metal chains in the Jánošíkove Diery gorges can be extremely slippery after rain; sturdy hiking boots are essential.</li><li>Slovakia requires an electronic highway vignette (e-známka) for driving on motorways; purchase it online before entering the country.</li>
+      </ul>
+      
+      
+      <ul class="p-facts"><li class="pf-h">Interesting facts</li>
+        <li>Terchová is the birthplace of Juraj Jánošík, the 'Slovak Robin Hood', who is celebrated with a massive 7.5-meter steel statue overlooking the village.</li><li>The traditional music of Terchová, characterized by multi-part singing and string instrument play, was inscribed on the UNESCO Intangible Cultural Heritage list in 2013.</li>
+      </ul>
+      
+      <div class="pm-box"><div class="pm-map" id="pm-terchova" data-pmkey="terchova"></div><p class="pm-leg">⭐ must-see · 🏖 beach · 🍴 where to eat · <span class="pm-dot-i"></span> sight — click a pin for details</p></div>
+      <p class="p-more"><a href="https://www.google.com/search?tbm=isch&amp;q=Terchov%C3%A1%20SK" target="_blank" rel="noopener">More photos on Google Images →</a></p>
+    </div>
+  </div>
+
+</div>
+
+<footer>Generated by AI Travel Planner · <span id="gen-date"></span> · map data &copy; OpenStreetMap contributors · routing &copy; OSRM · <a href="index.html" style="color:var(--sea)">Home</a> · <a href="design_my_trip.html" style="color:var(--sea)">Design my trip</a></footer>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script id="planner-map-js">
+
+(function(){
+var GEO=window.TRIP_GEO;
+var NAMES=window.TRIP_NAMES;
+var ORIGIN=window.TRIP_ORIGIN;
+var esc=window.escHtml;
+var map=null,layer=null,gotTile=false,failed=0,timer=null,reqSeq=0,lastFit='';
+var routeCache={};
+function fmtD(iso){return new Date(iso+'T12:00:00').toLocaleDateString('en-GB',{day:'numeric',month:'short'});}
+function pin(cls,txt){return L.divIcon({className:'',html:'<div class="mpin '+cls+'">'+txt+'</div>',iconSize:[26,26],iconAnchor:[13,13]});}
+function lblOpt(k,cls,g){
+  g=g||9;
+  return{permanent:true,direction:'right',offset:[g,0],className:cls};
+}
+function svgFallback(){
+  var f=document.getElementById('rb-lmap-fallback');if(f)f.hidden=false;
+}
+function init(){
+  map=L.map('rb-lmap',{zoomSnap:0.5,scrollWheelZoom:false});
+  var tl=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,
+    attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors'});
+  tl.on('tileload',function(){gotTile=true;var f=document.getElementById('rb-lmap-fallback');if(f)f.hidden=true;});
+  tl.on('tileerror',function(){failed++;if(!gotTile&&failed>=3)svgFallback();});
+  tl.addTo(map);
+  map.setView(GEO.origin,6);
+}
+function refresh(){
+  if(!map)return;
+  if(layer)layer.remove();
+  layer=L.layerGroup().addTo(map);
+  var st=window.rbState?window.rbState():{start:window.TRIP_START_DATE,end:window.TRIP_START_DATE,stops:[],legs:[],km:0};
+  var onRoute={origin:1};st.stops.forEach(function(s){onRoute[s.k]=1;});
+  for(var k in GEO){if(onRoute[k])continue;
+    L.circleMarker(GEO[k],{radius:6,color:'#8E2B22',weight:1.5,fillColor:'#C84B3C',fillOpacity:.95})
+     .bindTooltip(NAMES[k],lblOpt(k,'mlbl')).addTo(layer);}
+  var straight=[];
+  st.legs.forEach(function(path){
+    straight.push(L.polyline(path.map(function(k){return GEO[k];}),
+      {color:'#0E4A5E',weight:2.5,opacity:.5,dashArray:'6 7'}).addTo(layer));
+  });
+  st.stops.forEach(function(s,i){
+    L.marker(GEO[s.k],{icon:pin('',i+1),zIndexOffset:100})
+     .bindTooltip(s.name,lblOpt(s.k,'mlbl mlbl-on',15))
+     .bindPopup('<b>'+(i+1)+'. '+esc(s.full)+'</b><br>'+s.nights+' night'+(s.nights>1?'s':'')+' · '+fmtD(s.ci)+' → '+fmtD(s.co))
+     .addTo(layer);
+  });
+  L.marker(GEO.origin,{icon:pin('home','⌂'),zIndexOffset:100})
+   .bindTooltip(esc(ORIGIN.name),lblOpt('origin','mlbl mlbl-on',15))
+   .bindPopup('<b>'+esc(ORIGIN.name)+' — start &amp; finish</b><br>depart '+fmtD(st.start)+(st.stops.length?' · home '+fmtD(st.end):''))
+   .addTo(layer);
+  var pts=st.stops.map(function(s){return GEO[s.k];});pts.push(GEO.origin);
+  var fitKey=st.stops.map(function(s){return s.k;}).join(',');
+  if(fitKey!==lastFit){
+    lastFit=fitKey;
+    if(pts.length>1)map.fitBounds(L.latLngBounds(pts).pad(0.12));
+    else map.setView(GEO.origin,6);
+  }
+  if(st.stops.length)osrmUpgrade(st,straight,layer);
+}
+function osrmCoords(st){
+  var keys=['origin'];st.stops.forEach(function(s){keys.push(s.k);});keys.push('origin');
+  return keys.map(function(k){return GEO[k][1]+','+GEO[k][0];}).join(';');
+}
+function osrmUpgrade(st,straight,lay){
+  var coords=osrmCoords(st),seq=++reqSeq;
+  var go=routeCache[coords]?Promise.resolve(routeCache[coords])
+    :fetch('https://router.project-osrm.org/route/v1/driving/'+coords+'?overview=simplified&geometries=geojson')
+      .then(function(r){return r.json();})
+      .then(function(j){
+        if(j.code!=='Ok'||!j.routes||!j.routes[0])throw new Error('osrm');
+        var ll=j.routes[0].geometry.coordinates.map(function(c){return [c[1],c[0]];});
+        routeCache[coords]={ll:ll,km:Math.round(j.routes[0].distance/1000)};
+        return routeCache[coords];
+      });
+  go.then(function(rt){
+    if(seq!==reqSeq||lay!==layer)return; // stale response — route changed meanwhile
+    L.polyline(rt.ll,{color:'#0E4A5E',weight:3.5,opacity:.85})
+     .bindTooltip('Real driving route — '+rt.km+' km (OSRM)').addTo(lay);
+    straight.forEach(function(l){lay.removeLayer(l);});
+  }).catch(function(){/* offline / OSRM down — dashed mesh lines stay */});
+}
+window.rbMapSync=function(){clearTimeout(timer);timer=setTimeout(refresh,350);};
+window.rbMapOpen=function(){
+  if(!window.L)return;
+  if(!map)init();
+  setTimeout(function(){map.invalidateSize();refresh();},60);
+};
+window.addEventListener('load',function(){
+  var el=document.getElementById('rb-lmap');
+  if(el&&el.offsetParent!==null)window.rbMapOpen();
+});
+function dl(name,mime,text){
+  var a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([text],{type:mime}));
+  a.download=name;document.body.appendChild(a);a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},4000);
+}
+function xmlEsc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function addD(iso){var d=new Date(iso+'T12:00:00');d.setDate(d.getDate()+1);return d.toISOString().slice(0,10);}
+document.getElementById('mb-kml').addEventListener('click',function(){
+  var st=window.rbState?window.rbState():null;
+  if(!st||!st.stops.length){alert('Nothing selected in the Planner yet — tick some places first.');return;}
+  var k='<?xml version="1.0" encoding="UTF-8"?>\n<kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>'+xmlEsc(ORIGIN.name)+' trip — route</name>\n';
+  k+='<Placemark><name>⌂ '+xmlEsc(ORIGIN.name)+' — start/finish</name><description>Depart '+st.start+', home '+st.end+'</description><Point><coordinates>'+GEO.origin[1]+','+GEO.origin[0]+'</coordinates></Point></Placemark>\n';
+  st.stops.forEach(function(s,i){
+    k+='<Placemark><name>'+(i+1)+'. '+xmlEsc(s.full)+'</name><description>'+s.nights+' nights — check-in '+s.ci+', check-out '+s.co+'</description><Point><coordinates>'+GEO[s.k][1]+','+GEO[s.k][0]+'</coordinates></Point></Placemark>\n';
+  });
+  var cached=routeCache[osrmCoords(st)];
+  var line,label;
+  if(cached){line=cached.ll.map(function(p){return p[1]+','+p[0]+',0';});label='Route — '+cached.km+' km (real roads)';}
+  else{
+    var seq=['origin'];st.legs.forEach(function(p){for(var i=1;i<p.length;i++)seq.push(p[i]);});
+    line=seq.map(function(x){return GEO[x][1]+','+GEO[x][0]+',0';});label='Route — ~'+Math.round(st.km)+' km';
+  }
+  if(line.length>1){
+    k+='<Placemark><name>'+label+'</name><LineString><tessellate>1</tessellate><coordinates>';
+    k+=line.join(' ');
+    k+='</coordinates></LineString></Placemark>\n';
+  }
+  if(window.PDATA){
+    var sights='',eats='';
+    st.stops.forEach(function(s){
+      (window.PDATA[s.k]||[]).forEach(function(p){
+        var pm='<Placemark><name>'+xmlEsc((p.t==='eat'?'🍴 ':p.t==='must'?'⭐ ':p.t==='beach'?'🏖 ':'')+p.n+' — '+s.name)+'</name><description>'+xmlEsc(p.note)+'</description><Point><coordinates>'+p.ll[1]+','+p.ll[0]+'</coordinates></Point></Placemark>\n';
+        if(p.t==='eat')eats+=pm;else sights+=pm;
+      });
+    });
+    if(sights)k+='<Folder><name>Sights &amp; beaches</name>'+sights+'</Folder>\n';
+    if(eats)k+='<Folder><name>Where to eat</name>'+eats+'</Folder>\n';
+  }
+  k+='</Document></kml>';
+  dl('trip-route.kml','application/vnd.google-earth.kml+xml',k);
+});
+document.getElementById('mb-ics').addEventListener('click',function(){
+  var st=window.rbState?window.rbState():null;
+  if(!st||!st.stops.length){alert('Nothing selected in the Planner yet — tick some places first.');return;}
+  var now=new Date().toISOString().replace(/[-:]/g,'').slice(0,15)+'Z';
+  var ev=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//aitravelplanner//route//EN','CALSCALE:GREGORIAN','X-WR-CALNAME:'+ORIGIN.name+' trip'];
+  st.stops.forEach(function(s,i){
+    ev.push('BEGIN:VEVENT','UID:trip-'+s.k+'-'+s.ci+'@local','DTSTAMP:'+now,
+      'DTSTART;VALUE=DATE:'+s.ci.replace(/-/g,''),'DTEND;VALUE=DATE:'+s.co.replace(/-/g,''),
+      'SUMMARY:🏨 '+(i+1)+'. '+s.name+' ('+s.nights+'n)','LOCATION:'+s.loc,
+      'DESCRIPTION:Stop '+(i+1)+' of '+st.stops.length+' — '+s.full,'END:VEVENT');
+  });
+  ev.push('BEGIN:VEVENT','UID:trip-home-'+st.end+'@local','DTSTAMP:'+now,
+    'DTSTART;VALUE=DATE:'+st.end.replace(/-/g,''),'DTEND;VALUE=DATE:'+addD(st.end).replace(/-/g,''),
+    'SUMMARY:🏁 Home — '+ORIGIN.name,'LOCATION:'+ORIGIN.name+(ORIGIN.country?', '+ORIGIN.country:''),'END:VEVENT');
+  ev.push('END:VCALENDAR');
+  dl('trip.ics','text/calendar',ev.join('\r\n'));
+});
+})();
+
+</script>
+<script id="pmaps-js">
+
+(function(){
+var made={};
+var CHIP={must:'⭐ must-see',beach:'🏖 beach',eat:'🍴 where to eat',sight:'sight'};
+function icon(t){
+  if(t==='sight')return L.divIcon({className:'',html:'<div class="pm-dot"></div>',iconSize:[12,12],iconAnchor:[6,6]});
+  var e=t==='must'?'⭐':t==='beach'?'🏖':'🍴';
+  return L.divIcon({className:'',html:'<div class="pm-em">'+e+'</div>',iconSize:[18,18],iconAnchor:[9,9]});
+}
+function popup(p){
+  var g='https://www.google.com/maps/search/?api=1&query='+p.ll[0]+','+p.ll[1];
+  return '<div class="pm-pop"><b>'+p.n+'</b><span class="pm-chip">'+CHIP[p.t]+'</span><br>'
+    +p.note+'<br><a href="'+g+'" target="_blank" rel="noopener">📍 open in Google Maps</a></div>';
+}
+function build(el){
+  var key=el.getAttribute('data-pmkey'),pts=(window.PDATA&&window.PDATA[key])||[];
+  if(made[key])return;made[key]=true;
+  var m=L.map(el,{scrollWheelZoom:false,zoomSnap:0.5});
+  var got=false,failed=0;
+  var tl=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,
+    attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>'});
+  tl.on('tileload',function(){got=true;});
+  tl.on('tileerror',function(){failed++;
+    if(!got&&failed>=3&&!el.querySelector('.pm-fail'))
+      el.insertAdjacentHTML('beforeend','<div class="pm-fail">🗺 Map tiles need internet — open this file locally in a browser.</div>');});
+  tl.addTo(m);
+  var latsum=0,lonsum=0;pts.forEach(function(p){latsum+=p.ll[0];lonsum+=p.ll[1];});
+  var c=pts.length?[latsum/pts.length,lonsum/pts.length]:[46,14];
+  var near=pts.filter(function(p){
+    return Math.abs(p.ll[0]-c[0])*111<22&&Math.abs(p.ll[1]-c[1])*80<22;});
+  var fit=(near.length>1?near:pts).map(function(p){return p.ll;});
+  if(fit.length>1)m.fitBounds(L.latLngBounds(fit).pad(0.18));else m.setView(c,12);
+  pts.forEach(function(p){
+    L.marker(p.ll,{icon:icon(p.t),zIndexOffset:p.t==='eat'?50:p.t==='must'?100:0})
+     .bindTooltip(p.n)
+     .bindPopup(popup(p),{maxWidth:260})
+     .addTo(m);
+  });
+}
+function arm(){
+  var els=document.querySelectorAll('.pm-map[data-pmkey]');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){io.unobserve(e.target);build(e.target);}});
+    },{rootMargin:'600px 0px'});
+    els.forEach(function(el){io.observe(el);});
+  }else{
+    els.forEach(build);
+  }
+}
+if(document.readyState==='complete')arm();
+else window.addEventListener('load',arm);
+})();
+
+</script>
+<script>
+
+(function(){
+  var wrap=document.querySelector('.wrap');
+  var header=wrap.querySelector('header');
+  var design=document.getElementById('tab-design');
+  var placesH2=document.getElementById('places');
+  var footer=wrap.querySelector('footer');
+  if(!wrap||!header||!design||!placesH2||!footer)return;
+  var bar=document.createElement('nav');bar.id='tabbar';
+  bar.innerHTML='<button type="button" class="tb" data-tab="design">✏️&nbsp;Design my trip<\/button><button type="button" class="tb" data-tab="planner">\u{1F5FA}️&nbsp;Planner<\/button><button type="button" class="tb" data-tab="places">\u{1F3D6}️&nbsp;Places<\/button>';
+  var pPlan=document.createElement('div');pPlan.id='tab-planner';
+  var pPlaces=document.createElement('div');pPlaces.id='tab-places';
+  var n=design.nextSibling,nx;
+  while(n&&n!==placesH2){nx=n.nextSibling;pPlan.appendChild(n);n=nx;}
+  n=placesH2;
+  while(n&&n!==footer){nx=n.nextSibling;pPlaces.appendChild(n);n=nx;}
+  header.after(bar,design,pPlan,pPlaces);
+  var panels={design:design,planner:pPlan,places:pPlaces};
+  function show(which,scroll){
+    if(!panels[which])which='planner';
+    Object.keys(panels).forEach(function(k){panels[k].style.display=k===which?'':'none';});
+    if(which==='planner'&&window.rbMapOpen)window.rbMapOpen();
+    bar.querySelectorAll('.tb').forEach(function(b){b.classList.toggle('on',b.dataset.tab===which);});
+    if(history.replaceState)history.replaceState(null,'','#'+which);
+    if(scroll)window.scrollTo({top:0});
+  }
+  bar.addEventListener('click',function(e){
+    var b=e.target.closest('.tb');if(b)show(b.dataset.tab,true);
+  });
+  window.addEventListener('hashchange',function(){
+    var h=location.hash.replace('#','');
+    if(panels[h])show(h,true);
+  });
+  var init=location.hash.replace('#','');
+  show(panels[init]?init:'planner',false);
+})();
+
+</script>
+<script>
+
+document.addEventListener('DOMContentLoaded',function(){
+  var el=document.getElementById('gen-date');
+  if(el)el.textContent=new Date().toLocaleDateString();
+});
+if(document.readyState!=='loading'){
+  var el2=document.getElementById('gen-date');
+  if(el2)el2.textContent=new Date().toLocaleDateString();
+}
+
+</script>
+<script>
+
+(function () {
+  var ENDPOINT = "https://formsubmit.co/ajax/example@example.com";
+  var form = document.getElementById("brief-form");
+  var errEl = document.getElementById("form-error");
+  var successEl = document.getElementById("success");
+  var submitting = false;
+  if (!form) return;
+
+  function showError(msg) { errEl.textContent = msg; errEl.hidden = false; }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (submitting) return; // guard against rapid multi-click
+    errEl.hidden = true;
+
+    var from = form.from.value.trim();
+    var start = form.start.value;
+    var end = form.end.value;
+    var email = form.email.value.trim();
+
+    if (!from || !start || !end || !email) {
+      showError("Please fill in: where from, both dates, and your email.");
+      return;
+    }
+    if (end < start) { showError("End date is before the start date."); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError("That email doesn't look right."); return; }
+
+    var mode = form.querySelector("input[name=mode]:checked").value;
+    var tripType = form.querySelector("input[name=trip_type]:checked").value;
+
+    var btn = form.querySelector("button[type=submit]");
+    submitting = true;
+    btn.disabled = true;
+    btn.textContent = "Sending…";
+
+    var fields = {
+      "Mode": mode === "vibe" ? "Vibe — discover places" : "Strict — knows the destination",
+      "Trip type": tripType === "round" ? "Round trip" : "One way",
+      "From": from,
+      "To": form.to.value.trim(),
+      "Start": start,
+      "End": end,
+      "Adults": form.adults.value,
+      "Kids": form.kids.value.trim(),
+      "Pets": form.pets.value.trim(),
+      "Driving per day (optimal)": form.drive_optimal.value.trim(),
+      "Driving per day (max)": form.drive_max.value.trim(),
+      "Places they loved": form.loved.value.trim(),
+      "Preferences": form.prefs.value.trim(),
+      "Stops": form.stops.value.trim(),
+      "Main stay": form.main_stop.value.trim(),
+      "Max total km": form.max_km.value.trim(),
+      "Food": form.food.value.trim(),
+      "Avoid": form.avoid.value.trim(),
+      "Traveler email": email
+    };
+
+    var emailBody = { _subject: "Wishlist brief — " + from + " → " + (form.to.value.trim() || "open") + " (" + start + ")", _template: "table" };
+    Object.keys(fields).forEach(function (k) { emailBody[k] = fields[k]; });
+
+    fetch(ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify(emailBody)
+    }).then(function (res) { if (!res.ok) throw new Error("HTTP " + res.status); return res.json(); })
+      .then(function () {
+        form.hidden = true;
+        successEl.hidden = false;
+        successEl.scrollIntoView({ behavior: "smooth", block: "center" });
+      })
+      .catch(function () {
+        submitting = false;
+        btn.disabled = false;
+        btn.textContent = "Join wishlist →";
+        showError("Couldn't send the brief. Please try again.");
+      });
+  });
+})();
+
+</script>
+</div>
+
+</body>
+</html>

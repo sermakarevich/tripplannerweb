@@ -1,0 +1,851 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Krakow trip — 3372.7 km</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha512-pwNz1Ib3cDS0cx7KMzffFf3POEu/GXV0D2qx3GGK7WlB/fLzGf8hCfz2XmQ=="/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha512-XPq2x9y0gC8Wf0x2g=="></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 16px;
+    color: #1a1a1a;
+    background: #fafafa;
+  }
+  h1 { font-size: 1.6rem; margin-bottom: 8px; }
+  .header {
+    padding: 16px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  .header .meta { display: flex; flex-wrap: wrap; gap: 16px; font-size: 0.9rem; color: #555; }
+  .header .meta span { white-space: nowrap; }
+  .header .meta strong { color: #1a1a1a; }
+  #map { border: 1px solid #e0e0e0; border-radius: 8px; margin-bottom: 24px; }
+  .stop {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+  .stop h2 { font-size: 1.2rem; margin-bottom: 4px; }
+  .stop .meta { font-size: 0.85rem; color: #555; margin-bottom: 12px; }
+  .stop .meta span { margin-right: 16px; }
+  .poi-group { margin-bottom: 8px; }
+  .poi-group-title { font-size: 0.95rem; font-weight: 600; margin-bottom: 4px; }
+  .poi-item { font-size: 0.9rem; color: #444; margin-left: 16px; }
+  .poi-item .note { color: #777; }
+  .notes { margin-top: 24px; padding: 12px 16px; background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; font-size: 0.9rem; color: #333; }
+  #tripplan { display: none; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Krakow — 2026-07-12 to 2026-08-02</h1>
+  <div class="meta">
+    <span><strong>Party:</strong> 2 adults + 1 kid (18)</span>
+    <span><strong>Total km:</strong> 3372.7 km</span>
+    <span><strong>Nights:</strong> 21</span>
+    
+    <span><strong>Budget:</strong> €2310</span>
+    
+  </div>
+</div>
+
+<div id="map"></div>
+
+
+<section class="stop">
+  <h2>Zakopane</h2>
+  <p class="meta">
+    <span>PL</span>
+    <span><strong>3 nights</strong></span>
+    
+  </p>
+  
+  
+  
+  
+
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">⭐</div>
+      
+      <div class="poi-item">
+        Kasprowy Wierch <span class="note">— Take the cable car to the peak for breathtaking 360-degree Tatra views.</span>
+      </div>
+      
+      <div class="poi-item">
+        Morskie Oko <span class="note">— Stunning emerald-green mountain lake surrounded by towering pine forests.</span>
+      </div>
+      
+      <div class="poi-item">
+        Gubałówka <span class="note">— Ride the funicular railway for a panoramic view of the Zakopane valley.</span>
+      </div>
+      
+    </div>
+    
+  
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">🍴</div>
+      
+      <div class="poi-item">
+        Cristina Ristorante <span class="note">— Seafood pasta, beef carpaccio & pizza · ~€25/pp · upscale Italian dining with a cozy mountain vibe</span>
+      </div>
+      
+      <div class="poi-item">
+        Bąkowo Zohylina Wyżno <span class="note">— Grilled lamb chops, local steaks & oscypek · ~€30/pp · authentic highlander tavern with live music</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">•</div>
+      
+      <div class="poi-item">
+        Willa Koliba - Museum of Zakopane Style <span class="note">— Beautiful wooden villa showcasing unique local architecture and art.</span>
+      </div>
+      
+      <div class="poi-item">
+        Dolina Kościeliska <span class="note">— Scenic valley hike with caves, pine forests, and dramatic limestone cliffs.</span>
+      </div>
+      
+    </div>
+    
+  
+</section>
+
+<section class="stop">
+  <h2>Tatranská Lomnica</h2>
+  <p class="meta">
+    <span>SK</span>
+    <span><strong>2 nights</strong></span>
+    
+    <span>Leg: 790.9 km · 11.3 h</span>
+    
+  </p>
+  
+  
+  
+  
+
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">⭐</div>
+      
+      <div class="poi-item">
+        Lomnický štít <span class="note">— Breathtaking peak accessible by a spectacular red cable car.</span>
+      </div>
+      
+      <div class="poi-item">
+        Skalnaté pleso <span class="note">— Scenic mountain lake and a major hub for hiking trails.</span>
+      </div>
+      
+      <div class="poi-item">
+        TANAP Museum <span class="note">— Fascinating museum showcasing Tatra's nature, history, and folklore.</span>
+      </div>
+      
+    </div>
+    
+  
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">🍴</div>
+      
+      <div class="poi-item">
+        Olivia Restaurant <span class="note">— risotto, steaks, pasta · ~€25/pp · cozy Italian-inspired dining</span>
+      </div>
+      
+      <div class="poi-item">
+        Humno Tatry <span class="note">— ribeye steak, burgers, local beer · ~€30/pp · unique alpine cabin design with a suspended car</span>
+      </div>
+      
+      <div class="poi-item">
+        Slnečný Dom Restaurant <span class="note">— grilled meats, fish, local specialties · ~€22/pp · warm atmosphere with great mountain views</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">•</div>
+      
+      <div class="poi-item">
+        Botanical Garden Tatranská Lomnica <span class="note">— Beautiful exhibition of rare Tatra mountain plants and flowers.</span>
+      </div>
+      
+      <div class="poi-item">
+        Vodopády Studeného potoka <span class="note">— Stunning waterfalls accessible via an easy hike through pine forests.</span>
+      </div>
+      
+    </div>
+    
+  
+</section>
+
+<section class="stop">
+  <h2>Bled</h2>
+  <p class="meta">
+    <span>SI</span>
+    <span><strong>2 nights</strong></span>
+    
+    <span>Leg: 222.2 km · 3.2 h</span>
+    
+  </p>
+  
+  
+  
+  
+
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">⭐</div>
+      
+      <div class="poi-item">
+        Bled Island <span class="note">— Take a traditional Pletna boat to the island and ring the wishing bell.</span>
+      </div>
+      
+      <div class="poi-item">
+        Bled Castle <span class="note">— Perched on a cliff with a museum, printing shop, and panoramic lake views.</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">🏖</div>
+      
+      <div class="poi-item">
+        Grajsko Kopališče <span class="note">— The designated outdoor bathing area below the castle cliff with slides and pools.</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">🍴</div>
+      
+      <div class="poi-item">
+        Oštarija Peglez'n <span class="note">— Seafood pasta & grilled fish · ~€25/pp · Cozy rustic tavern near the lake</span>
+      </div>
+      
+      <div class="poi-item">
+        Rustika Pizzeria <span class="note">— Gourmet pizzas & local craft beer · ~€15/pp · Best wood-fired pizza in town</span>
+      </div>
+      
+      <div class="poi-item">
+        The Park Cafe <span class="note">— Original Bled cream cake & coffee · ~€10/pp · Home of the famous local dessert</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">•</div>
+      
+      <div class="poi-item">
+        Mala Osojnica <span class="note">— A steep forest hike offering the most iconic postcard view of Lake Bled.</span>
+      </div>
+      
+      <div class="poi-item">
+        Vintgar Gorge <span class="note">— Stunning wooden walkways carving through a dramatic canyon just north of Bled.</span>
+      </div>
+      
+    </div>
+    
+  
+</section>
+
+<section class="stop">
+  <h2>Zell am See</h2>
+  <p class="meta">
+    <span>AT</span>
+    <span><strong>2 nights</strong></span>
+    
+    <span>Leg: 110.6 km · 1.6 h</span>
+    
+  </p>
+  
+  
+  
+  
+
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">⭐</div>
+      
+      <div class="poi-item">
+        Schmittenhöhe <span class="note">— Take the Porsche-designed cable car up for panoramic views and pine forest hikes.</span>
+      </div>
+      
+      <div class="poi-item">
+        Zeller See Boat Cruise <span class="note">— Board the MS Schmittenhöhe for a relaxing cruise with stunning alpine reflections.</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">🏖</div>
+      
+      <div class="poi-item">
+        Strandbad Zell am See <span class="note">— Enjoy the lakeside lido with heated pools, kayak rentals, and grassy sunbathing areas.</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">🍴</div>
+      
+      <div class="poi-item">
+        Ristorante Pizzeria Giuseppe <span class="note">— seafood pasta, branzino · ~€35/pp · authentic Italian flavors in the heart of the old town</span>
+      </div>
+      
+      <div class="poi-item">
+        Steinerwirt 1493 <span class="note">— dry-aged steak, Wiener Schnitzel · ~€45/pp · historic tavern known for premium local meats</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">•</div>
+      
+      <div class="poi-item">
+        Stadtmuseum Vogtturm <span class="note">— Explore local history and contemporary art inside a beautifully preserved medieval tower.</span>
+      </div>
+      
+      <div class="poi-item">
+        Sigmund-Thun Gorge <span class="note">— Walk the wooden boardwalks over roaring glacial waters framed by lush forest.</span>
+      </div>
+      
+    </div>
+    
+  
+</section>
+
+<section class="stop">
+  <h2>Hallstatt</h2>
+  <p class="meta">
+    <span>AT</span>
+    <span><strong>2 nights</strong></span>
+    
+    <span>Leg: 529.8 km · 7.6 h</span>
+    
+  </p>
+  
+  
+  
+  
+
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">⭐</div>
+      
+      <div class="poi-item">
+        Hallstatt Skywalk Welterbeblick <span class="note">— Breathtaking viewing platform 360 meters above the roofs of Hallstatt, accessible by funicular.</span>
+      </div>
+      
+      <div class="poi-item">
+        Salzwelten Hallstatt <span class="note">— The world's oldest salt mine featuring an underground salt lake and an exciting mining slide.</span>
+      </div>
+      
+      <div class="poi-item">
+        Classic Hallstatt Viewpoint <span class="note">— The iconic postcard-perfect photo spot of the historic village and the serene lake.</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">🏖</div>
+      
+      <div class="poi-item">
+        Badeinsel Hallstatt <span class="note">— A scenic lakeside bathing island with a gravel beach, perfect for relaxing by the alpine water.</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">🍴</div>
+      
+      <div class="poi-item">
+        Seewirt Zauner <span class="note">— Grilled lake trout & local char · ~€35/pp · Historic lakeside restaurant famous for fresh wild-caught fish</span>
+      </div>
+      
+      <div class="poi-item">
+        Bella Milano <span class="note">— Stone-oven pizza & pasta · ~€22/pp · Cozy Italian spot offering classic Mediterranean dishes near the lake</span>
+      </div>
+      
+      <div class="poi-item">
+        Restaurant Rudolfsturm <span class="note">— Beef steaks & Austrian classics · ~€40/pp · Dine on a historic defense tower with panoramic mountain views</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">•</div>
+      
+      <div class="poi-item">
+        Echerntal Trail <span class="note">— Scenic hiking trail through dense pine forests leading to the impressive Waldbachstrub waterfalls.</span>
+      </div>
+      
+      <div class="poi-item">
+        Museum Hallstatt <span class="note">— Fascinating museum showcasing 7,000 years of local history and unique Celtic archaeological finds.</span>
+      </div>
+      
+    </div>
+    
+  
+</section>
+
+<section class="stop">
+  <h2>Karpacz</h2>
+  <p class="meta">
+    <span>PL</span>
+    <span><strong>2 nights</strong></span>
+    
+    <span>Leg: 28.3 km · 0.4 h</span>
+    
+  </p>
+  
+  
+  
+  
+
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">⭐</div>
+      
+      <div class="poi-item">
+        Vang Stave Church <span class="note">— Stunning 12th-century Norwegian wooden church relocated to the Giant Mountains.</span>
+      </div>
+      
+      <div class="poi-item">
+        Śnieżka Mountain <span class="note">— The highest peak of the Karkonosze range, offering panoramic border views.</span>
+      </div>
+      
+      <div class="poi-item">
+        Kopa Cable Car <span class="note">— Convenient chairlift taking you high up towards the Śnieżka hiking trails.</span>
+      </div>
+      
+    </div>
+    
+  
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">🍴</div>
+      
+      <div class="poi-item">
+        Restauracja Sowica <span class="note">— Steaks, grilled trout · ~€25/pp · Cozy mountain tavern known for excellent meats and local fish</span>
+      </div>
+      
+      <div class="poi-item">
+        Mamma Mia Carpaccio <span class="note">— Wood-fired pizza, pasta · ~€18/pp · Charming Italian spot serving authentic Mediterranean classics</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">•</div>
+      
+      <div class="poi-item">
+        Wild Waterfall (Dziki Wodospad) <span class="note">— Picturesque waterfall surrounded by dense pine forests near the cable car station.</span>
+      </div>
+      
+      <div class="poi-item">
+        Karkonoskie Tajemnice <span class="note">— Interactive underground museum dedicated to the legends of the Mountain Spirit.</span>
+      </div>
+      
+    </div>
+    
+  
+</section>
+
+<section class="stop">
+  <h2>Szklarska Poręba</h2>
+  <p class="meta">
+    <span>PL</span>
+    <span><strong>2 nights</strong></span>
+    
+    <span>Leg: 508.5 km · 7.3 h</span>
+    
+  </p>
+  
+  
+  
+  
+
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">⭐</div>
+      
+      <div class="poi-item">
+        Kamieńczyk Waterfall <span class="note">— The highest and most spectacular waterfall in the Polish Sudetes, set in a deep gorge.</span>
+      </div>
+      
+      <div class="poi-item">
+        Szklarki Waterfall <span class="note">— A picturesque waterfall surrounded by dense pine forests, easily accessible via a flat trail.</span>
+      </div>
+      
+      <div class="poi-item">
+        Szrenica Chairlift <span class="note">— Take the double-section chairlift up to Szrenica peak for panoramic mountain views and hiking trails.</span>
+      </div>
+      
+    </div>
+    
+  
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">🍴</div>
+      
+      <div class="poi-item">
+        Restauracja Alfredo <span class="note">— tuscan pasta, wood-fired pizza · ~€15/pp · cozy Italian spot in the heart of the mountain resort</span>
+      </div>
+      
+      <div class="poi-item">
+        Karczma Karkonoska <span class="note">— beef steaks, grilled local trout · ~€22/pp · rustic mountain tavern serving hearty regional meats</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">•</div>
+      
+      <div class="poi-item">
+        Złoty Widok (Golden View) <span class="note">— A newly renovated viewing platform offering breathtaking vistas of the Karkonosze range.</span>
+      </div>
+      
+      <div class="poi-item">
+        Chata Walońska <span class="note">— A unique museum and cultural center dedicated to medieval mineral seekers and local legends.</span>
+      </div>
+      
+    </div>
+    
+  
+</section>
+
+<section class="stop">
+  <h2>Heringsdorf</h2>
+  <p class="meta">
+    <span>DE</span>
+    <span><strong>2 nights</strong></span>
+    
+    <span>Leg: 335.7 km · 4.8 h</span>
+    
+  </p>
+  
+  
+  
+  
+
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">⭐</div>
+      
+      <div class="poi-item">
+        Seebrücke Heringsdorf <span class="note">— Germany's longest pier, featuring shops, restaurants, and a striking pyramid-shaped building.</span>
+      </div>
+      
+      <div class="poi-item">
+        Villa Irmgard <span class="note">— Charming memorial museum dedicated to writer Maxim Gorky in a historic resort-style villa.</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">🏖</div>
+      
+      <div class="poi-item">
+        Heringsdorf Beach <span class="note">— Wide, fine-sand Baltic beach lined with classic covered wicker beach chairs.</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">🍴</div>
+      
+      <div class="poi-item">
+        Uwe's Fischerhütte <span class="note">— Fresh fish platter, smoked fish · ~€25/pp · iconic rustic beachside fish shack</span>
+      </div>
+      
+      <div class="poi-item">
+        Marcello's Ristorante <span class="note">— Homemade pasta, stone-oven pizza · ~€30/pp · cozy Italian dining near the promenade</span>
+      </div>
+      
+      <div class="poi-item">
+        Steakhouse Beef & Meer <span class="note">— Dry-aged ribeye, grilled beef fillet · ~€45/pp · premium steaks and seafood near Bansin beach</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">•</div>
+      
+      <div class="poi-item">
+        Baumwipfelpfad Usedom <span class="note">— Elevated treetop walk offering panoramic views of the surrounding pine forests and the sea.</span>
+      </div>
+      
+      <div class="poi-item">
+        Kunstpavillon Heringsdorf <span class="note">— Distinctive round exhibition hall showcasing contemporary art from the region.</span>
+      </div>
+      
+    </div>
+    
+  
+</section>
+
+<section class="stop">
+  <h2>Łeba</h2>
+  <p class="meta">
+    <span>PL</span>
+    <span><strong>2 nights</strong></span>
+    
+    <span>Leg: 105.4 km · 1.5 h</span>
+    
+  </p>
+  
+  
+  
+  
+
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">⭐</div>
+      
+      <div class="poi-item">
+        Ruchome Wydmy (Moving Dunes) <span class="note">— Stunning shifting sand dunes between the Baltic Sea and Lake Łebsko.</span>
+      </div>
+      
+      <div class="poi-item">
+        Słowiński National Park Pine Forest <span class="note">— Scenic hiking trails through coastal pine forests and unique biosphere reserve.</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">🏖</div>
+      
+      <div class="poi-item">
+        Plaża Łeba <span class="note">— Wide, fine-sand Baltic beach perfect for sunbathing and long walks.</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">🍴</div>
+      
+      <div class="poi-item">
+        Tawerna pod Łososiem <span class="note">— fried cod, fish soup · ~€20/pp · fresh Baltic catch in a cozy maritime setting</span>
+      </div>
+      
+      <div class="poi-item">
+        La Chitarra <span class="note">— pasta, wood-fired pizza · ~€18/pp · authentic Italian flavors near the harbor</span>
+      </div>
+      
+      <div class="poi-item">
+        Karczma Słowińska <span class="note">— grilled steaks, local venison · ~€25/pp · hearty Polish meats and rustic atmosphere</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">•</div>
+      
+      <div class="poi-item">
+        Muzeum Wyrzutni Rakiet w Rąbce <span class="note">— Historical WWII rocket testing site museum hidden in the forest.</span>
+      </div>
+      
+      <div class="poi-item">
+        Muzeum Motyli <span class="note">— Fascinating private collection of thousands of colorful butterflies and insects.</span>
+      </div>
+      
+    </div>
+    
+  
+</section>
+
+<section class="stop">
+  <h2>Hel</h2>
+  <p class="meta">
+    <span>PL</span>
+    <span><strong>2 nights</strong></span>
+    
+    <span>Leg: 686.9 km · 9.8 h</span>
+    
+  </p>
+  
+  
+  
+  
+
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">⭐</div>
+      
+      <div class="poi-item">
+        Fokarium (Seal Sanctuary) <span class="note">— Watch seal feeding and learn about Baltic marine conservation.</span>
+      </div>
+      
+      <div class="poi-item">
+        Cypel Helski (The Tip of Hel) <span class="note">— Scenic boardwalk where the Baltic Sea meets the Bay of Puck.</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">🏖</div>
+      
+      <div class="poi-item">
+        Plaża na Cyplu <span class="note">— Wide, sandy beach perfect for relaxing walks amidst coastal dunes.</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">🍴</div>
+      
+      <div class="poi-item">
+        ToTu <span class="note">— fried cod, herring in oil · ~€20/pp · cozy atmosphere near the harbor</span>
+      </div>
+      
+      <div class="poi-item">
+        Restauracja Morgan <span class="note">— halibut steak, fish soup · ~€25/pp · maritime-themed tavern with fresh catch</span>
+      </div>
+      
+      <div class="poi-item">
+        Bella Italia <span class="note">— wood-fired pizza, seafood pasta · ~€18/pp · classic Italian flavors by the Baltic</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">•</div>
+      
+      <div class="poi-item">
+        Muzeum Obrony Wybrzeża <span class="note">— Explore WWII bunkers and military exhibits hidden in the pine forest.</span>
+      </div>
+      
+      <div class="poi-item">
+        Latarnia Morska Hel <span class="note">— Climb the historic brick lighthouse for panoramic views of the peninsula.</span>
+      </div>
+      
+    </div>
+    
+  
+</section>
+
+
+
+
+<script type="application/json" id="tripplan">{"schema":"tripplan.v1","request":{"origin":{"name":"Krakow","country":"Poland","lat":50.06465,"lon":19.94498},"start_date":"2026-07-12","end_date":"2026-08-02","party":"2 adults + 1 kid (18)","interests":["sandy beach","pine forest","mountains","hiking","cable car","museums","art galleries","seafood","italian food","steaks"],"pace":"balanced","budget_total_eur":null,"km_cap":4000,"must":["sandy beach","pine forest","mountains","hiking","cable car","museums","art galleries"],"avoid":["big cities"],"notes":"Heading to: The sea — Italy or Croatia or somewhere there. Main stay: 7–14 days near the sea. Places they loved/dream of: Jesolo, Lake Como, Titlis & Pilatus hikes, Morskie Oko, Hallstatt."},"stops":[{"key":"zakopane","name":"Zakopane","country":"PL","lat":49.29918,"lon":19.94885,"nights":3,"leg_km":54.4,"leg_h":0.78,"pois":[{"n":"Kasprowy Wierch","t":"must","lat":49.2322,"lon":19.9817,"note":"Take the cable car to the peak for breathtaking 360-degree Tatra views."},{"n":"Morskie Oko","t":"must","lat":49.2014,"lon":20.0711,"note":"Stunning emerald-green mountain lake surrounded by towering pine forests."},{"n":"Gubałówka","t":"must","lat":49.3072,"lon":19.9378,"note":"Ride the funicular railway for a panoramic view of the Zakopane valley."},{"n":"Willa Koliba - Museum of Zakopane Style","t":"sight","lat":49.2964,"lon":19.9436,"note":"Beautiful wooden villa showcasing unique local architecture and art."},{"n":"Dolina Kościeliska","t":"sight","lat":49.2575,"lon":19.8689,"note":"Scenic valley hike with caves, pine forests, and dramatic limestone cliffs."},{"n":"Cristina Ristorante","t":"eat","lat":49.2945,"lon":19.9515,"note":"Seafood pasta, beef carpaccio & pizza · ~€25/pp · upscale Italian dining with a cozy mountain vibe"},{"n":"Bąkowo Zohylina Wyżno","t":"eat","lat":49.2911,"lon":19.9592,"note":"Grilled lamb chops, local steaks & oscypek · ~€30/pp · authentic highlander tavern with live music"}]},{"key":"tatranska-lomnica","name":"Tatranská Lomnica","country":"SK","lat":49.1649,"lon":20.2826,"nights":2,"leg_km":790.9,"leg_h":11.3,"pois":[{"n":"Lomnický štít","t":"must","lat":49.1945,"lon":20.213,"note":"Breathtaking peak accessible by a spectacular red cable car."},{"n":"Skalnaté pleso","t":"must","lat":49.1864,"lon":20.2324,"note":"Scenic mountain lake and a major hub for hiking trails."},{"n":"TANAP Museum","t":"must","lat":49.1643,"lon":20.2858,"note":"Fascinating museum showcasing Tatra's nature, history, and folklore."},{"n":"Botanical Garden Tatranská Lomnica","t":"sight","lat":49.1655,"lon":20.289,"note":"Beautiful exhibition of rare Tatra mountain plants and flowers."},{"n":"Vodopády Studeného potoka","t":"sight","lat":49.1647,"lon":20.2231,"note":"Stunning waterfalls accessible via an easy hike through pine forests."},{"n":"Olivia Restaurant","t":"eat","lat":49.1672,"lon":20.2811,"note":"risotto, steaks, pasta · ~€25/pp · cozy Italian-inspired dining"},{"n":"Humno Tatry","t":"eat","lat":49.1652,"lon":20.2725,"note":"ribeye steak, burgers, local beer · ~€30/pp · unique alpine cabin design with a suspended car"},{"n":"Slnečný Dom Restaurant","t":"eat","lat":49.1631,"lon":20.2835,"note":"grilled meats, fish, local specialties · ~€22/pp · warm atmosphere with great mountain views"}]},{"key":"bled","name":"Bled","country":"SI","lat":46.3683,"lon":14.1143,"nights":2,"leg_km":222.2,"leg_h":3.17,"pois":[{"n":"Bled Island","t":"must","lat":46.3622,"lon":14.0902,"note":"Take a traditional Pletna boat to the island and ring the wishing bell."},{"n":"Bled Castle","t":"must","lat":46.3698,"lon":14.1007,"note":"Perched on a cliff with a museum, printing shop, and panoramic lake views."},{"n":"Mala Osojnica","t":"sight","lat":46.3578,"lon":14.0811,"note":"A steep forest hike offering the most iconic postcard view of Lake Bled."},{"n":"Grajsko Kopališče","t":"beach","lat":46.369,"lon":14.103,"note":"The designated outdoor bathing area below the castle cliff with slides and pools."},{"n":"Vintgar Gorge","t":"sight","lat":46.3911,"lon":14.0839,"note":"Stunning wooden walkways carving through a dramatic canyon just north of Bled."},{"n":"Oštarija Peglez'n","t":"eat","lat":46.3675,"lon":14.1118,"note":"Seafood pasta & grilled fish · ~€25/pp · Cozy rustic tavern near the lake"},{"n":"Rustika Pizzeria","t":"eat","lat":46.3695,"lon":14.1075,"note":"Gourmet pizzas & local craft beer · ~€15/pp · Best wood-fired pizza in town"},{"n":"The Park Cafe","t":"eat","lat":46.3668,"lon":14.1095,"note":"Original Bled cream cake & coffee · ~€10/pp · Home of the famous local dessert"}]},{"key":"zell-am-see","name":"Zell am See","country":"AT","lat":47.3235,"lon":12.7968,"nights":2,"leg_km":110.6,"leg_h":1.58,"pois":[{"n":"Schmittenhöhe","t":"must","lat":47.3292,"lon":12.7381,"note":"Take the Porsche-designed cable car up for panoramic views and pine forest hikes."},{"n":"Zeller See Boat Cruise","t":"must","lat":47.3245,"lon":12.8015,"note":"Board the MS Schmittenhöhe for a relaxing cruise with stunning alpine reflections."},{"n":"Strandbad Zell am See","t":"beach","lat":47.3275,"lon":12.8042,"note":"Enjoy the lakeside lido with heated pools, kayak rentals, and grassy sunbathing areas."},{"n":"Stadtmuseum Vogtturm","t":"sight","lat":47.3236,"lon":12.7969,"note":"Explore local history and contemporary art inside a beautifully preserved medieval tower."},{"n":"Sigmund-Thun Gorge","t":"sight","lat":47.2589,"lon":12.7441,"note":"Walk the wooden boardwalks over roaring glacial waters framed by lush forest."},{"n":"Ristorante Pizzeria Giuseppe","t":"eat","lat":47.3233,"lon":12.7968,"note":"seafood pasta, branzino · ~€35/pp · authentic Italian flavors in the heart of the old town"},{"n":"Steinerwirt 1493","t":"eat","lat":47.3244,"lon":12.7965,"note":"dry-aged steak, Wiener Schnitzel · ~€45/pp · historic tavern known for premium local meats"}]},{"key":"hallstatt","name":"Hallstatt","country":"AT","lat":47.5622,"lon":13.6493,"nights":2,"leg_km":529.8,"leg_h":7.57,"pois":[{"n":"Hallstatt Skywalk Welterbeblick","t":"must","lat":47.5625,"lon":13.6478,"note":"Breathtaking viewing platform 360 meters above the roofs of Hallstatt, accessible by funicular."},{"n":"Salzwelten Hallstatt","t":"must","lat":47.5619,"lon":13.6378,"note":"The world's oldest salt mine featuring an underground salt lake and an exciting mining slide."},{"n":"Classic Hallstatt Viewpoint","t":"must","lat":47.5646,"lon":13.6493,"note":"The iconic postcard-perfect photo spot of the historic village and the serene lake."},{"n":"Badeinsel Hallstatt","t":"beach","lat":47.5542,"lon":13.6511,"note":"A scenic lakeside bathing island with a gravel beach, perfect for relaxing by the alpine water."},{"n":"Echerntal Trail","t":"sight","lat":47.5531,"lon":13.6333,"note":"Scenic hiking trail through dense pine forests leading to the impressive Waldbachstrub waterfalls."},{"n":"Museum Hallstatt","t":"sight","lat":47.5617,"lon":13.6492,"note":"Fascinating museum showcasing 7,000 years of local history and unique Celtic archaeological finds."},{"n":"Seewirt Zauner","t":"eat","lat":47.5621,"lon":13.6489,"note":"Grilled lake trout & local char · ~€35/pp · Historic lakeside restaurant famous for fresh wild-caught fish"},{"n":"Bella Milano","t":"eat","lat":47.5595,"lon":13.6482,"note":"Stone-oven pizza & pasta · ~€22/pp · Cozy Italian spot offering classic Mediterranean dishes near the lake"},{"n":"Restaurant Rudolfsturm","t":"eat","lat":47.5627,"lon":13.6479,"note":"Beef steaks & Austrian classics · ~€40/pp · Dine on a historic defense tower with panoramic mountain views"}]},{"key":"karpacz","name":"Karpacz","country":"PL","lat":50.7785,"lon":15.7511,"nights":2,"leg_km":28.3,"leg_h":0.4,"pois":[{"n":"Vang Stave Church","t":"must","lat":50.7772,"lon":15.7231,"note":"Stunning 12th-century Norwegian wooden church relocated to the Giant Mountains."},{"n":"Śnieżka Mountain","t":"must","lat":50.7361,"lon":15.7401,"note":"The highest peak of the Karkonosze range, offering panoramic border views."},{"n":"Kopa Cable Car","t":"must","lat":50.7694,"lon":15.7289,"note":"Convenient chairlift taking you high up towards the Śnieżka hiking trails."},{"n":"Wild Waterfall (Dziki Wodospad)","t":"sight","lat":50.7691,"lon":15.7272,"note":"Picturesque waterfall surrounded by dense pine forests near the cable car station."},{"n":"Karkonoskie Tajemnice","t":"sight","lat":50.7744,"lon":15.7511,"note":"Interactive underground museum dedicated to the legends of the Mountain Spirit."},{"n":"Restauracja Sowica","t":"eat","lat":50.7748,"lon":15.7535,"note":"Steaks, grilled trout · ~€25/pp · Cozy mountain tavern known for excellent meats and local fish"},{"n":"Mamma Mia Carpaccio","t":"eat","lat":50.7731,"lon":15.7575,"note":"Wood-fired pizza, pasta · ~€18/pp · Charming Italian spot serving authentic Mediterranean classics"}]},{"key":"szklarska-poreba","name":"Szklarska Poręba","country":"PL","lat":50.8271,"lon":15.5253,"nights":2,"leg_km":508.5,"leg_h":7.26,"pois":[{"n":"Kamieńczyk Waterfall","t":"must","lat":50.8144,"lon":15.5122,"note":"The highest and most spectacular waterfall in the Polish Sudetes, set in a deep gorge."},{"n":"Szklarki Waterfall","t":"must","lat":50.8291,"lon":15.5556,"note":"A picturesque waterfall surrounded by dense pine forests, easily accessible via a flat trail."},{"n":"Szrenica Chairlift","t":"must","lat":50.8189,"lon":15.5178,"note":"Take the double-section chairlift up to Szrenica peak for panoramic mountain views and hiking trails."},{"n":"Złoty Widok (Golden View)","t":"sight","lat":50.8353,"lon":15.5511,"note":"A newly renovated viewing platform offering breathtaking vistas of the Karkonosze range."},{"n":"Chata Walońska","t":"sight","lat":50.8347,"lon":15.5414,"note":"A unique museum and cultural center dedicated to medieval mineral seekers and local legends."},{"n":"Restauracja Alfredo","t":"eat","lat":50.8265,"lon":15.5255,"note":"tuscan pasta, wood-fired pizza · ~€15/pp · cozy Italian spot in the heart of the mountain resort"},{"n":"Karczma Karkonoska","t":"eat","lat":50.8258,"lon":15.5242,"note":"beef steaks, grilled local trout · ~€22/pp · rustic mountain tavern serving hearty regional meats"}]},{"key":"heringsdorf","name":"Heringsdorf","country":"DE","lat":53.9547,"lon":14.1664,"nights":2,"leg_km":335.7,"leg_h":4.8,"pois":[{"n":"Seebrücke Heringsdorf","t":"must","lat":53.9564,"lon":14.1715,"note":"Germany's longest pier, featuring shops, restaurants, and a striking pyramid-shaped building."},{"n":"Villa Irmgard","t":"must","lat":53.9589,"lon":14.1648,"note":"Charming memorial museum dedicated to writer Maxim Gorky in a historic resort-style villa."},{"n":"Heringsdorf Beach","t":"beach","lat":53.9575,"lon":14.173,"note":"Wide, fine-sand Baltic beach lined with classic covered wicker beach chairs."},{"n":"Baumwipfelpfad Usedom","t":"sight","lat":53.9602,"lon":14.1558,"note":"Elevated treetop walk offering panoramic views of the surrounding pine forests and the sea."},{"n":"Kunstpavillon Heringsdorf","t":"sight","lat":53.9568,"lon":14.1691,"note":"Distinctive round exhibition hall showcasing contemporary art from the region."},{"n":"Uwe's Fischerhütte","t":"eat","lat":53.9458,"lon":14.1912,"note":"Fresh fish platter, smoked fish · ~€25/pp · iconic rustic beachside fish shack"},{"n":"Marcello's Ristorante","t":"eat","lat":53.9548,"lon":14.1675,"note":"Homemade pasta, stone-oven pizza · ~€30/pp · cozy Italian dining near the promenade"},{"n":"Steakhouse Beef & Meer","t":"eat","lat":53.9718,"lon":14.139,"note":"Dry-aged ribeye, grilled beef fillet · ~€45/pp · premium steaks and seafood near Bansin beach"}]},{"key":"leba","name":"Łeba","country":"PL","lat":54.7592,"lon":17.5543,"nights":2,"leg_km":105.4,"leg_h":1.51,"pois":[{"n":"Ruchome Wydmy (Moving Dunes)","t":"must","lat":54.7511,"lon":17.4101,"note":"Stunning shifting sand dunes between the Baltic Sea and Lake Łebsko."},{"n":"Słowiński National Park Pine Forest","t":"must","lat":54.758,"lon":17.512,"note":"Scenic hiking trails through coastal pine forests and unique biosphere reserve."},{"n":"Plaża Łeba","t":"beach","lat":54.7685,"lon":17.555,"note":"Wide, fine-sand Baltic beach perfect for sunbathing and long walks."},{"n":"Muzeum Wyrzutni Rakiet w Rąbce","t":"sight","lat":54.7578,"lon":17.4655,"note":"Historical WWII rocket testing site museum hidden in the forest."},{"n":"Muzeum Motyli","t":"sight","lat":54.7612,"lon":17.5565,"note":"Fascinating private collection of thousands of colorful butterflies and insects."},{"n":"Tawerna pod Łososiem","t":"eat","lat":54.7615,"lon":17.5532,"note":"fried cod, fish soup · ~€20/pp · fresh Baltic catch in a cozy maritime setting"},{"n":"La Chitarra","t":"eat","lat":54.7598,"lon":17.5545,"note":"pasta, wood-fired pizza · ~€18/pp · authentic Italian flavors near the harbor"},{"n":"Karczma Słowińska","t":"eat","lat":54.7595,"lon":17.551,"note":"grilled steaks, local venison · ~€25/pp · hearty Polish meats and rustic atmosphere"}]},{"key":"hel","name":"Hel","country":"PL","lat":54.6083,"lon":18.8014,"nights":2,"leg_km":686.9,"leg_h":9.81,"pois":[{"n":"Fokarium (Seal Sanctuary)","t":"must","lat":54.6078,"lon":18.8011,"note":"Watch seal feeding and learn about Baltic marine conservation."},{"n":"Cypel Helski (The Tip of Hel)","t":"must","lat":54.5945,"lon":18.8115,"note":"Scenic boardwalk where the Baltic Sea meets the Bay of Puck."},{"n":"Muzeum Obrony Wybrzeża","t":"sight","lat":54.6205,"lon":18.7711,"note":"Explore WWII bunkers and military exhibits hidden in the pine forest."},{"n":"Plaża na Cyplu","t":"beach","lat":54.5975,"lon":18.818,"note":"Wide, sandy beach perfect for relaxing walks amidst coastal dunes."},{"n":"Latarnia Morska Hel","t":"sight","lat":54.6022,"lon":18.8093,"note":"Climb the historic brick lighthouse for panoramic views of the peninsula."},{"n":"ToTu","t":"eat","lat":54.6075,"lon":18.7985,"note":"fried cod, herring in oil · ~€20/pp · cozy atmosphere near the harbor"},{"n":"Restauracja Morgan","t":"eat","lat":54.6068,"lon":18.7998,"note":"halibut steak, fish soup · ~€25/pp · maritime-themed tavern with fresh catch"},{"n":"Bella Italia","t":"eat","lat":54.6081,"lon":18.7972,"note":"wood-fired pizza, seafood pasta · ~€18/pp · classic Italian flavors by the Baltic"}]}],"total_km":3372.7,"total_nights":21,"budget_estimate_eur":2310,"notes":""}</script>
+
+<script>
+(function() {
+  const plan = JSON.parse(document.getElementById('tripplan').textContent);
+  const origin = plan.request.origin;
+  const stops = plan.stops;
+
+  const map = L.map('map').setView([origin.lat, origin.lon], 8);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 18,
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  const allPoints = [[origin.lat, origin.lon]];
+  const pointNames = [origin.name];
+
+  stops.forEach(function(s) {
+    const latlng = [s.lat, s.lon];
+    allPoints.push(latlng);
+    pointNames.push(s.name);
+    L.circleMarker(latlng, {
+      color: '#dc3545',
+      fillColor: '#dc3545',
+      fillOpacity: 0.8,
+      radius: 6
+    }).addTo(map).bindTooltip(s.name, { permanent: true, direction: 'top', offset: [0, -10] });
+  });
+
+  // closed polyline: origin -> stops -> origin
+  allPoints.push([origin.lat, origin.lon]);
+  L.polyline(allPoints, {
+    color: '#dc3545',
+    weight: 3,
+    opacity: 0.7,
+    dashArray: '8, 12'
+  }).addTo(map);
+
+  // fitBounds over origin + stops
+  const bounds = allPoints.slice(0, allPoints.length - 1);
+  map.fitBounds(bounds, { padding: [40, 40] });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,840 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Krakow trip — 2079.9 km</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha512-pwNz1Ib3cDS0cx7KMzffFf3POEu/GXV0D2qx3GGK7WlB/fLzGf8hCfz2XmQ=="/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha512-XPq2x9y0gC8Wf0x2g=="></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 16px;
+    color: #1a1a1a;
+    background: #fafafa;
+  }
+  h1 { font-size: 1.6rem; margin-bottom: 8px; }
+  .header {
+    padding: 16px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  .header .meta { display: flex; flex-wrap: wrap; gap: 16px; font-size: 0.9rem; color: #555; }
+  .header .meta span { white-space: nowrap; }
+  .header .meta strong { color: #1a1a1a; }
+  #map { border: 1px solid #e0e0e0; border-radius: 8px; margin-bottom: 24px; }
+  .stop {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+  .stop h2 { font-size: 1.2rem; margin-bottom: 4px; }
+  .stop .meta { font-size: 0.85rem; color: #555; margin-bottom: 12px; }
+  .stop .meta span { margin-right: 16px; }
+  .poi-group { margin-bottom: 8px; }
+  .poi-group-title { font-size: 0.95rem; font-weight: 600; margin-bottom: 4px; }
+  .poi-item { font-size: 0.9rem; color: #444; margin-left: 16px; }
+  .poi-item .note { color: #777; }
+  .notes { margin-top: 24px; padding: 12px 16px; background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; font-size: 0.9rem; color: #333; }
+  #tripplan { display: none; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Krakow — 2026-07-12 to 2026-08-02</h1>
+  <div class="meta">
+    <span><strong>Party:</strong> 2 adults + 1 kid (18)</span>
+    <span><strong>Total km:</strong> 2079.9 km</span>
+    <span><strong>Nights:</strong> 21</span>
+    
+    <span><strong>Budget:</strong> €2310</span>
+    
+  </div>
+</div>
+
+<div id="map"></div>
+
+
+<section class="stop">
+  <h2>Mikulov</h2>
+  <p class="meta">
+    <span>CZ</span>
+    <span><strong>3 nights</strong></span>
+    
+  </p>
+  
+  
+  
+  
+
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">⭐</div>
+      
+      <div class="poi-item">
+        Mikulov Castle <span class="note">— Baroque castle hosting regional museum exhibitions and a giant wine cask.</span>
+      </div>
+      
+      <div class="poi-item">
+        Svatý Kopeček (Holy Hill) <span class="note">— Scenic pilgrimage hill with a Stations of the Cross trail and panoramic views.</span>
+      </div>
+      
+    </div>
+    
+  
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">🍴</div>
+      
+      <div class="poi-item">
+        Bistro Drogerka <span class="note">— ribeye steak, seasonal specials · ~€25/pp · chic bistro on the historic square</span>
+      </div>
+      
+      <div class="poi-item">
+        Sojka & spol. <span class="note">— mediterranean pasta, seafood · ~€30/pp · stylish restaurant focusing on fresh local ingredients</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">•</div>
+      
+      <div class="poi-item">
+        Dietrichstein Tomb <span class="note">— Stunning monumental tomb of the noble Dietrichstein family on the main square.</span>
+      </div>
+      
+      <div class="poi-item">
+        Kozí Hrádek <span class="note">— 15th-century artillery tower ruins offering a lovely short hike and town views.</span>
+      </div>
+      
+    </div>
+    
+  
+</section>
+
+<section class="stop">
+  <h2>Hallstatt</h2>
+  <p class="meta">
+    <span>AT</span>
+    <span><strong>2 nights</strong></span>
+    
+    <span>Leg: 20.9 km · 0.3 h</span>
+    
+  </p>
+  
+  
+  
+  
+
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">⭐</div>
+      
+      <div class="poi-item">
+        Hallstatt Skywalk Welterbeblick <span class="note">— Breathtaking viewing platform 360 meters above the roofs of Hallstatt.</span>
+      </div>
+      
+      <div class="poi-item">
+        Salzwelten Hallstatt <span class="note">— The world's oldest salt mine with an underground slide.</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">🏖</div>
+      
+      <div class="poi-item">
+        Badeinsel Hallstatt <span class="note">— Lakeside park and beach area with mountain views.</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">🍴</div>
+      
+      <div class="poi-item">
+        Restaurant im Seehotel Grüner Baum <span class="note">— fresh lake trout, ribeye steak · ~€45/pp · lakeside terrace with stunning views</span>
+      </div>
+      
+      <div class="poi-item">
+        Pizzeria Bella Milano <span class="note">— pizza, pasta, seafood · ~€25/pp · cozy Italian dining near the lake</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">•</div>
+      
+      <div class="poi-item">
+        Five Fingers Viewing Platform <span class="note">— Spectacular viewing platform shaped like a hand, reached by cable car.</span>
+      </div>
+      
+    </div>
+    
+  
+</section>
+
+<section class="stop">
+  <h2>Bad Ischl</h2>
+  <p class="meta">
+    <span>AT</span>
+    <span><strong>2 nights</strong></span>
+    
+    <span>Leg: 23.3 km · 0.3 h</span>
+    
+  </p>
+  
+  
+  
+  
+
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">⭐</div>
+      
+      <div class="poi-item">
+        Kaiservilla <span class="note">— The historic summer residence of Emperor Franz Joseph I and Empress Sisi, surrounded by a vast park.</span>
+      </div>
+      
+      <div class="poi-item">
+        Katrin Cable Car <span class="note">— Ride up to the Katrin mountain pasture for spectacular 7-lake views and scenic pine forest hiking trails.</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">🏖</div>
+      
+      <div class="poi-item">
+        Naturstrandbad Strobl <span class="note">— A beautiful natural lakeside beach on nearby Lake Wolfgangsee with sunbathing lawns and clear waters.</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">🍴</div>
+      
+      <div class="poi-item">
+        Ristorante Pizzeria Rossini <span class="note">— Wood-fired pizza & homemade pasta · ~€25/pp · Cozy Italian trattoria with a warm atmosphere</span>
+      </div>
+      
+      <div class="poi-item">
+        Weinhaus Attwenger <span class="note">— Ribeye steaks & fresh Salzkammergut trout · ~€45/pp · Historic riverside tavern with a beautiful shady dining garden</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">•</div>
+      
+      <div class="poi-item">
+        Siriuskogl <span class="note">— A short but steep hike through lush woods leading to a historic lookout tower and a highly-rated local inn.</span>
+      </div>
+      
+      <div class="poi-item">
+        Stadtmuseum Bad Ischl <span class="note">— Explore local history, salt mining heritage, and imperial culture in this charming riverside museum.</span>
+      </div>
+      
+    </div>
+    
+  
+</section>
+
+<section class="stop">
+  <h2>St. Gilgen</h2>
+  <p class="meta">
+    <span>AT</span>
+    <span><strong>2 nights</strong></span>
+    
+    <span>Leg: 119.0 km · 1.7 h</span>
+    
+  </p>
+  
+  
+  
+  
+
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">⭐</div>
+      
+      <div class="poi-item">
+        Zwölferhorn Seilbahn <span class="note">— Modern cable car offering panoramic views of Wolfgangsee and alpine hiking trails.</span>
+      </div>
+      
+      <div class="poi-item">
+        Mozarthaus St. Gilgen <span class="note">— Historical museum dedicated to Mozart's mother and sister with cultural exhibits.</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">🏖</div>
+      
+      <div class="poi-item">
+        Strandbad St. Gilgen <span class="note">— Lakeside beach park with sunbathing lawns, crystal-clear water, and mountain backdrops.</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">🍴</div>
+      
+      <div class="poi-item">
+        Pizzeria Ristorante da Claudio <span class="note">— seafood pasta, wood-fired pizza · ~€25/pp · cozy Italian spot near the lakefront</span>
+      </div>
+      
+      <div class="poi-item">
+        Wirt am Gries <span class="note">— ribeye steak, local lake fish · ~€35/pp · rustic tavern known for excellent meats</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">•</div>
+      
+      <div class="poi-item">
+        Plombergstein Hiking Trail <span class="note">— Scenic hike through pine forests leading to a spectacular rocky viewpoint.</span>
+      </div>
+      
+    </div>
+    
+  
+</section>
+
+<section class="stop">
+  <h2>Zell am See</h2>
+  <p class="meta">
+    <span>AT</span>
+    <span><strong>2 nights</strong></span>
+    
+    <span>Leg: 205.1 km · 2.9 h</span>
+    
+  </p>
+  
+  
+  
+  
+
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">⭐</div>
+      
+      <div class="poi-item">
+        Schmittenhöhe <span class="note">— Panoramic mountain peak offering hiking trails, pine forests, and cable car access.</span>
+      </div>
+      
+      <div class="poi-item">
+        Zeller See <span class="note">— Stunning alpine lake perfect for boat trips, scenic walks, and water activities.</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">🏖</div>
+      
+      <div class="poi-item">
+        Strandbad Zell am See <span class="note">— Lakeside beach resort with heated pools, lawns, and access to the clean waters of Lake Zell.</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">🍴</div>
+      
+      <div class="poi-item">
+        Giuseppe <span class="note">— seafood spaghetti, beef fillet, tiramisu · ~€35/pp · Charming Italian restaurant with a great selection of seafood and steaks</span>
+      </div>
+      
+      <div class="poi-item">
+        Deins & Meins <span class="note">— ribeye steak, grilled sea bass, truffle pasta · ~€45/pp · Trendy spot offering premium steaks and Mediterranean delights</span>
+      </div>
+      
+      <div class="poi-item">
+        Ristorante Pizzeria da Gianni <span class="note">— stone-oven pizza, seafood linguine, panna cotta · ~€28/pp · Family-friendly Italian eatery with authentic flavors</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">•</div>
+      
+      <div class="poi-item">
+        Elisabethpark <span class="note">— Beautiful lakeside park featuring art installations, walking paths, and light shows.</span>
+      </div>
+      
+      <div class="poi-item">
+        Stadtmuseum Vogtturm <span class="note">— Local history museum housed in an ancient tower, showcasing regional art and culture.</span>
+      </div>
+      
+    </div>
+    
+  
+</section>
+
+<section class="stop">
+  <h2>Ortisei</h2>
+  <p class="meta">
+    <span>IT</span>
+    <span><strong>2 nights</strong></span>
+    
+    <span>Leg: 66.2 km · 0.9 h</span>
+    
+  </p>
+  
+  
+  
+  
+
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">⭐</div>
+      
+      <div class="poi-item">
+        Seceda Cable Car <span class="note">— Unbelievable ridge views and access to dramatic Seceda peaks.</span>
+      </div>
+      
+      <div class="poi-item">
+        Alpe di Siusi Cable Car <span class="note">— Gateway to Europe's largest high-altitude Alpine meadow.</span>
+      </div>
+      
+    </div>
+    
+  
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">🍴</div>
+      
+      <div class="poi-item">
+        Tubladel <span class="note">— dry-aged steaks & Ladin specialties · ~€60/pp · rustic-chic alpine tavern</span>
+      </div>
+      
+      <div class="poi-item">
+        Mauriz Keller <span class="note">— truffle pasta & wood-fired pizza · ~€35/pp · lively historic cellar setting</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">•</div>
+      
+      <div class="poi-item">
+        Museum Gherdëina <span class="note">— Fascinating local woodcarving art and Ladin cultural heritage.</span>
+      </div>
+      
+      <div class="poi-item">
+        Resciesa Funicular <span class="note">— Scenic funicular ride leading to quiet pine forest hiking trails.</span>
+      </div>
+      
+      <div class="poi-item">
+        St. Jakob Church <span class="note">— The oldest church in the valley, reached via a lovely forest hike.</span>
+      </div>
+      
+    </div>
+    
+  
+</section>
+
+<section class="stop">
+  <h2>Cortina d'Ampezzo</h2>
+  <p class="meta">
+    <span>IT</span>
+    <span><strong>2 nights</strong></span>
+    
+    <span>Leg: 184.1 km · 2.6 h</span>
+    
+  </p>
+  
+  
+  
+  
+
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">⭐</div>
+      
+      <div class="poi-item">
+        Freccia nel Cielo Cable Car <span class="note">— Breathtaking cable car ride to one of the highest peaks in the Dolomites.</span>
+      </div>
+      
+      <div class="poi-item">
+        Tre Cime di Lavaredo <span class="note">— The ultimate Dolomite hike with world-famous triple peaks.</span>
+      </div>
+      
+    </div>
+    
+  
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">🍴</div>
+      
+      <div class="poi-item">
+        Ristorante Al Camin <span class="note">— Veneto specialties, local steaks · ~€50/pp · cozy alpine atmosphere</span>
+      </div>
+      
+      <div class="poi-item">
+        Ristorante Tivoli <span class="note">— Refined mountain cuisine, local venison, seafood · ~€110/pp · Michelin-starred excellence</span>
+      </div>
+      
+      <div class="poi-item">
+        Baita Fraina <span class="note">— Casunziei pasta, local game · ~€45/pp · rustic pine-wood stube</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">•</div>
+      
+      <div class="poi-item">
+        Lago di Sorapis <span class="note">— A challenging hike rewarding you with surreal turquoise waters and pine forests.</span>
+      </div>
+      
+      <div class="poi-item">
+        Cinque Torri <span class="note">— Stunning rock towers featuring an open-air WWI museum and great hiking.</span>
+      </div>
+      
+      <div class="poi-item">
+        Museo d'Arte Moderna Mario Rimoldi <span class="note">— Excellent collection of 20th-century Italian modern art.</span>
+      </div>
+      
+    </div>
+    
+  
+</section>
+
+<section class="stop">
+  <h2>Caorle</h2>
+  <p class="meta">
+    <span>IT</span>
+    <span><strong>2 nights</strong></span>
+    
+    <span>Leg: 103.0 km · 1.5 h</span>
+    
+  </p>
+  
+  
+  
+  
+
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">⭐</div>
+      
+      <div class="poi-item">
+        Duomo di Santo Stefano e Campanile <span class="note">— 11th-century cathedral with a unique cylindrical bell tower.</span>
+      </div>
+      
+      <div class="poi-item">
+        Scogliera Viva <span class="note">— An outdoor gallery of beautiful sculptures carved directly into coastal rocks.</span>
+      </div>
+      
+      <div class="poi-item">
+        Casoni di Caorle <span class="note">— Traditional historic fishermen's huts made of wood and reeds in the lagoon.</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">🏖</div>
+      
+      <div class="poi-item">
+        Spiaggia di Levante <span class="note">— Wide, golden sandy beach with excellent amenities and shallow waters.</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">🍴</div>
+      
+      <div class="poi-item">
+        Ristorante Duomo <span class="note">— seafood spaghetti, fritto misto · ~€35/pp · cozy terrace near the cathedral</span>
+      </div>
+      
+      <div class="poi-item">
+        Ristorante Al Bragozzo <span class="note">— squid ink pasta, grilled sea bass · ~€45/pp · refined seafood in the historic center</span>
+      </div>
+      
+      <div class="poi-item">
+        Ristorante Pizzeria Da Pino <span class="note">— fiorentina steak, wood-fired pizza · ~€30/pp · excellent meat and classic Italian dishes</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">•</div>
+      
+      <div class="poi-item">
+        Valle Vecchia Nature Reserve <span class="note">— Wild sandy beach backed by a lush pine forest, perfect for hiking and birdwatching.</span>
+      </div>
+      
+    </div>
+    
+  
+</section>
+
+<section class="stop">
+  <h2>Grado</h2>
+  <p class="meta">
+    <span>IT</span>
+    <span><strong>2 nights</strong></span>
+    
+    <span>Leg: 109.3 km · 1.6 h</span>
+    
+  </p>
+  
+  
+  
+  
+
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">⭐</div>
+      
+      <div class="poi-item">
+        Basilica di Sant'Eufemia <span class="note">— Admire the stunning 6th-century mosaic floor and the historic octagonal baptistery.</span>
+      </div>
+      
+      <div class="poi-item">
+        Santuario di Barbana <span class="note">— Take a scenic ferry ride across the lagoon to this peaceful island sanctuary.</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">🏖</div>
+      
+      <div class="poi-item">
+        Spiaggia Principale <span class="note">— Fully equipped sandy beach with shallow, warm waters perfect for relaxing.</span>
+      </div>
+      
+      <div class="poi-item">
+        Spiaggia Al Bosco <span class="note">— Shady beach backed by a lush pine forest, ideal for a cooler seaside walk.</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">🍴</div>
+      
+      <div class="poi-item">
+        Tavernetta all'Androna <span class="note">— Boreto alla graesana, fresh turbot · ~€55/pp · refined local seafood in the heart of the old town</span>
+      </div>
+      
+      <div class="poi-item">
+        Trattoria De Toni <span class="note">— Sarde in saor, grilled sea bass · ~€45/pp · historic tavern serving authentic lagoon recipes</span>
+      </div>
+      
+      <div class="poi-item">
+        Alla Vecchia Marina <span class="note">— Fritto misto, local white wines · ~€35/pp · friendly harbor-side spot with excellent seafood</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">•</div>
+      
+      <div class="poi-item">
+        Valle Cavanata Nature Reserve <span class="note">— Scenic protected wetlands perfect for birdwatching and easy flat hiking.</span>
+      </div>
+      
+    </div>
+    
+  
+</section>
+
+<section class="stop">
+  <h2>Bovec</h2>
+  <p class="meta">
+    <span>SI</span>
+    <span><strong>2 nights</strong></span>
+    
+    <span>Leg: 872.1 km · 12.5 h</span>
+    
+  </p>
+  
+  
+  
+  
+
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">⭐</div>
+      
+      <div class="poi-item">
+        Kanin Cable Car <span class="note">— Slovenia's highest ski resort cable car, offering panoramic Alpine views.</span>
+      </div>
+      
+      <div class="poi-item">
+        Great Soča Gorge <span class="note">— Stunning emerald waters carved through a narrow limestone canyon.</span>
+      </div>
+      
+      <div class="poi-item">
+        Slap Boka <span class="note">— Slovenia's most majestic waterfall, easily reached via a short hike.</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">🏖</div>
+      
+      <div class="poi-item">
+        Čezsoča Gravel Beach <span class="note">— Scenic pebble beach on the emerald Soča River, perfect for relaxing.</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">🍴</div>
+      
+      <div class="poi-item">
+        Gostilna Martinov Hram <span class="note">— Venison steak, local trout · ~€30/pp · cozy traditional alpine tavern</span>
+      </div>
+      
+      <div class="poi-item">
+        Pizzeria & Spaghetteria Y00-K00 <span class="note">— Wood-fired pizzas, pasta · ~€18/pp · excellent Italian-style comfort food</span>
+      </div>
+      
+      <div class="poi-item">
+        Gostišče Sovdat <span class="note">— Bovec krafi, local river trout · ~€25/pp · authentic regional specialties</span>
+      </div>
+      
+    </div>
+    
+  
+    
+    <div class="poi-group">
+      <div class="poi-group-title">•</div>
+      
+      <div class="poi-item">
+        Kluže Fortress <span class="note">— Historic WWI mountain fortress and museum overlooking the Koritnica gorge.</span>
+      </div>
+      
+      <div class="poi-item">
+        Ravelnik Outdoor Museum <span class="note">— An outdoor WWI military museum with preserved trenches and bunkers.</span>
+      </div>
+      
+    </div>
+    
+  
+</section>
+
+
+
+
+<script type="application/json" id="tripplan">{"schema":"tripplan.v1","request":{"origin":{"name":"Krakow","country":"Poland","lat":50.06465,"lon":19.94498},"start_date":"2026-07-12","end_date":"2026-08-02","party":"2 adults + 1 kid (18)","interests":["sandy beach","pine forest","mountains","hiking","cable cars","museums","art galleries","italian food","seafood","steaks"],"pace":"balanced","budget_total_eur":null,"km_cap":4000,"must":["Hallstatt","Jesolo","Lake Como"],"avoid":["big cities"],"notes":"Heading to: The sea — Italy or Croatia or somewhere there. Main stay: 7–14 days near the sea. Trip type: Round trip. Stops: 3–4 places. Places they loved: Jesolo, Lake Como, Titlis & Pilatus hikes in Switzerland, Morskie Oko in Poland, Hallstatt (never visited, but the dream)."},"stops":[{"key":"mikulov","name":"Mikulov","country":"CZ","lat":48.8072,"lon":16.6378,"nights":3,"leg_km":376.9,"leg_h":5.38,"pois":[{"n":"Mikulov Castle","t":"must","lat":48.8068,"lon":16.6365,"note":"Baroque castle hosting regional museum exhibitions and a giant wine cask."},{"n":"Svatý Kopeček (Holy Hill)","t":"must","lat":48.8072,"lon":16.6481,"note":"Scenic pilgrimage hill with a Stations of the Cross trail and panoramic views."},{"n":"Dietrichstein Tomb","t":"sight","lat":48.8073,"lon":16.6398,"note":"Stunning monumental tomb of the noble Dietrichstein family on the main square."},{"n":"Kozí Hrádek","t":"sight","lat":48.8115,"lon":16.6389,"note":"15th-century artillery tower ruins offering a lovely short hike and town views."},{"n":"Bistro Drogerka","t":"eat","lat":48.8075,"lon":16.6382,"note":"ribeye steak, seasonal specials · ~€25/pp · chic bistro on the historic square"},{"n":"Sojka & spol.","t":"eat","lat":48.8071,"lon":16.6389,"note":"mediterranean pasta, seafood · ~€30/pp · stylish restaurant focusing on fresh local ingredients"}]},{"key":"hallstatt","name":"Hallstatt","country":"AT","lat":47.5622,"lon":13.6493,"nights":2,"leg_km":20.9,"leg_h":0.3,"pois":[{"n":"Hallstatt Skywalk Welterbeblick","t":"must","lat":47.5628,"lon":13.6428,"note":"Breathtaking viewing platform 360 meters above the roofs of Hallstatt."},{"n":"Salzwelten Hallstatt","t":"must","lat":47.5619,"lon":13.6381,"note":"The world's oldest salt mine with an underground slide."},{"n":"Five Fingers Viewing Platform","t":"sight","lat":47.5247,"lon":13.7011,"note":"Spectacular viewing platform shaped like a hand, reached by cable car."},{"n":"Badeinsel Hallstatt","t":"beach","lat":47.5542,"lon":13.6495,"note":"Lakeside park and beach area with mountain views."},{"n":"Restaurant im Seehotel Grüner Baum","t":"eat","lat":47.5621,"lon":13.6494,"note":"fresh lake trout, ribeye steak · ~€45/pp · lakeside terrace with stunning views"},{"n":"Pizzeria Bella Milano","t":"eat","lat":47.5592,"lon":13.6821,"note":"pizza, pasta, seafood · ~€25/pp · cozy Italian dining near the lake"}]},{"key":"bad-ischl","name":"Bad Ischl","country":"AT","lat":47.7111,"lon":13.6189,"nights":2,"leg_km":23.3,"leg_h":0.33,"pois":[{"n":"Kaiservilla","t":"must","lat":47.7153,"lon":13.6214,"note":"The historic summer residence of Emperor Franz Joseph I and Empress Sisi, surrounded by a vast park."},{"n":"Katrin Cable Car","t":"must","lat":47.7031,"lon":13.5997,"note":"Ride up to the Katrin mountain pasture for spectacular 7-lake views and scenic pine forest hiking trails."},{"n":"Siriuskogl","t":"sight","lat":47.7075,"lon":13.6225,"note":"A short but steep hike through lush woods leading to a historic lookout tower and a highly-rated local inn."},{"n":"Naturstrandbad Strobl","t":"beach","lat":47.7194,"lon":13.4811,"note":"A beautiful natural lakeside beach on nearby Lake Wolfgangsee with sunbathing lawns and clear waters."},{"n":"Stadtmuseum Bad Ischl","t":"sight","lat":47.7115,"lon":13.6235,"note":"Explore local history, salt mining heritage, and imperial culture in this charming riverside museum."},{"n":"Ristorante Pizzeria Rossini","t":"eat","lat":47.7128,"lon":13.6231,"note":"Wood-fired pizza & homemade pasta · ~€25/pp · Cozy Italian trattoria with a warm atmosphere"},{"n":"Weinhaus Attwenger","t":"eat","lat":47.7135,"lon":13.6258,"note":"Ribeye steaks & fresh Salzkammergut trout · ~€45/pp · Historic riverside tavern with a beautiful shady dining garden"}]},{"key":"st-gilgen","name":"St. Gilgen","country":"AT","lat":47.7667,"lon":13.3667,"nights":2,"leg_km":119.0,"leg_h":1.7,"pois":[{"n":"Zwölferhorn Seilbahn","t":"must","lat":47.7663,"lon":13.3655,"note":"Modern cable car offering panoramic views of Wolfgangsee and alpine hiking trails."},{"n":"Mozarthaus St. Gilgen","t":"must","lat":47.7675,"lon":13.3661,"note":"Historical museum dedicated to Mozart's mother and sister with cultural exhibits."},{"n":"Strandbad St. Gilgen","t":"beach","lat":47.7692,"lon":13.3711,"note":"Lakeside beach park with sunbathing lawns, crystal-clear water, and mountain backdrops."},{"n":"Plombergstein Hiking Trail","t":"sight","lat":47.7592,"lon":13.3615,"note":"Scenic hike through pine forests leading to a spectacular rocky viewpoint."},{"n":"Pizzeria Ristorante da Claudio","t":"eat","lat":47.7671,"lon":13.3665,"note":"seafood pasta, wood-fired pizza · ~€25/pp · cozy Italian spot near the lakefront"},{"n":"Wirt am Gries","t":"eat","lat":47.7678,"lon":13.3652,"note":"ribeye steak, local lake fish · ~€35/pp · rustic tavern known for excellent meats"}]},{"key":"zell-am-see","name":"Zell am See","country":"AT","lat":47.3237,"lon":12.7962,"nights":2,"leg_km":205.1,"leg_h":2.93,"pois":[{"n":"Schmittenhöhe","t":"must","lat":47.3294,"lon":12.7383,"note":"Panoramic mountain peak offering hiking trails, pine forests, and cable car access."},{"n":"Zeller See","t":"must","lat":47.325,"lon":12.805,"note":"Stunning alpine lake perfect for boat trips, scenic walks, and water activities."},{"n":"Strandbad Zell am See","t":"beach","lat":47.3278,"lon":12.8039,"note":"Lakeside beach resort with heated pools, lawns, and access to the clean waters of Lake Zell."},{"n":"Elisabethpark","t":"sight","lat":47.3242,"lon":12.7997,"note":"Beautiful lakeside park featuring art installations, walking paths, and light shows."},{"n":"Stadtmuseum Vogtturm","t":"sight","lat":47.3236,"lon":12.7972,"note":"Local history museum housed in an ancient tower, showcasing regional art and culture."},{"n":"Giuseppe","t":"eat","lat":47.3231,"lon":12.7978,"note":"seafood spaghetti, beef fillet, tiramisu · ~€35/pp · Charming Italian restaurant with a great selection of seafood and steaks"},{"n":"Deins & Meins","t":"eat","lat":47.3241,"lon":12.7975,"note":"ribeye steak, grilled sea bass, truffle pasta · ~€45/pp · Trendy spot offering premium steaks and Mediterranean delights"},{"n":"Ristorante Pizzeria da Gianni","t":"eat","lat":47.3255,"lon":12.7985,"note":"stone-oven pizza, seafood linguine, panna cotta · ~€28/pp · Family-friendly Italian eatery with authentic flavors"}]},{"key":"ortisei","name":"Ortisei","country":"IT","lat":46.5761,"lon":11.6742,"nights":2,"leg_km":66.2,"leg_h":0.95,"pois":[{"n":"Seceda Cable Car","t":"must","lat":46.5765,"lon":11.6751,"note":"Unbelievable ridge views and access to dramatic Seceda peaks."},{"n":"Alpe di Siusi Cable Car","t":"must","lat":46.5718,"lon":11.6708,"note":"Gateway to Europe's largest high-altitude Alpine meadow."},{"n":"Museum Gherdëina","t":"sight","lat":46.5731,"lon":11.6742,"note":"Fascinating local woodcarving art and Ladin cultural heritage."},{"n":"Resciesa Funicular","t":"sight","lat":46.5769,"lon":11.6745,"note":"Scenic funicular ride leading to quiet pine forest hiking trails."},{"n":"St. Jakob Church","t":"sight","lat":46.5714,"lon":11.6917,"note":"The oldest church in the valley, reached via a lovely forest hike."},{"n":"Tubladel","t":"eat","lat":46.5738,"lon":11.6719,"note":"dry-aged steaks & Ladin specialties · ~€60/pp · rustic-chic alpine tavern"},{"n":"Mauriz Keller","t":"eat","lat":46.5728,"lon":11.6738,"note":"truffle pasta & wood-fired pizza · ~€35/pp · lively historic cellar setting"}]},{"key":"cortina-dampezzo","name":"Cortina d'Ampezzo","country":"IT","lat":46.5405,"lon":12.1357,"nights":2,"leg_km":184.1,"leg_h":2.63,"pois":[{"n":"Freccia nel Cielo Cable Car","t":"must","lat":46.5441,"lon":12.1261,"note":"Breathtaking cable car ride to one of the highest peaks in the Dolomites."},{"n":"Tre Cime di Lavaredo","t":"must","lat":46.6186,"lon":12.3027,"note":"The ultimate Dolomite hike with world-famous triple peaks."},{"n":"Lago di Sorapis","t":"sight","lat":46.5275,"lon":12.2136,"note":"A challenging hike rewarding you with surreal turquoise waters and pine forests."},{"n":"Cinque Torri","t":"sight","lat":46.5088,"lon":12.0548,"note":"Stunning rock towers featuring an open-air WWI museum and great hiking."},{"n":"Museo d'Arte Moderna Mario Rimoldi","t":"sight","lat":46.5385,"lon":12.1372,"note":"Excellent collection of 20th-century Italian modern art."},{"n":"Ristorante Al Camin","t":"eat","lat":46.5242,"lon":12.1583,"note":"Veneto specialties, local steaks · ~€50/pp · cozy alpine atmosphere"},{"n":"Ristorante Tivoli","t":"eat","lat":46.5336,"lon":12.1192,"note":"Refined mountain cuisine, local venison, seafood · ~€110/pp · Michelin-starred excellence"},{"n":"Baita Fraina","t":"eat","lat":46.5181,"lon":12.1482,"note":"Casunziei pasta, local game · ~€45/pp · rustic pine-wood stube"}]},{"key":"caorle","name":"Caorle","country":"IT","lat":45.5997,"lon":12.8874,"nights":2,"leg_km":103.0,"leg_h":1.47,"pois":[{"n":"Duomo di Santo Stefano e Campanile","t":"must","lat":45.5992,"lon":12.8881,"note":"11th-century cathedral with a unique cylindrical bell tower."},{"n":"Scogliera Viva","t":"must","lat":45.5985,"lon":12.8875,"note":"An outdoor gallery of beautiful sculptures carved directly into coastal rocks."},{"n":"Casoni di Caorle","t":"must","lat":45.6135,"lon":12.911,"note":"Traditional historic fishermen's huts made of wood and reeds in the lagoon."},{"n":"Spiaggia di Levante","t":"beach","lat":45.604,"lon":12.897,"note":"Wide, golden sandy beach with excellent amenities and shallow waters."},{"n":"Valle Vecchia Nature Reserve","t":"sight","lat":45.631,"lon":12.955,"note":"Wild sandy beach backed by a lush pine forest, perfect for hiking and birdwatching."},{"n":"Ristorante Duomo","t":"eat","lat":45.5996,"lon":12.8872,"note":"seafood spaghetti, fritto misto · ~€35/pp · cozy terrace near the cathedral"},{"n":"Ristorante Al Bragozzo","t":"eat","lat":45.5994,"lon":12.8858,"note":"squid ink pasta, grilled sea bass · ~€45/pp · refined seafood in the historic center"},{"n":"Ristorante Pizzeria Da Pino","t":"eat","lat":45.6025,"lon":12.884,"note":"fiorentina steak, wood-fired pizza · ~€30/pp · excellent meat and classic Italian dishes"}]},{"key":"grado","name":"Grado","country":"IT","lat":45.6798,"lon":13.3899,"nights":2,"leg_km":109.3,"leg_h":1.56,"pois":[{"n":"Basilica di Sant'Eufemia","t":"must","lat":45.6768,"lon":13.3905,"note":"Admire the stunning 6th-century mosaic floor and the historic octagonal baptistery."},{"n":"Santuario di Barbana","t":"must","lat":45.6983,"lon":13.4319,"note":"Take a scenic ferry ride across the lagoon to this peaceful island sanctuary."},{"n":"Spiaggia Principale","t":"beach","lat":45.6761,"lon":13.3995,"note":"Fully equipped sandy beach with shallow, warm waters perfect for relaxing."},{"n":"Spiaggia Al Bosco","t":"beach","lat":45.6812,"lon":13.4215,"note":"Shady beach backed by a lush pine forest, ideal for a cooler seaside walk."},{"n":"Valle Cavanata Nature Reserve","t":"sight","lat":45.7111,"lon":13.4785,"note":"Scenic protected wetlands perfect for birdwatching and easy flat hiking."},{"n":"Tavernetta all'Androna","t":"eat","lat":45.6765,"lon":13.3892,"note":"Boreto alla graesana, fresh turbot · ~€55/pp · refined local seafood in the heart of the old town"},{"n":"Trattoria De Toni","t":"eat","lat":45.6763,"lon":13.3885,"note":"Sarde in saor, grilled sea bass · ~€45/pp · historic tavern serving authentic lagoon recipes"},{"n":"Alla Vecchia Marina","t":"eat","lat":45.6775,"lon":13.3878,"note":"Fritto misto, local white wines · ~€35/pp · friendly harbor-side spot with excellent seafood"}]},{"key":"bovec","name":"Bovec","country":"SI","lat":46.3375,"lon":13.5522,"nights":2,"leg_km":872.1,"leg_h":12.46,"pois":[{"n":"Kanin Cable Car","t":"must","lat":46.3272,"lon":13.5385,"note":"Slovenia's highest ski resort cable car, offering panoramic Alpine views."},{"n":"Great Soča Gorge","t":"must","lat":46.3411,"lon":13.6492,"note":"Stunning emerald waters carved through a narrow limestone canyon."},{"n":"Slap Boka","t":"must","lat":46.3175,"lon":13.4925,"note":"Slovenia's most majestic waterfall, easily reached via a short hike."},{"n":"Kluže Fortress","t":"sight","lat":46.3615,"lon":13.5898,"note":"Historic WWI mountain fortress and museum overlooking the Koritnica gorge."},{"n":"Ravelnik Outdoor Museum","t":"sight","lat":46.3405,"lon":13.5702,"note":"An outdoor WWI military museum with preserved trenches and bunkers."},{"n":"Čezsoča Gravel Beach","t":"beach","lat":46.3218,"lon":13.5485,"note":"Scenic pebble beach on the emerald Soča River, perfect for relaxing."},{"n":"Gostilna Martinov Hram","t":"eat","lat":46.3381,"lon":13.5518,"note":"Venison steak, local trout · ~€30/pp · cozy traditional alpine tavern"},{"n":"Pizzeria & Spaghetteria Y00-K00","t":"eat","lat":46.3375,"lon":13.5525,"note":"Wood-fired pizzas, pasta · ~€18/pp · excellent Italian-style comfort food"},{"n":"Gostišče Sovdat","t":"eat","lat":46.3384,"lon":13.5522,"note":"Bovec krafi, local river trout · ~€25/pp · authentic regional specialties"}]}],"total_km":2079.9,"total_nights":21,"budget_estimate_eur":2310,"notes":""}</script>
+
+<script>
+(function() {
+  const plan = JSON.parse(document.getElementById('tripplan').textContent);
+  const origin = plan.request.origin;
+  const stops = plan.stops;
+
+  const map = L.map('map').setView([origin.lat, origin.lon], 8);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 18,
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  const allPoints = [[origin.lat, origin.lon]];
+  const pointNames = [origin.name];
+
+  stops.forEach(function(s) {
+    const latlng = [s.lat, s.lon];
+    allPoints.push(latlng);
+    pointNames.push(s.name);
+    L.circleMarker(latlng, {
+      color: '#dc3545',
+      fillColor: '#dc3545',
+      fillOpacity: 0.8,
+      radius: 6
+    }).addTo(map).bindTooltip(s.name, { permanent: true, direction: 'top', offset: [0, -10] });
+  });
+
+  // closed polyline: origin -> stops -> origin
+  allPoints.push([origin.lat, origin.lon]);
+  L.polyline(allPoints, {
+    color: '#dc3545',
+    weight: 3,
+    opacity: 0.7,
+    dashArray: '8, 12'
+  }).addTo(map);
+
+  // fitBounds over origin + stops
+  const bounds = allPoints.slice(0, allPoints.length - 1);
+  map.fitBounds(bounds, { padding: [40, 40] });
+})();
+</script>
+
+</body>
+</html>

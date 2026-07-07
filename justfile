@@ -12,6 +12,7 @@ sync:
     rsync -av --delete \
       --exclude='.DS_Store' \
       --exclude='.git' \
+      --exclude='.gitignore' \
       {{src}}/ {{dst}}/
     @echo "Synced {{src}} -> {{dst}}"
 
