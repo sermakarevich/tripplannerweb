@@ -304,6 +304,9 @@ a { color: var(--sea); }
   .preview-grid { grid-template-columns: 1fr; }
 }
 
+/* Example trip links — each on its own line, indented under the label */
+.ex-link { display: block; margin-left: 22px; margin-top: 4px; width: max-content; }
+
 .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
 
 /* ---------- sections ---------- */
