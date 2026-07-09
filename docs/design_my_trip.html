@@ -82,6 +82,10 @@
                 <label for="to">To</label>
                 <input id="to" name="to" type="text" value="The sea — Italy or Croatia or somewhere there">
               </div>
+              <div>
+                <label for="region-hint">Region or direction (if no fixed destination)</label>
+                <input id="region-hint" name="region_hint" type="text" placeholder="e.g. south, Adriatic coast, Alps" value="">
+              </div>
             </div>
             <div class="form-grid-3" style="margin-top: 18px;">
               <div>
@@ -96,6 +100,10 @@
                 <label for="max-km">Max total km</label>
                 <input id="max-km" name="max_km" type="text" value="3,000–4,000 km">
               </div>
+            </div>
+            <div style="margin-top: 18px;">
+              <label for="min-nights">Min nights per stop</label>
+              <input id="min-nights" name="min_nights" type="number" min="1" max="10" value="2">
             </div>
             <p class="section-note" style="margin-top: 18px;">How much driving feels right? We pace the whole route around this — no vacation spent staring at a windshield.</p>
             <div class="form-grid-2">
@@ -157,6 +165,10 @@
             <div class="form-row">
               <label for="loved">Places you've loved</label>
               <textarea id="loved" name="loved" rows="3">Jesolo (great sea resort), Lake Como, Titlis &amp; Pilatus hikes in Switzerland, Morskie Oko in Poland, Hallstatt (never visited, but the dream)</textarea>
+            </div>
+            <div class="form-row">
+              <label for="must-visit">Must visit (we will route through these)</label>
+              <input id="must-visit" name="must_visit" type="text" placeholder="e.g. Hallstatt, Plitvice Lakes" value="">
             </div>
             <div class="form-row">
               <label for="prefs">Preferences &amp; interests</label>
@@ -287,6 +299,9 @@
       "Food": form.food.value.trim(),
       "Avoid": form.avoid.value.trim(),
       "Note": form.note.value.trim(),
+      "Min nights per stop": form.min_nights.value.trim(),
+      "Must visit": form.must_visit.value.trim(),
+      "Region hint": form.region_hint.value.trim(),
       "Traveler email": email
     };
 
