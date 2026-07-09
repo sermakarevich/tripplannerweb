@@ -230,7 +230,38 @@
 
 <script>
 (function () {
-  var ENDPOINT = "https://formsubmit.co/ajax/sermakarevich@gmail.com";
+  // Email relays, tried in order — first success wins (a relay outage must not lose a submission).
+  var RELAYS = [
+    function (subject, fields) {
+      var b = { access_key: "18219e04-da02-42d8-902b-fcaf90b8c042", subject: subject };
+      Object.keys(fields).forEach(function (k) { b[k] = fields[k]; });
+      return { url: "https://api.web3forms.com/submit", body: b };
+    },
+    function (subject, fields) {
+      var b = { _subject: subject, _template: "table" };
+      Object.keys(fields).forEach(function (k) { b[k] = fields[k]; });
+      return { url: "https://formsubmit.co/ajax/sermakarevich@gmail.com", body: b };
+    }
+  ];
+  function sendEmailCopy(subject, fields) {
+    var i = 0;
+    function attempt() {
+      if (i >= RELAYS.length) return Promise.reject(new Error("all relays failed"));
+      var r = RELAYS[i++](subject, fields);
+      return fetch(r.url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify(r.body)
+      }).then(function (res) {
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        return res.json();
+      }).then(function (j) {
+        if (!j || !(j.success === true || j.success === "true")) throw new Error("relay rejected");
+        return j;
+      }).catch(function () { return attempt(); });
+    }
+    return attempt();
+  }
   // DB service wishlist endpoint. Local dev auto-targets the db API on :8001;
   // in prod set PROD_WISHLIST_API to https://<db-api-domain>/wishlist.
   // (Empty prod value = skip DB, email still sent.)
@@ -331,16 +362,7 @@
           err.duplicate = true;
           throw err;
         }
-        var emailBody = { _subject: "Wishlist brief — " + from + " → " + (form.to.value.trim() || "open") + " (" + start + ")", _template: "table" };
-        Object.keys(fields).forEach(function (k) { emailBody[k] = fields[k]; });
-        return fetch(ENDPOINT, {
-          method: "POST",
-          headers: { "Content-Type": "application/json", "Accept": "application/json" },
-          body: JSON.stringify(emailBody)
-        }).then(function (res) {
-          if (!res.ok) throw new Error("HTTP " + res.status);
-          return res.json();
-        });
+        return sendEmailCopy("Wishlist brief — " + from + " → " + (form.to.value.trim() || "open") + " (" + start + ")", fields);
       })
       .then(function () {
         form.hidden = true;
